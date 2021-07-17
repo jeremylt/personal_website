@@ -9,7 +9,7 @@ Contact
 | GitHub: `jeremylt <https://www.github.com/jeremylt>`_
 | GitLab: `jeremylt <https://www.gitlab.com/jeremylt>`_
 | freeCodeCamp: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
-| Linkedin: `jeremylukethompson <https://www.linkedin.com/in/jeremylukethompson/>`_
+| Linkedin: `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
 
 Background
 ====================================
