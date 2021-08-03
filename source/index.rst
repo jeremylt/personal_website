@@ -24,5 +24,10 @@ I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and
 Software
 ====================================
 
+.. figure:: img/libCEED.png
+
 | `libCEED <https://www.github.com/CEED/libCEED>`_: fast algebra for efficient extensible discretizations with performance portability, run-time flexibility, and clean embedding in higher level libraries and applications
+
+.. figure:: img/LFAToolkit.png
+
 | `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_: Local Fourier Analysis of preconditioners for arbitrary, user provided weak forms of PDEs
