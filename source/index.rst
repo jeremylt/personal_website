@@ -33,3 +33,9 @@ Software
 | `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_: Local Fourier Analysis of preconditioners for arbitrary, user provided weak forms of PDEs
 
 .. figure:: img/LFAToolkit.png
+
+Dungeons & Dragons
+====================================
+
+| `Theaceae <https://eudicods.github.io/Theaceae/>`_ Campaign Setting: the land of tea, treasure, and adventure
+| `Astral Sea <https://eudicods.github.io/AstralSea/>`_ Campaign Setting: the realm between realms, full of intrigue and mystery
