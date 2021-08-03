@@ -27,7 +27,7 @@ Software
 | `libCEED <https://www.github.com/CEED/libCEED>`_: fast algebra for efficient extensible discretizations with performance portability, run-time flexibility, and clean embedding in higher level libraries and applications
 
 .. figure:: img/libCEED.png
-.. figure:: img/SolidsTwist.png
+.. figure:: img/SolidsTwist.jpeg
 .. figure:: img/FluidsVortices.png
 
 | `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_: Local Fourier Analysis of preconditioners for arbitrary, user provided weak forms of PDEs
