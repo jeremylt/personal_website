@@ -63,7 +63,14 @@ libCEED provides fast algebra for element-based discretizations, designed for pe
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
 .. figure:: img/SolidsTwist.jpeg
+    :alt: Solid mechanics example, twisting beam
+
+    Solid mechanics example of beam deforming under twisting force.
+
 .. figure:: img/FluidsVortices.png
+    :alt: Fluid dynamics example, cold air vortices
+
+    Fluid dynamics example of vortices from falling cold air bubble.
 
 `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
 ----------------------------------------------------------------
@@ -73,6 +80,9 @@ This analysis can be used to predict convergence rates and optimize parameters i
 This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.
 
 .. figure:: img/LFAToolkit.png
+    :alt: Local Fourier Analysis, p-multigrid on high-order element
+
+    Local Fourier Analysis of p-multigrid for high-order finite element.
 
 Hobbies
 ****************************************************************
