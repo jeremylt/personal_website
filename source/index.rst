@@ -59,7 +59,8 @@ Software
 `libCEED <https://www.github.com/CEED/libCEED>`_
 ----------------------------------------------------------------
 
-Fast algebra for efficient extensible discretizations with performance portability, run-time flexibility, and clean embedding in higher level libraries and applications
+libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, Python, Julia, and Rust.
+While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
 .. figure:: img/SolidsTwist.jpeg
 .. figure:: img/FluidsVortices.png
@@ -67,7 +68,9 @@ Fast algebra for efficient extensible discretizations with performance portabili
 `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
 ----------------------------------------------------------------
 
-Local Fourier Analysis of preconditioners for arbitrary, user provided weak forms of PDEs
+Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
+This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
+This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.
 
 .. figure:: img/LFAToolkit.png
 
