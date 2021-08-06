@@ -1,0 +1,7 @@
+#jeremy-luke-thompson h1:first-of-type {
+    text-align: center !important;
+}
+
+section section, p, .line-block {
+    padding-left: .5em;
+}
