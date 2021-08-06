@@ -5,3 +5,7 @@
 section section, p, .line-block {
     padding-left: .5em;
 }
+
+div.body {
+    min-width: 100px !important;
+}
