@@ -2,16 +2,44 @@
 Jeremy Luke Thompson
 ====================================
 
+.. |fa-email| raw:: html
+
+    <i class="fas fa-envelope"></i>
+
+.. |fa-github| raw:: html
+
+    <i class="fab fa-github"></i>
+
+.. |fa-gitlab| raw:: html
+
+    <i class="fab fa-gitlab"></i>
+
+.. |fa-linked| raw:: html
+
+    <i class="fab fa-linkedin"></i>
+
+.. |fa-fcc| raw:: html
+
+    <i class="fab fa-free-code-camp"></i>
+
+.. |fa-orcid| raw:: html
+
+    <i class="fab fa-orcid"></i>
+
+.. |fa-research| raw:: html
+
+    <i class="fab fa-researchgate"></i>
+
 Contact
 ====================================
 
-| jeremy (at) jeremylt.org
-| GitHub: `jeremylt <https://www.github.com/jeremylt>`_
-| GitLab: `jeremylt <https://www.gitlab.com/jeremylt>`_
-| Linkedin: `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
-| freeCodeCamp: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
-| ORCiD: `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| ResearchGate: `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
+| |fa-email| email:            jeremy (at) jeremylt.org
+| |fa-github| GitHub:          `jeremylt <https://www.github.com/jeremylt>`_
+| |fa-gitlab| GitLab:          `jeremylt <https://www.gitlab.com/jeremylt>`_
+| |fa-linked| Linkedin:        `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
+| |fa-fcc| freeCodeCamp:      `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
+| |fa-orcid| ORCiD:            `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-research| ResearchGate:  `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
 
 Background
 ====================================
