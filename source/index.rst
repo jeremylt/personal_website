@@ -80,5 +80,5 @@ Hobbies
 Dungeons & Dragons
 ----------------------------------------------------------------
 
-| |fa-d20| `Theaceae <https://eudicods.github.io/Theaceae/>`_: the land of tea, treasure, and adventure
-| |fa-d20| `Astral Sea <https://eudicods.github.io/AstralSea/>`_: the realm between realms, full of intrigue and mystery
+| |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_: the land of tea, treasure, and adventure
+| |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
