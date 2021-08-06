@@ -1,9 +1,9 @@
-#jeremy-luke-thompson h1:first-of-type {
+#icon-jeremy-l-thompson h1:first-of-type {
     text-align: center !important;
 }
 
 section section, p, .line-block {
-    padding-left: .5em;
+    padding: 0 .5em;
 }
 
 div.body {
