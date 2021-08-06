@@ -1,6 +1,10 @@
-################################################################
-Jeremy Luke Thompson
-################################################################
+################################################################################
+|icon| Jeremy L Thompson
+################################################################################
+
+.. |icon| image:: img/Icon.png
+    :height: 50px
+    :alt: JeremyLT icon
 
 .. |fa-email| raw:: html
 
@@ -35,18 +39,18 @@ Jeremy Luke Thompson
     <i class="fas fa-dice-d20"></i>
 
 Contact
-****************************************************************
+********************************************************************************
 
-| |fa-email| email:            jeremy (at) jeremylt.org
 | |fa-github| GitHub:          `jeremylt <https://www.github.com/jeremylt>`_
 | |fa-gitlab| GitLab:          `jeremylt <https://www.gitlab.com/jeremylt>`_
 | |fa-linked| Linkedin:        `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
 | |fa-fcc| freeCodeCamp:      `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
 | |fa-orcid| ORCiD:            `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
 | |fa-research| ResearchGate:  `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
+| |fa-email| email:            jeremy (at) jeremylt.org
 
 Background
-****************************************************************
+********************************************************************************
 
 I am a computational scientist, research software engineer, and programming and mathematics educator.
 My experience includes statistical analysis for the U.S. Air Force and performance portable software development as part of the Department of Energy Center for Efficient Exascale Discretizations.
@@ -54,10 +58,10 @@ I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, an
 I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and online at freeCodeCamp.
 
 Software
-****************************************************************
+********************************************************************************
 
 `libCEED <https://www.github.com/CEED/libCEED>`_
-----------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, Python, Julia, and Rust.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
@@ -73,7 +77,7 @@ While our focus is on high-order finite elements, the approach is mostly algebra
     Fluid dynamics example of vortices from falling cold air bubble.
 
 `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
-----------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
 This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
@@ -85,10 +89,10 @@ This package provides a toolkit for analyzing the performance of preconditioners
     Local Fourier Analysis of p-multigrid for high-order finite element.
 
 Hobbies
-****************************************************************
+********************************************************************************
 
 Dungeons & Dragons
-----------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 | |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_: the land of tea, treasure, and adventure
 | |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery

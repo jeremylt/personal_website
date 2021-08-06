@@ -54,3 +54,4 @@ html_css_files = ['css/custom.css']
 html_js_files = [
     'https://kit.fontawesome.com/4cef94740e.js',
 ]
+html_favicon = 'img/Icon.ico'
