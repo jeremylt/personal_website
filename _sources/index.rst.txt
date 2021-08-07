@@ -88,6 +88,12 @@ This package provides a toolkit for analyzing the performance of preconditioners
 
     Local Fourier Analysis of p-multigrid for high-order finite element.
 
+Publications and Presentations
+********************************************************************************
+
+A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_ and `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_.
+The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
+
 Hobbies
 ********************************************************************************
 
