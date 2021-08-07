@@ -2,6 +2,18 @@
     text-align: center !important;
 }
 
+#icon-jeremy-l-thompson h1:first-of-type a.reference {
+    border-bottom: none !important;
+}
+
+#icon-jeremy-l-thompson h1:first-of-type a.reference:hover {
+    border-bottom: none !important;
+}
+
+#icon-jeremy-l-thompson h1:first-of-type img {
+    margin-bottom: -11px;
+}
+
 section section, p, .line-block {
     padding: 0 .5em;
 }
