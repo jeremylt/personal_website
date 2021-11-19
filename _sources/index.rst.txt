@@ -66,15 +66,21 @@ Software
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, Python, Julia, and Rust.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
-.. figure:: img/SolidsTwist.jpeg
-    :alt: Solid mechanics example, twisting beam
-
-    Solid mechanics example of beam deforming under twisting force.
-
 .. figure:: img/FluidsVortices.png
     :alt: Fluid dynamics example, cold air vortices
 
     Fluid dynamics example of vortices from falling cold air bubble.
+
+`Ratel <https://gitlab.com/micromorph/ratel>`_
+--------------------------------------------------------------------------------
+
+Ratel provides solid mechanics solvers based on libCEED and PETSc.
+While the current library focuses on Elasticity formulations, with ongoing work in quasi-static and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
+
+.. figure:: img/SolidsTwist.jpeg
+    :alt: Solid mechanics example, twisting beam
+
+    Solid mechanics example of beam deforming under twisting force.
 
 `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
 --------------------------------------------------------------------------------
