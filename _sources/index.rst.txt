@@ -78,7 +78,7 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 `Ratel <https://gitlab.com/micromorph/ratel>`_
 --------------------------------------------------------------------------------
 
-Ratel provides solid mechanics solvers based on libCEED and PETSc.
+Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
 While the current library focuses on Elasticity formulations, with ongoing work in quasi-static and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
 
 .. figure:: img/SolidsTwist.jpeg
