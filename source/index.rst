@@ -45,13 +45,13 @@
 Contact
 ********************************************************************************
 
-| |fa-github| GitHub:          `jeremylt <https://www.github.com/jeremylt>`_
-| |fa-gitlab| GitLab:          `jeremylt <https://www.gitlab.com/jeremylt>`_
-| |fa-linked| Linkedin:        `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
-| |fa-fcc| freeCodeCamp:      `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
-| |fa-orcid| ORCiD:            `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-github|   GitHub:        `jeremylt <https://www.github.com/jeremylt>`_
+| |fa-gitlab|   GitLab:        `jeremylt <https://www.gitlab.com/jeremylt>`_
+| |fa-linked|   Linkedin:      `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
+| |fa-fcc|      freeCodeCamp:  `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
+| |fa-orcid|    ORCiD:         `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
 | |fa-research| ResearchGate:  `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
-| |fa-email| email:            jeremy (at) jeremylt.org
+| |fa-email|    email:          jeremy (at) jeremylt.org
 
 Background
 ********************************************************************************
@@ -110,11 +110,11 @@ Hobbies
 Dungeons & Dragons
 --------------------------------------------------------------------------------
 
-| |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_: the land of tea, treasure, and adventure
+| |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_:    the land of tea, treasure, and adventure
 | |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
 
 Advent of Code
 --------------------------------------------------------------------------------
 
-| |fa-rust| `2021 Repository <https://www.github.com/jeremylt/advent2021>`_: Deep sea trouble
-| |fa-rust| `2020 Repository <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
+| |fa-rust| `2021 <https://www.github.com/jeremylt/advent2021>`_: Deep sea trouble
+| |fa-rust| `2020 <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
