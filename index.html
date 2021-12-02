@@ -58,12 +58,12 @@ I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and
 <h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
 <section id="id5">
 <h3><a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, Python, Julia, and Rust.
+<p>libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, <a class="reference external" href="https://pypi.org/project/libceed/">Python</a>, <a class="reference external" href="https://juliapackages.com/p/libceed">Julia</a> , and <a class="reference external" href="https://lib.rs/crates/libceed">Rust</a>.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.</p>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id9">
 <img alt="Fluid dynamics example, cold air vortices" src="_images/FluidsVortices.png" />
 <figcaption>
-<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -71,10 +71,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 <h3><a class="reference external" href="https://gitlab.com/micromorph/ratel">Ratel</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Ratel provides solid mechanics solvers based on libCEED and PETSc.
 While the current library focuses on Elasticity formulations, with ongoing work in quasi-static and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="Solid mechanics example, twisting beam" src="_images/SolidsTwist.jpeg" />
 <figcaption>
-<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -83,10 +83,10 @@ While the current library focuses on Elasticity formulations, with ongoing work 
 <p>Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
 This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
 This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.</p>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id11">
 <img alt="Local Fourier Analysis, p-multigrid on high-order element" src="_images/LFAToolkit.png" />
 <figcaption>
-<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -105,6 +105,13 @@ The source and PDFs of my presentations can be found on <a class="reference exte
 <div class="line"><i class="fas fa-dice-d20"></i> <a class="reference external" href="https://astralsea.jeremylt.org/">Astral Sea</a>: the realm between realms, full of intrigue and mystery</div>
 </div>
 </section>
+<section id="advent-of-code">
+<h3>Advent of Code<a class="headerlink" href="#advent-of-code" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><i class="fab fa-rust"></i> <a class="reference external" href="https://www.github.com/jeremylt/advent2021">2021 Repository</a>: Deep sea trouble</div>
+<div class="line"><i class="fab fa-rust"></i> <a class="reference external" href="https://www.github.com/jeremylt/advent2020">2020 Repository</a>: Plane, train, boat</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -118,7 +125,7 @@ The source and PDFs of my presentations can be found on <a class="reference exte
       &copy;2021, Jeremy L Thompson.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

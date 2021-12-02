@@ -38,6 +38,10 @@
 
     <i class="fas fa-dice-d20"></i>
 
+.. |fa-rust| raw:: html
+
+    <i class="fab fa-rust"></i>
+
 Contact
 ********************************************************************************
 
@@ -63,7 +67,7 @@ Software
 `libCEED <https://www.github.com/CEED/libCEED>`_
 --------------------------------------------------------------------------------
 
-libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, Python, Julia, and Rust.
+libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
 .. figure:: img/FluidsVortices.png
@@ -108,3 +112,9 @@ Dungeons & Dragons
 
 | |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_: the land of tea, treasure, and adventure
 | |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
+
+Advent of Code
+--------------------------------------------------------------------------------
+
+| |fa-rust| `2021 Repository <https://www.github.com/jeremylt/advent2021>`_: Deep sea trouble
+| |fa-rust| `2020 Repository <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
