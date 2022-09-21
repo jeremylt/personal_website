@@ -79,10 +79,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 --------------------------------------------------------------------------------
 
 Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
-While the current library focuses on Elasticity formulations, with ongoing work in quasi-static and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
+While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
 
 .. figure:: img/SolidsTwist.jpeg
-    :alt: Solid mechanics example, twisting beam
+    :alt: Static elasticity example, twisting beam
 
     Solid mechanics example of beam deforming under twisting force.
 
