@@ -15,6 +15,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="https://kit.fontawesome.com/4cef94740e.js"></script>
     <link rel="shortcut icon" href="_static/Icon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -53,7 +54,7 @@
 <p>I am a research software engineer, applied mathematician, and programming and mathematics educator.
 My experience includes statistical analysis for the U.S. Air Force and performance portable software development as part of the Department of Energy Center for Efficient Exascale Discretizations.
 I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, as well as experience teaching several other languages.
-I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and online at freeCodeCamp.</p>
+I have taught at the U.S. Air Force Academy and University of Colorado at Boulder, and I am a mentor online at freeCodeCamp.</p>
 </section>
 <section id="software">
 <h2>Software<a class="headerlink" href="#software" title="Permalink to this heading">¶</a></h2>
@@ -61,10 +62,10 @@ I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and
 <h3><a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <p>libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, <a class="reference external" href="https://pypi.org/project/libceed/">Python</a>, <a class="reference external" href="https://juliapackages.com/p/libceed">Julia</a> , and <a class="reference external" href="https://lib.rs/crates/libceed">Rust</a>.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.</p>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id10">
 <img alt="Fluid dynamics example, cold air vortices" src="_images/FluidsVortices.png" />
 <figcaption>
-<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -72,10 +73,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 <h3><a class="reference external" href="https://gitlab.com/micromorph/ratel">Ratel</a><a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <p>Ratel provides solid mechanics solvers based on <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a> and <a class="reference external" href="https://petsc.org">PETSc</a>.
 While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.</p>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id11">
 <img alt="Static elasticity example, twisting beam" src="_images/SolidsTwist.jpeg" />
 <figcaption>
-<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -84,10 +85,10 @@ While the current library focuses on hyperelastic formulations, with ongoing wor
 <p>Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
 This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
 This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.</p>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id12">
 <img alt="Local Fourier Analysis, p-multigrid on high-order element" src="_images/LFAToolkit.png" />
 <figcaption>
-<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -109,7 +110,6 @@ The source and PDFs of my presentations can be found on <a class="reference exte
 <section id="advent-of-code">
 <h3>Advent of Code<a class="headerlink" href="#advent-of-code" title="Permalink to this heading">¶</a></h3>
 <div class="line-block">
-<div class="line"><i class="fab fa-rust"></i> <a class="reference external" href="https://www.github.com/jeremylt/advent2021">2021</a>: Deep sea trouble</div>
 <div class="line"><i class="fab fa-rust"></i> <a class="reference external" href="https://www.github.com/jeremylt/advent2020">2020</a>: Plane, train, boat</div>
 </div>
 </section>
@@ -126,7 +126,7 @@ The source and PDFs of my presentations can be found on <a class="reference exte
       &copy;2021, Jeremy L Thompson.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -59,7 +59,7 @@ Background
 I am a research software engineer, applied mathematician, and programming and mathematics educator.
 My experience includes statistical analysis for the U.S. Air Force and performance portable software development as part of the Department of Energy Center for Efficient Exascale Discretizations.
 I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, as well as experience teaching several other languages.
-I have taught at the U.S. Air Force Academy, University of Colorado Boulder, and online at freeCodeCamp.
+I have taught at the U.S. Air Force Academy and University of Colorado at Boulder, and I am a mentor online at freeCodeCamp.
 
 Software
 ********************************************************************************
@@ -116,5 +116,4 @@ Dungeons & Dragons
 Advent of Code
 --------------------------------------------------------------------------------
 
-| |fa-rust| `2021 <https://www.github.com/jeremylt/advent2021>`_: Deep sea trouble
 | |fa-rust| `2020 <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
