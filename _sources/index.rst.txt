@@ -117,3 +117,6 @@ Advent of Code
 --------------------------------------------------------------------------------
 
 | |fa-rust| `2020 <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
+
+.. raw:: html
+    <p style="color=white"><a rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a></p>
