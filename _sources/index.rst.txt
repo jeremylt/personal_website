@@ -42,6 +42,10 @@
 
     <i class="fab fa-rust"></i>
 
+.. |fa-mastadon| raw:: html
+
+    <i class="fab fa-mastodon"></i>
+
 Contact
 ********************************************************************************
 
@@ -56,8 +60,8 @@ Contact
 Background
 ********************************************************************************
 
-I am a research software engineer, applied mathematician, and programming and mathematics educator.
-My experience includes statistical analysis for the U.S. Air Force and performance portable software development as part of the Department of Energy Center for Efficient Exascale Discretizations.
+I am a research software engineer, applied mathematician, and STEM educator.
+My experience includes statistical analysis for the U.S. Air Force and performance portable software development for physics based simulations on exascale hardware as part of centers funded by grants from the Department of Energy.
 I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, as well as experience teaching several other languages.
 I have taught at the U.S. Air Force Academy and University of Colorado at Boulder, and I am a mentor online at freeCodeCamp.
 
@@ -104,6 +108,15 @@ Publications and Presentations
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_ and `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_.
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
+Social Media
+********************************************************************************
+
+| |fa-mastadon| |mastadon-link|
+
+.. |mastadon-link| raw:: html
+
+    <a class="reference external" rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a>
+
 Hobbies
 ********************************************************************************
 
@@ -117,7 +130,3 @@ Advent of Code
 --------------------------------------------------------------------------------
 
 | |fa-rust| `2020 <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
-
-.. raw:: html
-
-    <p style="color=white"><a rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a></p>
