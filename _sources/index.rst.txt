@@ -8,43 +8,51 @@
 
 .. |fa-email| raw:: html
 
-    <i class="fas fa-envelope"></i>
+    <i class="fa-fw fas fa-envelope"></i>
 
 .. |fa-github| raw:: html
 
-    <i class="fab fa-github"></i>
+    <i class="fa-fw fab fa-github"></i>
 
 .. |fa-gitlab| raw:: html
 
-    <i class="fab fa-gitlab"></i>
+    <i class="fa-fw fab fa-gitlab"></i>
 
 .. |fa-linked| raw:: html
 
-    <i class="fab fa-linkedin"></i>
+    <i class="fa-fw fab fa-linkedin"></i>
 
 .. |fa-fcc| raw:: html
 
-    <i class="fab fa-free-code-camp"></i>
+    <i class="fa-fw fab fa-free-code-camp"></i>
 
 .. |fa-orcid| raw:: html
 
-    <i class="fab fa-orcid"></i>
+    <i class="fa-fw fab fa-orcid"></i>
 
 .. |fa-research| raw:: html
 
-    <i class="fab fa-researchgate"></i>
+    <i class="fa-fw fab fa-researchgate"></i>
 
 .. |fa-d20| raw:: html
 
-    <i class="fas fa-dice-d20"></i>
+    <i class="fa-fw fas fa-dice-d20"></i>
+
+.. |fa-mech| raw:: html
+
+    <i class="fa-fw fa-solid fa-robot"></i>
 
 .. |fa-rust| raw:: html
 
-    <i class="fab fa-rust"></i>
+    <i class="fa-fw fab fa-rust"></i>
 
 .. |fa-mastadon| raw:: html
 
-    <i class="fab fa-mastodon"></i>
+    <i class="fa-fw fab fa-mastodon"></i>
+
+.. |fa-discord| raw:: html
+
+    <i class="fa-fw fa-brands fa-discord"></i>
 
 Contact
 ********************************************************************************
@@ -61,9 +69,9 @@ Background
 ********************************************************************************
 
 I am a research software engineer, applied mathematician, and STEM educator.
-My experience includes statistical analysis for the U.S. Air Force and performance portable software development for physics based simulations on exascale hardware as part of centers funded by grants from the Department of Energy.
-I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, as well as experience teaching several other languages.
-I have taught at the U.S. Air Force Academy and University of Colorado at Boulder, and I am a mentor online at freeCodeCamp.
+My experience includes `performance portable software development <https://ceed.exascaleproject.org/>`_ for `physics based simulations <https://micromorph.gitlab.io/>`_ on exascale hardware as part of centers funded by grants from the Department of Energy and statistical analysis for the `U.S. Air Force <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
+I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, among other languages.
+I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and University of `Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_.
 
 Software
 ********************************************************************************
@@ -111,14 +119,20 @@ The source and PDFs of my presentations can be found on `GitHub <https://github.
 Social Media
 ********************************************************************************
 
-| |fa-mastadon| |mastadon-link|
-
 .. |mastadon-link| raw:: html
 
     <a class="reference external" rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a>
 
+| |fa-discord|  `Discord <https://discordapp.com/users/513148167923957761>`_
+| |fa-mastadon| |mastadon-link|
+
 Hobbies
 ********************************************************************************
+
+BattleTech
+--------------------------------------------------------------------------------
+
+| |fa-mech| `Outworlds Wastes <https://github.com/Eudicods/outworlds-wastesg/>`_:    casual league framework
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
