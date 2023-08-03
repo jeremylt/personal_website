@@ -71,7 +71,7 @@ Background
 I am a research software engineer, applied mathematician, and STEM educator.
 My experience includes `performance portable software development <https://ceed.exascaleproject.org/>`_ for `physics based simulations <https://micromorph.gitlab.io/>`_ on exascale hardware as part of centers funded by grants from the Department of Energy and statistical analysis for the `U.S. Air Force <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
 I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, among other languages.
-I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and University of `Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_.
+I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and `University of Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_.
 
 Software
 ********************************************************************************
