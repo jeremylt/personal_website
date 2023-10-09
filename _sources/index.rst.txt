@@ -132,7 +132,7 @@ Hobbies
 BattleTech
 --------------------------------------------------------------------------------
 
-| |fa-mech| `Outworlds Wastes <https://github.com/Eudicods/outworlds-wastes>`_:    casual league framework
+| |fa-mech| `Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_:    casual league framework
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
