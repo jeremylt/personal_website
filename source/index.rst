@@ -2,9 +2,10 @@
 |icon| Jeremy L Thompson
 ################################################################################
 
-.. |icon| image:: img/Icon.png
-    :height: 50px
+.. |icon| image:: img/Icon.webp
     :alt: JeremyLT icon
+    :height: 50px
+    :width: 50px
 
 .. |fa-email| raw:: html
 
@@ -82,8 +83,10 @@ Software
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
-.. figure:: img/FluidsVortices.png
+.. figure:: img/FluidsVortices.webp
     :alt: Fluid dynamics example, cold air vortices
+    :height: 373px
+    :width: 749px
 
     Fluid dynamics example of vortices from falling cold air bubble.
 
@@ -93,8 +96,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
 While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
 
-.. figure:: img/SolidsTwist.jpeg
+.. figure:: img/SolidsTwist.webp
     :alt: Static elasticity example, twisting beam
+    :height: 371px
+    :width: 749px
 
     Solid mechanics example of beam deforming under twisting force.
 
@@ -105,8 +110,10 @@ Local Fourier Analysis is a tool commonly used in the analysis of multigrid and 
 This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
 This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.
 
-.. figure:: img/LFAToolkit.png
+.. figure:: img/LFAToolkit.webp
     :alt: Local Fourier Analysis, p-multigrid on high-order element
+    :height: 320px
+    :width: 321px
 
     Local Fourier Analysis of p-multigrid for high-order finite element.
 
