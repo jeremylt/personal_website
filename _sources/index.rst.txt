@@ -7,7 +7,6 @@
 
 .. |icon| image:: img/Icon.webp
     :alt: JeremyLT icon
-    :height: 50px
     :width: 50px
 
 .. |fa-email| raw:: html
@@ -88,7 +87,6 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 
 .. figure:: img/FluidsVortices.webp
     :alt: Fluid dynamics example, cold air vortices
-    :height: 373px
     :width: 748px
 
     Fluid dynamics example of vortices from falling cold air bubble.
@@ -101,7 +99,6 @@ While the current library focuses on hyperelastic formulations, with ongoing wor
 
 .. figure:: img/SolidsTwist.webp
     :alt: Static elasticity example, twisting beam
-    :height: 371px
     :width: 748px
 
     Solid mechanics example of beam deforming under twisting force.
@@ -115,7 +112,6 @@ This package provides a toolkit for analyzing the performance of preconditioners
 
 .. figure:: img/LFAToolkit.webp
     :alt: Local Fourier Analysis, p-multigrid on high-order element
-    :height: 320px
     :width: 320px
 
     Local Fourier Analysis of p-multigrid for high-order finite element.
