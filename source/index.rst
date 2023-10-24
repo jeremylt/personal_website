@@ -2,6 +2,9 @@
 |icon| Jeremy L Thompson
 ################################################################################
 
+.. meta::
+   :description: Jeremy L Thompson, personal webpage
+
 .. |icon| image:: img/Icon.webp
     :alt: JeremyLT icon
     :height: 50px

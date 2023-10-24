@@ -16,7 +16,7 @@
 
 # -- Project information -----------------------------------------------------
 project = ''
-copyright = '2021, Jeremy L Thompson'
+copyright = '2023, Jeremy L Thompson'
 author = 'Jeremy L Thompson'
 
 # -- General configuration ---------------------------------------------------
@@ -52,7 +52,5 @@ html_title = "Research Software Engineer"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['static']
 html_css_files = ['css/custom.css']
-html_js_files = [
-    'https://kit.fontawesome.com/4cef94740e.js',
-]
+html_js_files = ['https://kit.fontawesome.com/4cef94740e.js']
 html_favicon = 'img/Icon.ico'

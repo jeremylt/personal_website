@@ -22,6 +22,7 @@ jobs:
         run: |
           make html
           touch build/html/.nojekyll
+          sed -i -- 's/<meta name="viewport" content="width=device-width, initial-scale=0\.9, maximum-scale=0\.9" \/>/ /g' build/html/index.html
           echo 'jeremylt.org' > build/html/CNAME
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
