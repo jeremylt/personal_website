@@ -7,8 +7,8 @@
 <meta content="Jeremy L Thompson, personal webpage" name="description" />
 
     <title>Jeremy L Thompson &#8212; Research Software Engineer</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=022434c4" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=8697b950" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=d9c14bda" />
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
@@ -20,8 +20,9 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+
   
-   
+  
 
   </head><body>
   
@@ -40,9 +41,9 @@
 <div class="line"><i class="fa-fw fab fa-github"></i>   GitHub:        <a class="reference external" href="https://www.github.com/jeremylt">jeremylt</a></div>
 <div class="line"><i class="fa-fw fab fa-gitlab"></i>   GitLab:        <a class="reference external" href="https://www.gitlab.com/jeremylt">jeremylt</a></div>
 <div class="line"><i class="fa-fw fab fa-linkedin"></i>   Linkedin:      <a class="reference external" href="https://www.linkedin.com/in/jeremylt/">jeremylt</a></div>
-<div class="line"><i class="fa-fw fab fa-free-code-camp"></i>      freeCodeCamp:  <a class="reference external" href="https://forum.freecodecamp.org/u/jeremylt/summary">jeremylt</a></div>
 <div class="line"><i class="fa-fw fab fa-orcid"></i>    ORCiD:         <a class="reference external" href="https://orcid.org/0000-0003-2980-0899">0000-0003-2980-0899</a></div>
 <div class="line"><i class="fa-fw fab fa-researchgate"></i> ResearchGate:  <a class="reference external" href="https://www.researchgate.net/profile/Jeremy-Thompson">Jeremy Thompson</a></div>
+<div class="line"><i class="fa-fw fab fa-free-code-camp"></i>      freeCodeCamp:  <a class="reference external" href="https://forum.freecodecamp.org/u/jeremylt/summary">jeremylt</a></div>
 <div class="line"><i class="fa-fw fas fa-envelope"></i>    email:          jeremy (at) jeremylt.org</div>
 </div>
 </section>
@@ -59,10 +60,10 @@ I have taught at the <a class="reference external" href="https://www.usafa.edu/d
 <h3><a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a><a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <p>libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, <a class="reference external" href="https://pypi.org/project/libceed/">Python</a>, <a class="reference external" href="https://juliapackages.com/p/libceed">Julia</a> , and <a class="reference external" href="https://lib.rs/crates/libceed">Rust</a>.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.</p>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="_images/FluidsVortices.webp"><img alt="Fluid dynamics example, cold air vortices" src="_images/FluidsVortices.webp" style="width: 748px;" /></a>
 <figcaption>
-<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -70,10 +71,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 <h3><a class="reference external" href="https://gitlab.com/micromorph/ratel">Ratel</a><a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <p>Ratel provides solid mechanics solvers based on <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a> and <a class="reference external" href="https://petsc.org">PETSc</a>.
 While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.</p>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="_images/SolidsTwist.webp"><img alt="Static elasticity example, twisting beam" src="_images/SolidsTwist.webp" style="width: 748px;" /></a>
 <figcaption>
-<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -82,10 +83,10 @@ While the current library focuses on hyperelastic formulations, with ongoing wor
 <p>Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
 This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
 This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.</p>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="_images/LFAToolkit.webp"><img alt="Local Fourier Analysis, p-multigrid on high-order element" src="_images/LFAToolkit.webp" style="width: 320px;" /></a>
 <figcaption>
-<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -99,28 +100,24 @@ The source and PDFs of my presentations can be found on <a class="reference exte
 <h2>Social Media<a class="headerlink" href="#social-media" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line"><i class="fa-fw fa-brands fa-discord"></i>  <a class="reference external" href="https://discordapp.com/users/513148167923957761">Discord</a></div>
-<div class="line"><i class="fa-fw fab fa-mastodon"></i> <a class="reference external" rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a></div>
 </div>
 </section>
 <section id="hobbies">
 <h2>Hobbies<a class="headerlink" href="#hobbies" title="Link to this heading">¶</a></h2>
 <section id="battletech">
 <h3>BattleTech<a class="headerlink" href="#battletech" title="Link to this heading">¶</a></h3>
+<p>I enjoy playing BattleTech and run demos for the <a class="reference external" href="https://sites.google.com/view/catalystdemoteam/home">Catalyst Demo Team</a>.
+I’ve developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.</p>
 <div class="line-block">
-<div class="line"><i class="fa-fw fa-solid fa-robot"></i> <a class="reference external" href="https://outworlds-wastes.jeremylt.org">Outworlds Wastes</a>:    casual league framework</div>
+<div class="line"><i class="fa-fw fa-solid fa-robot"></i> <a class="reference external" href="https://outworlds-wastes.jeremylt.org">BattleTech: Outworlds Wastes</a>:    casual league framework</div>
 </div>
 </section>
 <section id="dungeons-dragons">
 <h3>Dungeons &amp; Dragons<a class="headerlink" href="#dungeons-dragons" title="Link to this heading">¶</a></h3>
+<p>The lore of my worlds for my home D&amp;D games can be found here:</p>
 <div class="line-block">
 <div class="line"><i class="fa-fw fas fa-dice-d20"></i> <a class="reference external" href="https://theaceae.jeremylt.org/">Theaceae</a>:    the land of tea, treasure, and adventure</div>
 <div class="line"><i class="fa-fw fas fa-dice-d20"></i> <a class="reference external" href="https://astralsea.jeremylt.org/">Astral Sea</a>: the realm between realms, full of intrigue and mystery</div>
-</div>
-</section>
-<section id="advent-of-code">
-<h3>Advent of Code<a class="headerlink" href="#advent-of-code" title="Link to this heading">¶</a></h3>
-<div class="line-block">
-<div class="line"><i class="fa-fw fab fa-rust"></i> <a class="reference external" href="https://www.github.com/jeremylt/advent2020">2020</a>: Plane, train, boat</div>
 </div>
 </section>
 </section>
@@ -133,11 +130,11 @@ The source and PDFs of my presentations can be found on <a class="reference exte
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2023, Jeremy L Thompson.
+      &#169;2023, Jeremy L Thompson.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
       <a href="_sources/index.rst.txt"
