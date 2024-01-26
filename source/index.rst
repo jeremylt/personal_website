@@ -45,14 +45,6 @@
 
     <i class="fa-fw fa-solid fa-robot"></i>
 
-.. |fa-rust| raw:: html
-
-    <i class="fa-fw fab fa-rust"></i>
-
-.. |fa-mastadon| raw:: html
-
-    <i class="fa-fw fab fa-mastodon"></i>
-
 .. |fa-discord| raw:: html
 
     <i class="fa-fw fa-brands fa-discord"></i>
@@ -63,9 +55,9 @@ Contact
 | |fa-github|   GitHub:        `jeremylt <https://www.github.com/jeremylt>`_
 | |fa-gitlab|   GitLab:        `jeremylt <https://www.gitlab.com/jeremylt>`_
 | |fa-linked|   Linkedin:      `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
-| |fa-fcc|      freeCodeCamp:  `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
 | |fa-orcid|    ORCiD:         `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
 | |fa-research| ResearchGate:  `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
+| |fa-fcc|      freeCodeCamp:  `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
 | |fa-email|    email:          jeremy (at) jeremylt.org
 
 Background
@@ -125,12 +117,7 @@ The source and PDFs of my presentations can be found on `GitHub <https://github.
 Social Media
 ********************************************************************************
 
-.. |mastadon-link| raw:: html
-
-    <a class="reference external" rel="me" href="https://social.freecodecamp.org/@jeremylt">Mastodon</a>
-
 | |fa-discord|  `Discord <https://discordapp.com/users/513148167923957761>`_
-| |fa-mastadon| |mastadon-link|
 
 Hobbies
 ********************************************************************************
@@ -138,15 +125,15 @@ Hobbies
 BattleTech
 --------------------------------------------------------------------------------
 
-| |fa-mech| `Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_:    casual league framework
+I enjoy playing BattleTech and run demos for the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
+I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
+
+| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_:    casual league framework
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
 
+The lore of my worlds for my home D&D games can be found here:
+
 | |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_:    the land of tea, treasure, and adventure
 | |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
-
-Advent of Code
---------------------------------------------------------------------------------
-
-| |fa-rust| `2020 <https://www.github.com/jeremylt/advent2020>`_: Plane, train, boat
