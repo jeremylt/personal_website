@@ -33,6 +33,10 @@
 
     <i class="fa-fw fab fa-orcid"></i>
 
+.. |fa-gscholar| raw:: html
+
+    <i class="fa-fw fa-brands fa-google-scholar"></i>
+
 .. |fa-research| raw:: html
 
     <i class="fa-fw fab fa-researchgate"></i>
@@ -52,12 +56,13 @@
 Contact
 ********************************************************************************
 
-| |fa-github|   GitHub:        `jeremylt <https://www.github.com/jeremylt>`_
-| |fa-gitlab|   GitLab:        `jeremylt <https://www.gitlab.com/jeremylt>`_
-| |fa-linked|   Linkedin:      `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
-| |fa-orcid|    ORCiD:         `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-research| ResearchGate:  `Jeremy Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
-| |fa-fcc|      freeCodeCamp:  `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
+| |fa-github|   GitHub:         `jeremylt <https://www.github.com/jeremylt>`_
+| |fa-gitlab|   GitLab:         `jeremylt <https://www.gitlab.com/jeremylt>`_
+| |fa-linked|   Linkedin:       `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
+| |fa-orcid|    Google Scholar: `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-gscholar| ORCiD:          `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_
+| |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
+| |fa-fcc|      freeCodeCamp:   `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
 | |fa-email|    email:          jeremy (at) jeremylt.org
 
 Background
