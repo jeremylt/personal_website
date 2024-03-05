@@ -56,13 +56,13 @@
 Contact
 ********************************************************************************
 
-| |fa-github|   GitHub:         `jeremylt <https://www.github.com/jeremylt>`_
-| |fa-gitlab|   GitLab:         `jeremylt <https://www.gitlab.com/jeremylt>`_
-| |fa-linked|   Linkedin:       `jeremylt <https://www.linkedin.com/in/jeremylt/>`_
+| |fa-github|   GitHub:         `jeremylt <https://www.github.com/jeremylt>`__
+| |fa-gitlab|   GitLab:         `jeremylt <https://www.gitlab.com/jeremylt>`__
+| |fa-linked|   Linkedin:       `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
+| |fa-fcc|      freeCodeCamp:   `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
 | |fa-orcid|    ORCiD:          `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_
-| |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
-| |fa-fcc|      freeCodeCamp:   `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`_
+| |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+| |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
 | |fa-email|    email:          jeremy (at) jeremylt.org
 
 Background
@@ -124,7 +124,7 @@ This package provides a toolkit for analyzing the performance of preconditioners
 Publications and Presentations
 ********************************************************************************
 
-A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_ and `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_.
+A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
 Social Media
@@ -146,7 +146,7 @@ I've developed a lightweight league framework with simplified logistics rules, B
 Dungeons & Dragons
 --------------------------------------------------------------------------------
 
-The lore of my worlds for my home D&D games can be found here:
+The lore for my home D&D games can be found here:
 
 | |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_:    the land of tea, treasure, and adventure
 | |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
