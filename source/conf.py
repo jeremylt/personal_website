@@ -52,5 +52,5 @@ html_title = "Research Software Engineer"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['static']
 html_css_files = ['css/custom.css']
-html_js_files = ['https://kit.fontawesome.com/4cef94740e.js']
+html_js_files = [('https://kit.fontawesome.com/4cef94740e.js', {'defer': 'defer'})]
 html_favicon = 'img/Icon.ico'
