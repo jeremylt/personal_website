@@ -79,6 +79,10 @@ Software
 `libCEED <https://www.github.com/CEED/libCEED>`_
 --------------------------------------------------------------------------------
 
+.. figure:: img/libCEEDLogo.webp
+    :alt: libCEED logo
+    :width: 250px
+
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
@@ -90,6 +94,10 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 
 `Ratel <https://gitlab.com/micromorph/ratel>`_
 --------------------------------------------------------------------------------
+
+.. figure:: img/RatelLogo.webp
+    :alt: Ratel logo
+    :width: 350px
 
 Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
 While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
