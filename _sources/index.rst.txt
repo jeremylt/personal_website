@@ -138,10 +138,15 @@ Hobbies
 BattleTech
 --------------------------------------------------------------------------------
 
+.. figure:: img/COBattleTechLogo.webp
+    :alt: Colorado BattleTech logo
+    :width: 250px
+
 I enjoy playing BattleTech and run demos for the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
 I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
+See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
 
-| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_:    casual league framework
+| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: casual league framework
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
