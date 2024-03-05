@@ -81,14 +81,14 @@ Software
 
 .. figure:: img/libCEEDLogo.webp
     :alt: libCEED logo
-    :scale: 100
+    :width: 225px
 
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
 .. figure:: img/FluidsVortices.webp
     :alt: Fluid dynamics example, cold air vortices
-    :scale: 100
+    :width: 748px
 
     Fluid dynamics example of vortices from falling cold air bubble.
 
@@ -97,14 +97,14 @@ While our focus is on high-order finite elements, the approach is mostly algebra
 
 .. figure:: img/RatelLogo.webp
     :alt: Ratel logo
-    :scale: 100
+    :width: 350px
 
 Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
 While the current library focuses on hyperelastic formulations, with ongoing work in quasistatic and fully dynamic examples, the long term goal of this project is to implement the material point method in a matrix free fashion.
 
 .. figure:: img/SolidsTwist.webp
     :alt: Static elasticity example, twisting beam
-    :scale: 100
+    :width: 748px
 
     Solid mechanics example of beam deforming under twisting force.
 
@@ -117,7 +117,7 @@ This package provides a toolkit for analyzing the performance of preconditioners
 
 .. figure:: img/LFAToolkit.webp
     :alt: Local Fourier Analysis, p-multigrid on high-order element
-    :scale: 100
+    :width: 320px
 
     Local Fourier Analysis of p-multigrid for high-order finite element.
 
