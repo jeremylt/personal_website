@@ -143,8 +143,13 @@ BattleTech
     :width: 250px
 
 I enjoy playing BattleTech and run demos for the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
-I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
+
+.. figure:: img/BattleTechOutworldsWastesLogo.webp
+    :alt: BattleTech Outworlds Wastes logo
+    :width: 250px
+
+I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 
 | |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: casual league framework
 
