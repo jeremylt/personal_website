@@ -86,12 +86,6 @@ Software
 libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
 While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
 
-.. figure:: img/FluidsVortices.webp
-    :alt: Fluid dynamics example, cold air vortices
-    :width: 748px
-
-    Fluid dynamics example of vortices from falling cold air bubble.
-
 `Ratel <https://gitlab.com/micromorph/ratel>`_
 --------------------------------------------------------------------------------
 
@@ -107,6 +101,18 @@ While the current library focuses on hyperelastic formulations, with ongoing wor
     :width: 748px
 
     Solid mechanics example of beam deforming under twisting force.
+
+`HONEE <https://gitlab.com/phypid/honee>`_
+--------------------------------------------------------------------------------
+
+HONEE provides fluid dynamics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
+The library solves the compressible Navier-Stokes equations in three dimensions using explicit or implicit time integration.
+
+.. figure:: img/FluidsVortices.webp
+    :alt: Fluid dynamics example, cold air vortices
+    :width: 748px
+
+    Fluid dynamics example of vortices from falling cold air bubble.
 
 `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
 --------------------------------------------------------------------------------
