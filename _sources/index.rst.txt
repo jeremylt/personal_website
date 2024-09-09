@@ -157,7 +157,7 @@ See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTe
 
 I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 
-| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: casual league framework
+| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: lightweight narrative league and event framework
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
