@@ -53,17 +53,33 @@
 
     <i class="fa-fw fa-brands fa-discord"></i>
 
+.. |fa-bluesky| raw:: html
+
+    <i class="fa-fw fa-brands fa-bluesky"></i>
+
+.. |fa-language| raw:: html
+
+    <i class="fa-fw fa-solid fa-language"></i>
+
 Contact
 ********************************************************************************
 
-| |fa-github|   GitHub:         `jeremylt <https://www.github.com/jeremylt>`__
 | |fa-gitlab|   GitLab:         `jeremylt <https://www.gitlab.com/jeremylt>`__
-| |fa-linked|   Linkedin:       `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
-| |fa-fcc|      freeCodeCamp:   `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
+| |fa-github|   GitHub:         `jeremylt <https://www.github.com/jeremylt>`__
+
 | |fa-orcid|    ORCiD:          `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
 | |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
+| |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+
+| |fa-fcc|      freeCodeCamp:   `jeremylt <https://www.freecodecamp.org/jeremylt>`__
+| |fa-fcc|      freeCodeCamp forum:   `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
+
+| |fa-bluesky|  Bluesky:  `jeremylt <https://bsky.app/profile/jeremylt.bsky.social>`_
+| |fa-discord|  Discord:  `jeremylt <https://discordapp.com/users/513148167923957761>`_
+| |fa-linked|   Linkedin: `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
+
 | |fa-email|    email:          jeremy (at) jeremylt.org
+| |fa-language| languages:      English (native), German (A2-B1)
 
 Background
 ********************************************************************************
@@ -133,11 +149,6 @@ Publications and Presentations
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
-Social Media
-********************************************************************************
-
-| |fa-discord|  `Discord <https://discordapp.com/users/513148167923957761>`_
-
 Hobbies
 ********************************************************************************
 
@@ -148,14 +159,15 @@ BattleTech
     :alt: Colorado BattleTech logo
     :width: 250px
 
-I enjoy playing BattleTech and run demos for the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
+I enjoy playing BattleTech and run demos as part of the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
+It is especially important to me for new players to feel safe and welcome joining this hobby space.
 See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
 
 .. figure:: img/BattleTechOutworldsWastesLogo.webp
     :alt: BattleTech Outworlds Wastes logo
     :width: 250px
 
-I've developed a lightweight league framework with simplified logistics rules, BattleTech: Outworlds Wastes.
+I've developed a lightweight narrative league and event framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 
 | |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: lightweight narrative league and event framework
 
