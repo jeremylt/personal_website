@@ -61,6 +61,11 @@
 
     <i class="fa-fw fa-solid fa-language"></i>
 
+.. |fa-book| raw:: html
+
+    <i class="fa-fw fa-solid fa-book"></i>
+
+
 Contact
 ********************************************************************************
 
@@ -81,13 +86,15 @@ Contact
 | |fa-email|    email:          jeremy (at) jeremylt.org
 | |fa-language| languages:      English (native), German (A2-B1)
 
+
 Background
 ********************************************************************************
 
 I am a research software engineer, applied mathematician, and STEM educator.
 My experience includes `performance portable software development <https://ceed.exascaleproject.org/>`_ for `physics based simulations <https://micromorph.gitlab.io/>`_ on exascale hardware as part of centers funded by grants from the Department of Energy and statistical analysis for the `U.S. Air Force <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
 I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, among other languages.
-I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and `University of Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_.
+I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and `University of Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_ and help moderate the `freeCodeCamp Discord <https://www.freecodecamp.org/news/freecodecamp-discord-chat-room-server/>`_ and `freeCodeCamp Forums <https://forum.freecodecamp.org/>`_.
+
 
 Software
 ********************************************************************************
@@ -143,11 +150,13 @@ This package provides a toolkit for analyzing the performance of preconditioners
 
     Local Fourier Analysis of p-multigrid for high-order finite element.
 
+
 Publications and Presentations
 ********************************************************************************
 
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
+
 
 Hobbies
 ********************************************************************************
@@ -162,6 +171,7 @@ BattleTech
 I enjoy playing BattleTech and run demos as part of the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
 It is especially important to me for new players to feel safe and welcome joining this hobby space.
 See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
+I also help moderate the `Catalyst Game Labs Discord <https://discord.com/invite/catalystgamelabs>`_ and `Colorado BattleTech Discord <https://discord.gg/NPXEmTJBrZ>`_ online communities.
 
 .. figure:: img/BattleTechOutworldsWastesLogo.webp
     :alt: BattleTech Outworlds Wastes logo
@@ -170,6 +180,14 @@ See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTe
 I've developed a lightweight narrative league and event framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 
 | |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: lightweight narrative league and event framework
+
+.. figure:: img/MercenarysPrideLogo.webp
+    :alt: Mercenary's Pride logo
+    :width: 250px
+
+Mercenary's Pride is a fun project retelling Jane Austin's Pride and Prejudice as a series of BattleTech scenarios and comm logs.
+
+| |fa-book| `Mercenary's Pride <https://mercenarys-pride.jeremylt.org/>`_: retelling Pride and Prejudice in BattleTech
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
