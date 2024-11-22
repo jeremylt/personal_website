@@ -72,16 +72,16 @@ Contact
 | |fa-gitlab|   GitLab:             `jeremylt <https://www.gitlab.com/jeremylt>`__
 | |fa-github|   GitHub:             `jeremylt <https://www.github.com/jeremylt>`__
 
-| |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
-| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+| |fa-bluesky|  Bluesky:            `jeremylt <https://bsky.app/profile/jeremylt.bsky.social>`_
+| |fa-discord|  Discord:            `jeremylt <https://discordapp.com/users/513148167923957761>`_
+| |fa-linked|   LinkedIn:           `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
 
 | |fa-fcc|      freeCodeCamp:       `jeremylt <https://www.freecodecamp.org/jeremylt>`__
 | |fa-fcc|      freeCodeCamp forum: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
 
-| |fa-bluesky|  Bluesky:            `jeremylt <https://bsky.app/profile/jeremylt.bsky.social>`_
-| |fa-discord|  Discord:            `jeremylt <https://discordapp.com/users/513148167923957761>`_
-| |fa-linked|   LinkedIn:           `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
+| |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
+| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
 
 | |fa-email|    email:              jeremy (at) jeremylt.org
 | |fa-language| languages:          English (native), German (A2-B1)
