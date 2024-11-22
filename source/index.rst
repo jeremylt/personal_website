@@ -81,7 +81,7 @@ Contact
 
 | |fa-bluesky|  Bluesky:  `jeremylt <https://bsky.app/profile/jeremylt.bsky.social>`_
 | |fa-discord|  Discord:  `jeremylt <https://discordapp.com/users/513148167923957761>`_
-| |fa-linked|   Linkedin: `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
+| |fa-linked|   LinkedIn: `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
 
 | |fa-email|    email:          jeremy (at) jeremylt.org
 | |fa-language| languages:      English (native), German (A2-B1)
