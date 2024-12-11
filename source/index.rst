@@ -13,6 +13,10 @@
 
     <i class="fa-fw fas fa-envelope"></i>
 
+.. |fa-pronouns| raw:: html
+
+    <i class="fa-fw fa-solid fa-user"></i>
+
 .. |fa-github| raw:: html
 
     <i class="fa-fw fab fa-github"></i>
@@ -83,7 +87,8 @@ Contact
 | |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
 | |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
 
-| |fa-email|    email:              jeremy (at) jeremylt.org
+| |fa-pronouns| pronouns:           he/they
+| |fa-email|    email:              `jeremy (at) jeremylt.org <mailto:jeremy@jeremylt.org>`__
 | |fa-language| languages:          English (native), German (A2-B1)
 
 
