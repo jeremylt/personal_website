@@ -16,7 +16,7 @@
 
 # -- Project information -----------------------------------------------------
 project = ''
-copyright = '2023, Jeremy L Thompson'
+copyright = '2025, Jeremy L Thompson'
 author = 'Jeremy L Thompson'
 
 # -- General configuration ---------------------------------------------------
