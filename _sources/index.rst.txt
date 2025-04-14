@@ -95,10 +95,15 @@ Contact
 Background
 ********************************************************************************
 
-I am a research software engineer, applied mathematician, and STEM educator.
-My experience includes `performance portable software development <https://ceed.exascaleproject.org/>`_ for `physics based simulations <https://micromorph.gitlab.io/>`_ on exascale hardware as part of centers funded by grants from the Department of Energy and statistical analysis for the `U.S. Air Force <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
-I have professional experience in C, Rust, Python, C++, CUDA, Julia, Fortran, and R, among other languages.
-I have taught at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_ and `University of Colorado at Boulder <https://www.colorado.edu/amath/>`_, and I am a mentor online at `freeCodeCamp <https://www.freecodecamp.org/>`_ and help moderate the `freeCodeCamp Discord <https://www.freecodecamp.org/news/freecodecamp-discord-chat-room-server/>`_ and `freeCodeCamp Forums <https://forum.freecodecamp.org/>`_.
+Jeremy L Thompson is a Research Software Engineer in the department of Computer Science at the University of Colorado Boulder.
+He develops the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries as part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_.
+After graduating from the US Air Force Academy, he served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
+He was named the Air Combat Command Junior Military Scientist of the Year for his work helping restore US Strategic Command's confidence in the US Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
+After this assignment, he joined the faculty at the `US Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where he taught math courses for engineering and computer science students.
+He was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
+He completed his PhD in applied mathematics from the University of Colorado Boulder in 2021.
+His research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
+He is a mentor and community leader online at `freeCodeCamp <https://www.freecodecamp.org/>`_, a free and open source resource for learning programming and web development.
 
 
 Software
