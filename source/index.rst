@@ -45,14 +45,6 @@
 
     <i class="fa-fw fab fa-researchgate"></i>
 
-.. |fa-d20| raw:: html
-
-    <i class="fa-fw fas fa-dice-d20"></i>
-
-.. |fa-mech| raw:: html
-
-    <i class="fa-fw fa-solid fa-robot"></i>
-
 .. |fa-discord| raw:: html
 
     <i class="fa-fw fa-brands fa-discord"></i>
@@ -65,9 +57,9 @@
 
     <i class="fa-fw fa-solid fa-language"></i>
 
-.. |fa-book| raw:: html
+.. |fa-file| raw:: html
 
-    <i class="fa-fw fa-solid fa-book"></i>
+    <i class="fa fa-fw fa-file-text"></i>
 
 
 Contact
@@ -83,10 +75,6 @@ Contact
 | |fa-fcc|      freeCodeCamp:       `jeremylt <https://www.freecodecamp.org/jeremylt>`__
 | |fa-fcc|      freeCodeCamp forum: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
 
-| |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
-| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
-
 | |fa-pronouns| pronouns:           he/they
 | |fa-email|    email:              `jeremy (at) jeremylt.org <mailto:jeremy@jeremylt.org>`__
 | |fa-language| languages:          English (native), German (A2-B1)
@@ -95,10 +83,17 @@ Contact
 Background
 ********************************************************************************
 
+| |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
+| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+
+| |fa-file| CV:     `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
+| |fa-file| Resume: `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_ 
+
 Jeremy L Thompson is a Research Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 He develops the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries as part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_.
 After graduating from the US Air Force Academy, he served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
-He was named the Air Combat Command Junior Military Scientist of the Year for his work helping restore US Strategic Command's confidence in the US Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
+He was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for his work helping restore US Strategic Command's confidence in the US Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
 After this assignment, he joined the faculty at the `US Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where he taught math courses for engineering and computer science students.
 He was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
 He completed his PhD in applied mathematics from the University of Colorado Boulder in 2021.
@@ -106,104 +101,12 @@ His research interests include preconditioning for high order finite element-lik
 He is a mentor and community leader online at `freeCodeCamp <https://www.freecodecamp.org/>`_, a free and open source resource for learning programming and web development.
 
 
-Software
+Website Contents
 ********************************************************************************
 
-`libCEED <https://www.github.com/CEED/libCEED>`_
---------------------------------------------------------------------------------
+.. toctree::
+   :maxdepth: 1
 
-.. figure:: img/libCEEDLogo.webp
-    :alt: libCEED logo
-    :width: 225px
-
-libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, `Python <https://pypi.org/project/libceed/>`_, `Julia <https://juliapackages.com/p/libceed>`_ , and `Rust <https://lib.rs/crates/libceed>`_.
-While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.
-
-`Ratel <https://gitlab.com/micromorph/ratel>`_
---------------------------------------------------------------------------------
-
-.. figure:: img/RatelLogo.webp
-    :alt: Ratel logo
-    :width: 350px
-
-Ratel provides solid mechanics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
-The library provides hyperelastic, plasticity, damage, and poroelasticity formulations, with static, quasistatic, and fully dynamic examples.
-Most examples use high order finite elements, but Ratel also provides Material Point Method (MPM) in a matrix free fashion many of the material models.
-
-.. figure:: img/SolidsTwist.webp
-    :alt: Static elasticity example, twisting beam
-    :width: 748px
-
-    Solid mechanics example of beam deforming under twisting force.
-
-`HONEE <https://gitlab.com/phypid/honee>`_
---------------------------------------------------------------------------------
-
-HONEE provides fluid dynamics solvers based on `libCEED <https://www.github.com/CEED/libCEED>`_ and `PETSc <https://petsc.org>`_.
-The library solves the compressible Navier-Stokes equations in three dimensions using explicit or implicit time integration.
-
-.. figure:: img/FluidsVortices.webp
-    :alt: Fluid dynamics example, cold air vortices
-    :width: 748px
-
-    Fluid dynamics example of vortices from falling cold air bubble.
-
-`LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_
---------------------------------------------------------------------------------
-
-Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
-This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
-This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.
-
-.. figure:: img/LFAToolkit.webp
-    :alt: Local Fourier Analysis, p-multigrid on high-order element
-    :width: 320px
-
-    Local Fourier Analysis of p-multigrid for high-order finite element.
-
-
-Publications and Presentations
-********************************************************************************
-
-A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
-The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
-
-
-Hobbies
-********************************************************************************
-
-BattleTech
---------------------------------------------------------------------------------
-
-.. figure:: img/COBattleTechLogo.webp
-    :alt: Colorado BattleTech logo
-    :width: 250px
-
-I enjoy playing BattleTech and run demos as part of the `Catalyst Demo Team <https://sites.google.com/view/catalystdemoteam/home>`_.
-It is especially important to me for new players to feel safe and welcome joining this hobby space.
-See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
-I also help moderate the `Catalyst Game Labs Discord <https://discord.com/invite/catalystgamelabs>`_ community.
-
-.. figure:: img/BattleTechOutworldsWastesLogo.webp
-    :alt: BattleTech Outworlds Wastes logo
-    :width: 250px
-
-I've developed a lightweight narrative league and event framework with simplified logistics rules, BattleTech: Outworlds Wastes.
-
-| |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: lightweight narrative league and event framework
-
-.. figure:: img/MercenarysPrideLogo.webp
-    :alt: Mercenary's Pride logo
-    :width: 250px
-
-Mercenary's Pride is a fun project retelling Jane Austin's Pride and Prejudice as a series of BattleTech scenarios and comm logs.
-
-| |fa-book| `Mercenary's Pride <https://mercenarys-pride.jeremylt.org/>`_: retelling Pride and Prejudice in BattleTech
-
-Dungeons & Dragons
---------------------------------------------------------------------------------
-
-The lore for my home D&D games can be found here:
-
-| |fa-d20| `Theaceae <https://theaceae.jeremylt.org/>`_:    the land of tea, treasure, and adventure
-| |fa-d20| `Astral Sea <https://astralsea.jeremylt.org/>`_: the realm between realms, full of intrigue and mystery
+   software.rst
+   publications.rst
+   hobbies.rst
