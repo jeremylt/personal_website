@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Software &#8212; Research Software Engineer</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d5a349cf" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=d9c14bda" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script defer="defer" src="https://kit.fontawesome.com/4cef94740e.js"></script>
+    <link rel="icon" href="_static/Icon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Publications" href="publications.html" />
+    <link rel="prev" title="Jeremy L Thompson" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="software">
+<h1>Software<a class="headerlink" href="#software" title="Link to this heading">¶</a></h1>
+<div class="line-block">
+<div class="line"><i class="fa-fw fab fa-gitlab"></i>   GitLab:             <a class="reference external" href="https://www.gitlab.com/jeremylt">jeremylt</a></div>
+<div class="line"><i class="fa-fw fab fa-github"></i>   GitHub:             <a class="reference external" href="https://www.github.com/jeremylt">jeremylt</a></div>
+</div>
+<section id="id1">
+<h2><a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a><a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/libCEEDLogo.webp"><img alt="libCEED logo" src="_images/libCEEDLogo.webp" style="width: 225px;" />
+</a>
+</figure>
+<p>libCEED provides fast algebra for element-based discretizations, designed for performance portability, run-time flexibility, and clean embedding in higher level libraries and applications. It offers a C99 interface as well as bindings for Fortran, <a class="reference external" href="https://pypi.org/project/libceed/">Python</a>, <a class="reference external" href="https://juliapackages.com/p/libceed">Julia</a> , and <a class="reference external" href="https://lib.rs/crates/libceed">Rust</a>.
+While our focus is on high-order finite elements, the approach is mostly algebraic and thus applicable to other discretizations in factored form.</p>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://gitlab.com/micromorph/ratel">Ratel</a><a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/RatelLogo.webp"><img alt="Ratel logo" src="_images/RatelLogo.webp" style="width: 350px;" />
+</a>
+</figure>
+<p>Ratel provides solid mechanics solvers based on <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a> and <a class="reference external" href="https://petsc.org">PETSc</a>.
+The library provides hyperelastic, plasticity, damage, and poroelasticity formulations, with static, quasistatic, and fully dynamic examples.
+Most examples use high order finite elements, but Ratel also provides Material Point Method (MPM) in a matrix free fashion many of the material models.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="_images/SolidsTwist.webp"><img alt="Static elasticity example, twisting beam" src="_images/SolidsTwist.webp" style="width: 748px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Solid mechanics example of beam deforming under twisting force.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id4">
+<h2><a class="reference external" href="https://gitlab.com/phypid/honee">HONEE</a><a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>HONEE provides fluid dynamics solvers based on <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED</a> and <a class="reference external" href="https://petsc.org">PETSc</a>.
+The library solves the compressible Navier-Stokes equations in three dimensions using explicit or implicit time integration.</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="_images/FluidsVortices.webp"><img alt="Fluid dynamics example, cold air vortices" src="_images/FluidsVortices.webp" style="width: 748px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Fluid dynamics example of vortices from falling cold air bubble.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id7">
+<h2><a class="reference external" href="https://www.github.com/jeremylt/LFAToolkit.jl">LFAToolkit.jl</a><a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<p>Local Fourier Analysis is a tool commonly used in the analysis of multigrid and multilevel algorithms for solving partial differential equations via finite element or finite difference methods.
+This analysis can be used to predict convergence rates and optimize parameters in multilevel methods and preconditioners.
+This package provides a toolkit for analyzing the performance of preconditioners for arbitrary, user provided weak forms of partial differential equations.</p>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="_images/LFAToolkit.webp"><img alt="Local Fourier Analysis, p-multigrid on high-order element" src="_images/LFAToolkit.webp" style="width: 320px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Local Fourier Analysis of p-multigrid for high-order finite element.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Jeremy L Thompson.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/software.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
