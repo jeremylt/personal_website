@@ -96,7 +96,7 @@ After graduating from the US Air Force Academy, he served as an advanced weapon 
 He was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for his work helping restore US Strategic Command's confidence in the US Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
 After this assignment, he joined the faculty at the `US Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where he taught math courses for engineering and computer science students.
 He was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
-He completed his PhD in applied mathematics from the University of Colorado Boulder in 2021.
+He completed his `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the `University of Colorado Boulder <https://www.colorado.edu/amath>`_ in 2021.
 His research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
 He is a mentor and community leader online at `freeCodeCamp <https://www.freecodecamp.org/>`_, a free and open source resource for learning programming and web development.
 

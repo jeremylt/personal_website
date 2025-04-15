@@ -27,4 +27,4 @@ Publications
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
-My entire PhD dissertation is also archived on `GitHub <https://github.com/jeremylt/dissertation>`_ and `ProQuest <https://github.com/jeremylt/dissertation>`_.
+My entire PhD dissertation is also archived on `GitHub <https://github.com/jeremylt/dissertation>`_ and `ProQuest <https://www.proquest.com/docview/2572576599>`_.
