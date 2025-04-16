@@ -24,7 +24,7 @@ author = 'Jeremy L Thompson'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinxcontrib.bibtex']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['templates']
@@ -33,6 +33,9 @@ templates_path = ['templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
+
+# sphinxcontrib-bibtex 2.0 requires listing all bibtex files here
+bibtex_bibfiles = ['references.bib']
 
 # -- Options for HTML output -------------------------------------------------
 
