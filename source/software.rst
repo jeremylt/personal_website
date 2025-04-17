@@ -9,8 +9,8 @@ Software
 
     <i class="fa-fw fab fa-gitlab"></i>
 
-| |fa-gitlab|   GitLab:             `jeremylt <https://www.gitlab.com/jeremylt>`__
-| |fa-github|   GitHub:             `jeremylt <https://www.github.com/jeremylt>`__
+| |fa-gitlab| GitLab: `jeremylt <https://www.gitlab.com/jeremylt>`__
+| |fa-github| GitHub: `jeremylt <https://www.github.com/jeremylt>`__
 
 
 `libCEED <https://www.github.com/CEED/libCEED>`_
