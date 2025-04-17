@@ -92,9 +92,9 @@ Background
 
 I am a Research Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 I develop the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries as part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_.
-After graduating from the US Air Force Academy, I served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
-I was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for my work helping restore US Strategic Command's confidence in the US Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
-After this assignment, I joined the faculty at the `US Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where I taught math courses for engineering and computer science students.
+After graduating from the U.S. Air Force Academy, I served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
+I was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for my work helping restore U.S. Strategic Command's confidence in the U.S. Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
+After this assignment, I joined the faculty at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where I taught math courses for engineering and computer science students.
 I was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
 I completed my `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the `University of Colorado Boulder <https://www.colorado.edu/amath>`_ in 2021.
 My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
