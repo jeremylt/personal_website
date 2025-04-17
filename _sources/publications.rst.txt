@@ -1,4 +1,4 @@
-Publications
+Publications and Presentations
 ********************************************************************************
 
 .. |fa-orcid| raw:: html
@@ -17,9 +17,9 @@ Publications
 
     <i class="fa fa-fw fa-file-text"></i>
 
-| |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
-| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+| |fa-orcid|    ORCiD:          `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
+| |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
+| |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
 
 | |fa-file| CV:     `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume: `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_ 

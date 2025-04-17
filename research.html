@@ -18,7 +18,7 @@
     <link rel="icon" href="_static/Icon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Publications" href="publications.html" />
+    <link rel="next" title="Teaching Statement" href="teaching.html" />
     <link rel="prev" title="Software" href="software.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -51,170 +51,165 @@ To this end, my research efforts are centered around building open source softwa
 <section id="high-order-matrix-free">
 <h2>High-Order Matrix-Free<a class="headerlink" href="#high-order-matrix-free" title="Link to this heading">¶</a></h2>
 <p>Two key performance metrics for HPC hardware are Floating Point Operations per Second (FLOPs) and memory and network bandwidth.
-FLOPs is the more widely popularized of these two metrics, but memory and network bandwidth is a common bottleneck in HPC application codes.</p>
-<p>The ratio of FLOPs to memory bandwidth required for high-order matrix-free finite element-like operators on elements with tensor-product bases is closer to the capabilities of modern HPC hardware than the ratio for assembled sparse matrices.
-While generation of high quality hexahedral meshes for tensor-product finite elements is a time intensive process when compared to the generation of simplex meshes, it is possible to generate meshes comprised predominately, but not necessarily exclusively, of high quality hexahedral elements with little additional effort when compared to the creation of a simplex mesh.
-Thus, the performance benefits of high-order matrix-free finite-like operators with tensor-product structure can be realized without the substantial additional effort required to generate a mesh exclusively composed of high quality hexahedral elements.</p>
-<p>Over the last thirty years, the maximum FLOP rates for new HPC hardware have been increasing more rapidly than memory bandwidth and network bandwidth, for both CPUs and GPUs.
-As discussed in McCalpin’s Supercomputing 2016 invited talk <span id="id1">[<a class="reference internal" href="#id30" title="John D McCalpin. Memory bandwidth and system balance in HPC systems. Invited talk, Supercomputing, 2016.">McC16</a>]</span>, maximum FLOPs per socket have been increasing at a rate of 50-60% per year while memory bandwidth has only been increasing at a rate of approximately 23% per year and network bandwidth has only been increasing at a rate of approximately 20% per year.
-This means that FLOPs have improved approximately twice as much as memory and network bandwidth over the last thirty years.
-This problem is exacerbated by network latency, which is decreasing at a rate of approximately 20% per year, and memory latency, which is <em>increasing</em> at a rate of approximately 20% per year.
-Additionally, communication between the host and device for GPU based systems introduces yet another source of communication latency.</p>
-<p>The Top 500 <span id="id2">[<a class="reference internal" href="#id31" title="Hans Meuer, Erich Strohmaier, Jack Dongarra, Horst Simon, and Martin Meuer. Top 500 list. 2020. URL: http://www.top500.org/.">MSD+20</a>]</span> list tracks the 500 supercomputers with the highest maximum FLOPs, as measured by High-Performance Linpack (HPL) <span id="id3">[<a class="reference internal" href="#id32" title="Antoine Petitet, R Clint Whaley, Jack Dongarra, and Andrew Cleary. HPL-a portable implementation of the high-performance Linpack benchmark for distributed-memory computers. 2004. URL: http://www.netlib.org/benchmark/hpl/.">PWDC04</a>]</span>.
-HPL measures the system performance when solving random dense linear systems in double precision via LU factorization and provides the maximum achievable FLOPs for the machine.
-The machines on the Top 500 list have exascale FLOP rates, <span class="math notranslate nohighlight">\(10^{18}\)</span> FLOPs.</p>
-<p>Other benchmarks, such as High-Performance Geometric Multigrid (HPGMG) <span id="id4">[<a class="reference internal" href="#id34" title="Mark Adams, Jed Brown, John Shalf, Brian Straalen, Erich Strohmaier, and Samuel Williams. HPGMG 1.0: a benchmark for ranking high performance computing systems. LBNL Technical Report, pages, 05 2014.">ABS+14</a>]</span> and High-Performance Conjugate Gradient (HPCG) <span id="id5">[<a class="reference internal" href="#id33" title="Jack Dongarra, Michael A Heroux, and Piotr Luszczek. High-performance conjugate-gradient benchmark. International Journal of High Performance Computing Applications, 30(1):3–10, 2016.">DHL16</a>]</span>, measure performance based upon solving a more complex benchmark problem.
-The Top 500 <span id="id6">[<a class="reference internal" href="#id31" title="Hans Meuer, Erich Strohmaier, Jack Dongarra, Horst Simon, and Martin Meuer. Top 500 list. 2020. URL: http://www.top500.org/.">MSD+20</a>]</span> HPCG list achieves far lower maximum FLOP rates than the maximum FLOP rates seen in the Top 500 HPL list.</p>
-<p>The disparity between the FLOPs achieved in benchmarks such as HPGMG and HPCG and the maximum FLOPs measured by HPL is partially explained by the growing gap between FLOPs and memory and network bandwidth on modern HPC hardware.
-This is particularly noticeable on many GPU based HPC machines.
-Using high-order matrix-free finite element-like operators for simulations on meshes populated predominately with elements with tensor-product bases allows scientific simulations to run closer to the maximum achievable FLOPs for the machine.</p>
+FLOPs is the more widely popularized of these two metrics, but memory and network bandwidth is a common bottleneck in HPC application codes.
+As discussed in McCalpin’s Supercomputing 2016 invited talk <span id="id1">[<a class="reference internal" href="#id29" title="John D McCalpin. Memory bandwidth and system balance in HPC systems. Invited talk, Supercomputing, 2016.">McC16</a>]</span>, the maximum FLOP rates for new HPC hardware have improved approximately twice as much as memory and network bandwidth, for both CPUs and GPUs.
+The ratio of FLOPs to memory bandwidth required for high-order matrix-free finite element-like operators on elements with tensor-product bases is closer to the capabilities of modern HPC hardware.</p>
+<p>The maximum FLOP rate given by the Top 500 <span id="id2">[<a class="reference internal" href="#id30" title="Hans Meuer, Erich Strohmaier, Jack Dongarra, Horst Simon, and Martin Meuer. Top 500 list. 2020. URL: http://www.top500.org/.">MSD+20</a>]</span> list is measured by High-Performance Linpack (HPL) <span id="id3">[<a class="reference internal" href="#id31" title="Antoine Petitet, R Clint Whaley, Jack Dongarra, and Andrew Cleary. HPL-a portable implementation of the high-performance Linpack benchmark for distributed-memory computers. 2004. URL: http://www.netlib.org/benchmark/hpl/.">PWDC04</a>]</span>.
+High-Performance Geometric Multigrid (HPGMG) <span id="id4">[<a class="reference internal" href="#id33" title="Mark Adams, Jed Brown, John Shalf, Brian Straalen, Erich Strohmaier, and Samuel Williams. HPGMG 1.0: a benchmark for ranking high performance computing systems. LBNL Technical Report, pages, 05 2014.">ABS+14</a>]</span> and High-Performance Conjugate Gradient (HPCG) <span id="id5">[<a class="reference internal" href="#id32" title="Jack Dongarra, Michael A Heroux, and Piotr Luszczek. High-performance conjugate-gradient benchmark. International Journal of High Performance Computing Applications, 30(1):3–10, 2016.">DHL16</a>]</span> measure performance with a benchmark problem that is more representative of scientific simulations.
+The disparity between the FLOPs achieved in HPGMG and HPCG using assembled sparse matrices and the maximum FLOPs measured by HPL highlights the need for matrix-free implementations.</p>
 <p>High-order finite elements also offer high accuracy and exponential convergence for sufficiently smooth problems.
-Often exponential convergence is not required to meet engineering tolerances and the smoothness of the solution may prevent exponential convergence from being achieved in practical problems.
-However, high-order finite elements will still offer convergence that is no worse than the convergence on a comparable low-order mesh with a larger number of elements.
-For these problems, high-order finite elements implemented in a matrix-free fashion still offer the memory bandwidth and FLOPs benefits detailed above.
-For further discussion of the convergence of high-order methods, see <span id="id7">[<a class="reference internal" href="#id99" title="Ivo Babuška and Manil Suri. The p and h-p versions of the finite element method, basic principles and properties. SIAM review, 36(4):578–632, 1994.">BabuvskaS94</a>, <a class="reference internal" href="#id98" title="Ivo Babuška and Barna Szabo. On the rates of convergence of the finite element method. International Journal for Numerical Methods in Engineering, 18(3):323–341, 1982.">BabuvskaS82</a>, <a class="reference internal" href="#id100" title="B Guo and Ivo Babuška. The hp version of the finite element method. Computational Mechanics, 1(1):21–41, 1986.">GBabuvska86</a>]</span>, among others.</p>
-<p>Although the benefits of high-order matrix-free implementations are well understood on modern HPC hardware, a significant amount of software development and research may be required to for a specific model needed in a simulation.
-Direct solvers like LU factorization are no longer available and iterative solvers with appropriate preconditioners are required.</p>
+While exponential convergence is not required to meet engineering tolerances and the smoothness of the solution for practical problems may prevent exponential convergence, high-order finite elements still offer convergence that is no worse a comparable low-order mesh with a larger number of elements.
+For discussion of the convergence of high-order methods, see <span id="id6">[<a class="reference internal" href="#id98" title="Ivo Babuška and Manil Suri. The p and h-p versions of the finite element method, basic principles and properties. SIAM review, 36(4):578–632, 1994.">BabuvskaS94</a>, <a class="reference internal" href="#id97" title="Ivo Babuška and Barna Szabo. On the rates of convergence of the finite element method. International Journal for Numerical Methods in Engineering, 18(3):323–341, 1982.">BabuvskaS82</a>, <a class="reference internal" href="#id99" title="B Guo and Ivo Babuška. The hp version of the finite element method. Computational Mechanics, 1(1):21–41, 1986.">GBabuvska86</a>]</span>, among others.</p>
+<p>Although the benefits of high-order matrix-free implementations are well understood on modern HPC hardware, a significant amount of software development and research can be required to for a specific model and preconditioners needed in a simulation.</p>
 </section>
 <section id="open-source-scientific-software">
 <h2>Open Source Scientific Software<a class="headerlink" href="#open-source-scientific-software" title="Link to this heading">¶</a></h2>
 <p>Transparency and reproducibility are the lifeblood of scientific and software advancement.
-I strive to make all of my software open source and freely available, utilizing best practices for modern software development.</p>
-<p>The implementation of the high-order matrix-free finite element-like operators can be found in the <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED GitHub repository</a>, along with fluid dynamics and solid mechanics mini-applications.
-libCEED <span id="id8">[<a class="reference internal" href="#id101" title="Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jed Brown, Jean-Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Thilina Rathnayake, Jeremy L Thompson, and Stanimire Tomov. LibCEED User Manual. July 2021. URL: https://doi.org/10.5281/zenodo.4302737, doi:10.5281/zenodo.4302737.">ABB+21</a>, <a class="reference internal" href="#id102" title="Jed Brown, Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jean Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Will Pazner, Thilina Ratnayaka, Jeremy Thompson, and Stan Tomov. libCEED: fast algebra for high-order element-based discretizations. Journal of Open Source Software, 6(63):2945, 2021. doi:10.21105/joss.02945.">BAB+21</a>]</span> is a low-level library for the efficient high-order discretization methods developed by the ECP co-design Center for Efficient Exascale Discretizations (CEED).
-LibCEED has multiple backends that can be selected at runtime, and these backends target CPU architectures <span id="id9">[<a class="reference internal" href="#id109" title="LIBXSMM. https://github.com/hfp/libxsmm, 2021.">lib21</a>]</span>, NVIDIA GPUs <span id="id10">[<a class="reference internal" href="#id107" title="Cuda. 2021. URL: https://developer.nvidia.com/about-cuda.">CUD21</a>]</span>, AMD GPUs <span id="id11">[<a class="reference internal" href="#id108" title="Hip. 2021. URL: https://rocmdocs.amd.com/en/latest/Programming_Guides/HIP-GUIDE.html.">HIP21</a>]</span>, and Intel GPUs.
-While the focus is on high-order finite elements, the approach used in libCEED is mostly algebraic and thus applicable to other discretizations in factored form.
-LibCEED is the core component of my research efforts, with core implementations for the PDE based operators required for our fluid dynamics and solid mechanics simulations.</p>
-<p>These simulations rely upon the the linear and nonlinear solver and preconditioning infrastructure found in <a class="reference external" href="https://www.mcs.anl.gov/petsc/">PETSc</a> <span id="id12">[<a class="reference internal" href="#id103" title="Satish Balay, Shrirang Abhyankar, Mark F Adams, Jed Brown, Peter Brune, Kris Buschelman, Lisandro Dalcin, Alp Dener, Victor Eijkhout, William D Gropp, Dmitry Karpeyev, Dinesh Kaushik, Matthew G Knepley, Dave A May, Lois Curfman McInnes, Richard Tran Mills, Todd Munson, Karl Rupp, Patrick Sanan, Barry F Smith, Stefano Zampini, Hong Zhang, and Hong Zhang. PETSc users manual. Technical Report ANL-95/11 - Revision 3.15, Argonne National Laboratory, 2021. URL: https://www.mcs.anl.gov/petsc.">BAA+21</a>]</span>, the Portable, Extensible Toolkit for Scientific Computation.
+I strive to make all of my software open source and freely available while utilizing best practices for modern software development such as documentation and continuous integration testing.
+Closed source or lower quality software inhibits reproducibility and can slow follow-up research expanding upon previous work.</p>
+<p>Implementations of the high-order matrix-free finite element-like operators can be found in the <a class="reference external" href="https://www.github.com/CEED/libCEED">libCEED GitHub repository</a>, along with fluid dynamics and solid mechanics mini-applications.
+libCEED <span id="id7">[<a class="reference internal" href="#id100" title="Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jed Brown, Jean-Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Thilina Rathnayake, Jeremy L Thompson, and Stanimire Tomov. LibCEED User Manual. July 2021. URL: https://doi.org/10.5281/zenodo.4302737, doi:10.5281/zenodo.4302737.">ABB+21</a>, <a class="reference internal" href="#id101" title="Jed Brown, Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jean Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Will Pazner, Thilina Ratnayaka, Jeremy Thompson, and Stan Tomov. libCEED: fast algebra for high-order element-based discretizations. Journal of Open Source Software, 6(63):2945, 2021. doi:10.21105/joss.02945.">BAB+21</a>]</span> is a low-level library for the efficient high-order discretization methods developed by the ECP co-design Center for Efficient Exascale Discretizations (CEED).
+LibCEED has multiple backends that can be selected at runtime, and these backends target CPU architectures <span id="id8">[<a class="reference internal" href="#id108" title="LIBXSMM. https://github.com/hfp/libxsmm, 2021.">lib21</a>]</span>, NVIDIA GPUs <span id="id9">[<a class="reference internal" href="#id106" title="Cuda. 2021. URL: https://developer.nvidia.com/about-cuda.">CUD21</a>]</span>, AMD GPUs <span id="id10">[<a class="reference internal" href="#id107" title="Hip. 2021. URL: https://rocmdocs.amd.com/en/latest/Programming_Guides/HIP-GUIDE.html.">HIP21</a>]</span>, and Intel GPUs.
+LibCEED is the core component of my research efforts and supports our fluid dynamics and solid mechanics simulations.</p>
+<p>LibCEED is based around separate hardware specific implementations of the API being selectable at runtime.
+As lead maintainer, a large portion of my effort is providing implementations of new features for my research, but code review and features to accelerate the work of other researchers are a critical part of my efforts.
+For example, we use a CPU first approach where we develop a reference CPU implementation while refining our API and writing tests before developing GPU implementations.
+The gap between a CPU and GPU implementation can be difficult to bridge for many HPC applications; to this end I developed a libCEED CPU backend implementation that replicates many of the common issues discovered while porting CPU code to GPU implementations, such as memory synchronization and dual memory spaces representing host and device memory, helping contributors and collaborators more quickly identify errors in their codes when moving to GPU implementations.</p>
+<p>An excessive number of kernel launches and intermediate data structures can slow GPU performance, so a large portion of my effort has been refactoring and expanding code generation backends for GPU hardware.
+While metaprogramming reduces the runtime of our simulations and allows us to put significantly larger portions of the problem on a single device, writing software that writes source code for JiT is inherently more complex to reason about.
+In addition to expanding our capabilities via metaprogramming, I focus on code consistency, clarity, and documentation so that it is easier for myself or other contributors to add new GPU implementations as new features are added to libCEED.</p>
+<p>These simulations rely upon the the linear and nonlinear solver and preconditioning infrastructure found in <a class="reference external" href="https://www.mcs.anl.gov/petsc/">PETSc</a> <span id="id11">[<a class="reference internal" href="#id102" title="Satish Balay, Shrirang Abhyankar, Mark F Adams, Jed Brown, Peter Brune, Kris Buschelman, Lisandro Dalcin, Alp Dener, Victor Eijkhout, William D Gropp, Dmitry Karpeyev, Dinesh Kaushik, Matthew G Knepley, Dave A May, Lois Curfman McInnes, Richard Tran Mills, Todd Munson, Karl Rupp, Patrick Sanan, Barry F Smith, Stefano Zampini, Hong Zhang, and Hong Zhang. PETSc users manual. Technical Report ANL-95/11 - Revision 3.15, Argonne National Laboratory, 2021. URL: https://www.mcs.anl.gov/petsc.">BAA+21</a>]</span>, the Portable, Extensible Toolkit for Scientific Computation.
 PETSc is a suite of data structures and routines for the scalable, parallel solution of scientific applications modeled by partial differential equations.
 As libCEED’s lead developer, I make contributions to PETSc to help ensure compatibility between libCEED and PETSc.</p>
 <p><a class="reference external" href="https://gitlab.com/phypid/honee">HONEE</a> (High-Order Navier-stokes Equation Evaluator) is a fluids dyamics library based on libCEED and PETSc with a particular focus on supporting Intel GPUs.
-HONEE uses the Navier-Stokes equations <span id="id13">[<a class="reference internal" href="#id118" title="Farzin Shakib, Thomas JR Hughes, and Zdeněk Johan. A new finite element formulation for computational fluid dynamics: X. the compressible Euler and Navier-Stokes equations. Computer Methods in Applied Mechanics and Engineering, 89(1-3):141–219, 1991. doi:10.1016/0045-7825(91)90041-4.">SHJ91</a>]</span> with continuous-Galerkin stabilized finite element methods, namely SUPG <span id="id14">[<a class="reference internal" href="#id119" title="Thomas J R Hughes, Guglielmo Scovazzi, and Tayfun E Tezduyar. Stabilized methods for compressible flows. Journal of Scientific Computing, 43:343–368, 2010. doi:10.1007/s10915-008-9233-5.">HST10</a>]</span>, focusing on scale-resolving simulations.
+HONEE uses the Navier-Stokes equations <span id="id12">[<a class="reference internal" href="#id117" title="Farzin Shakib, Thomas JR Hughes, and Zdeněk Johan. A new finite element formulation for computational fluid dynamics: X. the compressible Euler and Navier-Stokes equations. Computer Methods in Applied Mechanics and Engineering, 89(1-3):141–219, 1991. doi:10.1016/0045-7825(91)90041-4.">SHJ91</a>]</span> with continuous-Galerkin stabilized finite element methods, namely SUPG <span id="id13">[<a class="reference internal" href="#id118" title="Thomas J R Hughes, Guglielmo Scovazzi, and Tayfun E Tezduyar. Stabilized methods for compressible flows. Journal of Scientific Computing, 43:343–368, 2010. doi:10.1007/s10915-008-9233-5.">HST10</a>]</span>, focusing on scale-resolving simulations.
 Effort is made to maintain flexibility in state variable choice, boundary conditions, time integration scheme (both implicit and explicit), and other solver choices.
 I developed the original libCEED fluid dynamics mini-app that HONEE was based on and maintain and expand core infrastructure in libCEED to support HONEE.</p>
 <p><a class="reference external" href="https://gitlab.com/micromorph/ratel">Ratel</a> is a solid mechanics library that provides material models and boundary conditions implemented using libCEED and PETSc.
-Ratel supports both finite element (FEM) and implicit material point method (iMPM) <span id="id15">[<a class="reference internal" href="#id116" title="William M. Coombs, Charles E. Augarde, Andrew J. Brennan, Michael J. Brown, Tim J. Charlton, Jonathan A. Knappett, Yousef Ghaffari Motlagh, and Lei Wang. On lagrangian mechanics and the implicit material point method for large deformation elasto-plasticity. Computer Methods in Applied Mechanics and Engineering, 358:112622, January 2020. doi:10.1016/j.cma.2019.112622.">CAB+20</a>, <a class="reference internal" href="#id117" title="Louis Moresi, Frédéric Dufour, and H-B Mühlhaus. A lagrangian integration point finite element method for large deformation modeling of viscoelastic geomaterials. Journal of computational physics, 184(2):476–497, 2003. doi:10.1016/S0021-9991(02)00031-1.">MDMuhlhaus03</a>]</span> simulations; with users being able to compare output for both methods with supported models.
+Ratel supports both finite element (FEM) and implicit material point method (iMPM) <span id="id14">[<a class="reference internal" href="#id115" title="William M. Coombs, Charles E. Augarde, Andrew J. Brennan, Michael J. Brown, Tim J. Charlton, Jonathan A. Knappett, Yousef Ghaffari Motlagh, and Lei Wang. On lagrangian mechanics and the implicit material point method for large deformation elasto-plasticity. Computer Methods in Applied Mechanics and Engineering, 358:112622, January 2020. doi:10.1016/j.cma.2019.112622.">CAB+20</a>, <a class="reference internal" href="#id116" title="Louis Moresi, Frédéric Dufour, and H-B Mühlhaus. A lagrangian integration point finite element method for large deformation modeling of viscoelastic geomaterials. Journal of computational physics, 184(2):476–497, 2003. doi:10.1016/S0021-9991(02)00031-1.">MDMuhlhaus03</a>]</span> simulations; with users being able to compare output for both methods with supported models.
 Ratel’s material model library includes finite-strain hyperelastic, elastoplastic, viscoelastic, poroelastic, and fracture models, including stable mixed formulations for near-incompressible regimes.
-Ratel users can also take advantage of all the packages and algorithms supported by PETSc, including Hypre <span id="id16">[<a class="reference internal" href="#id104" title="Robert D Falgout, Ruipeng Li, Björn Sjögreen, Lu Wang, and Ulrike Meier Yang. Porting hypre to heterogeneous computer architectures: strategies and experiences. Parallel Computing, 108:102840, 2021. doi:10.1016/j.parco.2021.102840.">FLSjogreen+21</a>]</span> and Kokkos <span id="id17">[<a class="reference internal" href="#id105" title="Christian R. Trott, Damien Lebrun-Grandié, Daniel Arndt, Jan Ciesko, Vinh Dang, Nathan Ellingwood, Rahulkumar Gayatri, Evan Harvey, Daisy S. Hollman, Dan Ibanez, Nevin Liber, Jonathan Madsen, Jeff Miles, David Poliakoff, Amy Powell, Sivasankaran Rajamanickam, Mikael Simberg, Dan Sunderland, Bruno Turcksin, and Jeremiah Wilke. Kokkos 3: programming model extensions for the exascale era. IEEE Transactions on Parallel and Distributed Systems, 33(4):805-817, 2022. doi:10.1109/TPDS.2021.3097283.">TLGA+22</a>]</span>, which highlights the benefits of leveraging open source software in research applications.
-As the architect for Ratel, I work with the researchers and students implementing and using the material models in Ratel to ensure the software best supports our ongoing research.</p>
+Ratel users can also take advantage of all the packages and algorithms supported by PETSc, including Hypre <span id="id15">[<a class="reference internal" href="#id103" title="Robert D Falgout, Ruipeng Li, Björn Sjögreen, Lu Wang, and Ulrike Meier Yang. Porting hypre to heterogeneous computer architectures: strategies and experiences. Parallel Computing, 108:102840, 2021. doi:10.1016/j.parco.2021.102840.">FLSjogreen+21</a>]</span> and Kokkos <span id="id16">[<a class="reference internal" href="#id104" title="Christian R. Trott, Damien Lebrun-Grandié, Daniel Arndt, Jan Ciesko, Vinh Dang, Nathan Ellingwood, Rahulkumar Gayatri, Evan Harvey, Daisy S. Hollman, Dan Ibanez, Nevin Liber, Jonathan Madsen, Jeff Miles, David Poliakoff, Amy Powell, Sivasankaran Rajamanickam, Mikael Simberg, Dan Sunderland, Bruno Turcksin, and Jeremiah Wilke. Kokkos 3: programming model extensions for the exascale era. IEEE Transactions on Parallel and Distributed Systems, 33(4):805-817, 2022. doi:10.1109/TPDS.2021.3097283.">TLGA+22</a>]</span>, which highlights the benefits of leveraging open source software in research applications.</p>
+<p>As the architect for Ratel, I work with the researchers and students implementing and using the material models in Ratel to ensure the software best supports our ongoing research.
+Development of iMPM models is a particularly innovative feature, as matrix-free implicit MPM on GPU hardware for CU Boulder’s PSAAP Multidisciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflow offers an ability to run simulations with this technology significantly faster than other currently available software packages, allowing a larger number of runs to be completed and incorporated into more complex analysis of the results, such as uncertainty quantification.
+Also, preconditioning for iMPM operators offers unique challenges when compared to FEM operators and is a particularly rich area for research.</p>
+<p>All of these software efforts allow me to work with a wide range of contributors and support the work of an even larger range of collaborators.
+Additionally, while code review is designed to strengthen the end quality of software products, it also provides a natural vehicle for mentoring undergraduate and graduate students in research practices.</p>
 </section>
 <section id="preconditioning">
 <h2>Preconditioning<a class="headerlink" href="#preconditioning" title="Link to this heading">¶</a></h2>
-<p>The iteration count to reach convergence for Krylov subspace methods is based, in part, upon condition number of the operator <span id="id18">[<a class="reference internal" href="#id45" title="David G Luenberger. Introduction to linear and nonlinear programming. Volume 28. Addison-Wesley Reading, MA, 1973.">Lue73</a>]</span>, and high-order finite element operators have notoriously poor condition numbers <span id="id19">[<a class="reference internal" href="#id46" title="Ning Hu, Xian-Zhong Guo, and I Norman Katz. Bounds for eigenvalues and condition numbers in the p-version of the finite element method. Mathematics of Computation, 67(224):1423–1450, 1998.">HGK98</a>]</span>.
+<p>The iteration count to reach convergence for Krylov subspace methods is based, in part, upon condition number of the operator <span id="id17">[<a class="reference internal" href="#id44" title="David G Luenberger. Introduction to linear and nonlinear programming. Volume 28. Addison-Wesley Reading, MA, 1973.">Lue73</a>]</span>, and high-order finite element operators have notoriously poor condition numbers <span id="id18">[<a class="reference internal" href="#id45" title="Ning Hu, Xian-Zhong Guo, and I Norman Katz. Bounds for eigenvalues and condition numbers in the p-version of the finite element method. Mathematics of Computation, 67(224):1423–1450, 1998.">HGK98</a>]</span>.
 Preconditioners help control the condition number of high-order finite elements implemented in a matrix-free fashion and therefore reduce total iteration count and total time to solution for these operators.</p>
 <p>Multigrid methods are popular multi-level techniques that provide resolution independent convergence rates.
-<span class="math notranslate nohighlight">\(p\)</span>-type multigrid, developed by Ronquist and Patera <span id="id20">[<a class="reference internal" href="#id50" title="Einar M Rønquist and Anthony T Patera. Spectral element multigrid. I. formulation and numerical results. Journal of Scientific Computing, 2(4):389–406, 1987.">RonquistP87</a>]</span>, is a natural choice for high-order finite elements on an unstructured mesh and can be implemented with operators implemented in a matrix-free fashion.
-Additionally, <span class="math notranslate nohighlight">\(p\)</span>-multigrid can offer more flexibility with respect to meshes in comparison to <span class="math notranslate nohighlight">\(h\)</span>-multigrid as it does not require aggregation of multiple elements into larger elements, which can be difficult on more complex geometry.</p>
+<span class="math notranslate nohighlight">\(p\)</span>-type multigrid, developed by Ronquist and Patera <span id="id19">[<a class="reference internal" href="#id49" title="Einar M Rønquist and Anthony T Patera. Spectral element multigrid. I. formulation and numerical results. Journal of Scientific Computing, 2(4):389–406, 1987.">RonquistP87</a>]</span>, is a natural choice for high-order finite elements on an unstructured mesh, can be implemented in a matrix-free fashion, and can offer more flexibility than <span class="math notranslate nohighlight">\(h\)</span>-multigrid on meshes for complex problems.</p>
 <p>Local Fourier Analysis (LFA) provides a tool to predict the convergence of preconditioning techniques for finite element and finite difference methods.
-LFA <span id="id21">[<a class="reference internal" href="#id84" title="Achi Brandt. Multi-level adaptive solutions to boundary-value problems. Mathematics of Computation, 31(138):333–390, 1977.">Bra77</a>]</span> was originally developed in the context of analyzing <span class="math notranslate nohighlight">\(h\)</span>-multigrid methods for finite difference methods, but since then LFA has been used to analyze finite element methods and a variety of preconditioning techniques.
-Our development of LFA of <span class="math notranslate nohighlight">\(p\)</span>-multigrid and Balancing Domain Decomposition by Constraints for single high-order finite element subdomains for general finite element operators is a novel addition to the field.
-I wrote the Julia package <a class="reference external" href="https://www.github.com/jeremylt/LFAToolkit.jl">LFAToolkit.jl</a> <span id="id22">[<a class="reference internal" href="#id106" title="Jeremy L Thompson. LFAToolkit. https://github.com/jeremylt/LFAToolkit.jl, 2021.">Tho21</a>]</span>, a toolkit for analyzing the performance of preconditioners a priori for arbitrary, user provided weak forms of second order PDEs.</p>
-<p>Analyzing and implementing new preconditioning techniques can greatly improve the total iteration count and therefore the end to end runtime for scientific simulations in HONEE and Ratel.
+LFA <span id="id20">[<a class="reference internal" href="#id83" title="Achi Brandt. Multi-level adaptive solutions to boundary-value problems. Mathematics of Computation, 31(138):333–390, 1977.">Bra77</a>]</span> was originally developed in the context of analyzing <span class="math notranslate nohighlight">\(h\)</span>-multigrid methods for finite difference methods, but since then LFA has been used to analyze finite element methods and a variety of preconditioning techniques.
+I wrote the Julia package <a class="reference external" href="https://www.github.com/jeremylt/LFAToolkit.jl">LFAToolkit.jl</a> <span id="id21">[<a class="reference internal" href="#id105" title="Jeremy L Thompson. LFAToolkit. https://github.com/jeremylt/LFAToolkit.jl, 2021.">Tho21</a>]</span>, a toolkit for analyzing the performance of preconditioners a priori for arbitrary, user provided weak forms of second order PDEs.
+While this technique is not designed for complex meshes use in many research simulations, it offers good intuition on how preconditioners will perform on more complex meshes and offers a rigorous way to compare the performance of different preconditioners and parameter values for the same problem.</p>
+<p>With appropriate parameter tuning, these preconditioning techniques can greatly improve the total iteration count and therefore the end to end runtime for scientific simulations in HONEE and Ratel.
 This allows us to make better us of resources and complete more simulations with the same allocation of HPC resources.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
-<div class="docutils container" id="id23">
+<div class="docutils container" id="id22">
 <div role="list" class="citation-list">
-<div class="citation" id="id107" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">CUD21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id106" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">CUD21</a><span class="fn-bracket">]</span></span>
 <p>Cuda. 2021. URL: <a class="reference external" href="https://developer.nvidia.com/about-cuda">https://developer.nvidia.com/about-cuda</a>.</p>
 </div>
-<div class="citation" id="id108" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">HIP21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id107" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">HIP21</a><span class="fn-bracket">]</span></span>
 <p>Hip. 2021. URL: <a class="reference external" href="https://rocmdocs.amd.com/en/latest/Programming_Guides/HIP-GUIDE.html">https://rocmdocs.amd.com/en/latest/Programming_Guides/HIP-GUIDE.html</a>.</p>
 </div>
-<div class="citation" id="id109" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">lib21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id108" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">lib21</a><span class="fn-bracket">]</span></span>
 <p>LIBXSMM. <a class="reference external" href="https://github.com/hfp/libxsmm">https://github.com/hfp/libxsmm</a>, 2021.</p>
 </div>
-<div class="citation" id="id101" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">ABB+21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id100" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">ABB+21</a><span class="fn-bracket">]</span></span>
 <p>Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jed Brown, Jean-Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Thilina Rathnayake, Jeremy L Thompson, and Stanimire Tomov. LibCEED User Manual. July 2021. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.4302737">https://doi.org/10.5281/zenodo.4302737</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.4302737">doi:10.5281/zenodo.4302737</a>.</p>
 </div>
-<div class="citation" id="id34" role="doc-biblioentry">
+<div class="citation" id="id33" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">ABS+14</a><span class="fn-bracket">]</span></span>
 <p>Mark Adams, Jed Brown, John Shalf, Brian Straalen, Erich Strohmaier, and Samuel Williams. HPGMG 1.0: a benchmark for ranking high performance computing systems. <em>LBNL Technical Report</em>, pages, 05 2014.</p>
 </div>
-<div class="citation" id="id99" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">BabuvskaS94</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id98" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">BabuvskaS94</a><span class="fn-bracket">]</span></span>
 <p>Ivo Babuška and Manil Suri. The p and h-p versions of the finite element method, basic principles and properties. <em>SIAM review</em>, 36(4):578–632, 1994.</p>
 </div>
-<div class="citation" id="id98" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">BabuvskaS82</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id97" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">BabuvskaS82</a><span class="fn-bracket">]</span></span>
 <p>Ivo Babuška and Barna Szabo. On the rates of convergence of the finite element method. <em>International Journal for Numerical Methods in Engineering</em>, 18(3):323–341, 1982.</p>
 </div>
-<div class="citation" id="id103" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">BAA+21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id102" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">BAA+21</a><span class="fn-bracket">]</span></span>
 <p>Satish Balay, Shrirang Abhyankar, Mark F Adams, Jed Brown, Peter Brune, Kris Buschelman, Lisandro Dalcin, Alp Dener, Victor Eijkhout, William D Gropp, Dmitry Karpeyev, Dinesh Kaushik, Matthew G Knepley, Dave A May, Lois Curfman McInnes, Richard Tran Mills, Todd Munson, Karl Rupp, Patrick Sanan, Barry F Smith, Stefano Zampini, Hong Zhang, and Hong Zhang. PETSc users manual. Technical Report ANL-95/11 - Revision 3.15, Argonne National Laboratory, 2021. URL: <a class="reference external" href="https://www.mcs.anl.gov/petsc">https://www.mcs.anl.gov/petsc</a>.</p>
 </div>
-<div class="citation" id="id84" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">Bra77</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id83" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">Bra77</a><span class="fn-bracket">]</span></span>
 <p>Achi Brandt. Multi-level adaptive solutions to boundary-value problems. <em>Mathematics of Computation</em>, 31(138):333–390, 1977.</p>
 </div>
-<div class="citation" id="id102" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">BAB+21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id101" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">BAB+21</a><span class="fn-bracket">]</span></span>
 <p>Jed Brown, Ahmad Abdelfattah, Valeria Barra, Natalie Beams, Jean Sylvain Camier, Veselin Dobrev, Yohann Dudouit, Leila Ghaffari, Tzanio Kolev, David Medina, Will Pazner, Thilina Ratnayaka, Jeremy Thompson, and Stan Tomov. libCEED: fast algebra for high-order element-based discretizations. <em>Journal of Open Source Software</em>, 6(63):2945, 2021. <a class="reference external" href="https://doi.org/10.21105/joss.02945">doi:10.21105/joss.02945</a>.</p>
 </div>
-<div class="citation" id="id116" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">CAB+20</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id115" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">CAB+20</a><span class="fn-bracket">]</span></span>
 <p>William M. Coombs, Charles E. Augarde, Andrew J. Brennan, Michael J. Brown, Tim J. Charlton, Jonathan A. Knappett, Yousef Ghaffari Motlagh, and Lei Wang. On lagrangian mechanics and the implicit material point method for large deformation elasto-plasticity. <em>Computer Methods in Applied Mechanics and Engineering</em>, 358:112622, January 2020. <a class="reference external" href="https://doi.org/10.1016/j.cma.2019.112622">doi:10.1016/j.cma.2019.112622</a>.</p>
 </div>
-<div class="citation" id="id33" role="doc-biblioentry">
+<div class="citation" id="id32" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">DHL16</a><span class="fn-bracket">]</span></span>
 <p>Jack Dongarra, Michael A Heroux, and Piotr Luszczek. High-performance conjugate-gradient benchmark. <em>International Journal of High Performance Computing Applications</em>, 30(1):3–10, 2016.</p>
 </div>
-<div class="citation" id="id104" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">FLSjogreen+21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id103" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">FLSjogreen+21</a><span class="fn-bracket">]</span></span>
 <p>Robert D Falgout, Ruipeng Li, Björn Sjögreen, Lu Wang, and Ulrike Meier Yang. Porting hypre to heterogeneous computer architectures: strategies and experiences. <em>Parallel Computing</em>, 108:102840, 2021. <a class="reference external" href="https://doi.org/10.1016/j.parco.2021.102840">doi:10.1016/j.parco.2021.102840</a>.</p>
 </div>
-<div class="citation" id="id100" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">GBabuvska86</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id99" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">GBabuvska86</a><span class="fn-bracket">]</span></span>
 <p>B Guo and Ivo Babuška. The hp version of the finite element method. <em>Computational Mechanics</em>, 1(1):21–41, 1986.</p>
 </div>
-<div class="citation" id="id46" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">HGK98</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id45" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">HGK98</a><span class="fn-bracket">]</span></span>
 <p>Ning Hu, Xian-Zhong Guo, and I Norman Katz. Bounds for eigenvalues and condition numbers in the p-version of the finite element method. <em>Mathematics of Computation</em>, 67(224):1423–1450, 1998.</p>
 </div>
-<div class="citation" id="id119" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">HST10</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id118" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">HST10</a><span class="fn-bracket">]</span></span>
 <p>Thomas J R Hughes, Guglielmo Scovazzi, and Tayfun E Tezduyar. Stabilized methods for compressible flows. <em>Journal of Scientific Computing</em>, 43:343–368, 2010. <a class="reference external" href="https://doi.org/10.1007/s10915-008-9233-5">doi:10.1007/s10915-008-9233-5</a>.</p>
 </div>
-<div class="citation" id="id45" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">Lue73</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id44" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">Lue73</a><span class="fn-bracket">]</span></span>
 <p>David G Luenberger. <em>Introduction to linear and nonlinear programming</em>. Volume 28. Addison-Wesley Reading, MA, 1973.</p>
 </div>
-<div class="citation" id="id30" role="doc-biblioentry">
+<div class="citation" id="id29" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">McC16</a><span class="fn-bracket">]</span></span>
 <p>John D McCalpin. Memory bandwidth and system balance in HPC systems. <em>Invited talk, Supercomputing</em>, 2016.</p>
 </div>
-<div class="citation" id="id31" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>MSD+20<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">MSD+20</a><span class="fn-bracket">]</span></span>
 <p>Hans Meuer, Erich Strohmaier, Jack Dongarra, Horst Simon, and Martin Meuer. Top 500 list. 2020. URL: <a class="reference external" href="http://www.top500.org/">http://www.top500.org/</a>.</p>
 </div>
-<div class="citation" id="id117" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">MDMuhlhaus03</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id116" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">MDMuhlhaus03</a><span class="fn-bracket">]</span></span>
 <p>Louis Moresi, Frédéric Dufour, and H-B Mühlhaus. A lagrangian integration point finite element method for large deformation modeling of viscoelastic geomaterials. <em>Journal of computational physics</em>, 184(2):476–497, 2003. <a class="reference external" href="https://doi.org/10.1016/S0021-9991(02)00031-1">doi:10.1016/S0021-9991(02)00031-1</a>.</p>
 </div>
-<div class="citation" id="id32" role="doc-biblioentry">
+<div class="citation" id="id31" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">PWDC04</a><span class="fn-bracket">]</span></span>
 <p>Antoine Petitet, R Clint Whaley, Jack Dongarra, and Andrew Cleary. HPL-a portable implementation of the high-performance Linpack benchmark for distributed-memory computers. 2004. URL: <a class="reference external" href="http://www.netlib.org/benchmark/hpl/">http://www.netlib.org/benchmark/hpl/</a>.</p>
 </div>
-<div class="citation" id="id50" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id20">RonquistP87</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id49" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">RonquistP87</a><span class="fn-bracket">]</span></span>
 <p>Einar M Rønquist and Anthony T Patera. Spectral element multigrid. I. formulation and numerical results. <em>Journal of Scientific Computing</em>, 2(4):389–406, 1987.</p>
 </div>
-<div class="citation" id="id118" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">SHJ91</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id117" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">SHJ91</a><span class="fn-bracket">]</span></span>
 <p>Farzin Shakib, Thomas JR Hughes, and Zdeněk Johan. A new finite element formulation for computational fluid dynamics: X. the compressible Euler and Navier-Stokes equations. <em>Computer Methods in Applied Mechanics and Engineering</em>, 89(1-3):141–219, 1991. <a class="reference external" href="https://doi.org/10.1016/0045-7825(91)90041-4">doi:10.1016/0045-7825(91)90041-4</a>.</p>
 </div>
-<div class="citation" id="id106" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id22">Tho21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id105" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">Tho21</a><span class="fn-bracket">]</span></span>
 <p>Jeremy L Thompson. LFAToolkit. <a class="reference external" href="https://github.com/jeremylt/LFAToolkit.jl">https://github.com/jeremylt/LFAToolkit.jl</a>, 2021.</p>
 </div>
-<div class="citation" id="id105" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">TLGA+22</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id104" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">TLGA+22</a><span class="fn-bracket">]</span></span>
 <p>Christian R. Trott, Damien Lebrun-Grandié, Daniel Arndt, Jan Ciesko, Vinh Dang, Nathan Ellingwood, Rahulkumar Gayatri, Evan Harvey, Daisy S. Hollman, Dan Ibanez, Nevin Liber, Jonathan Madsen, Jeff Miles, David Poliakoff, Amy Powell, Sivasankaran Rajamanickam, Mikael Simberg, Dan Sunderland, Bruno Turcksin, and Jeremiah Wilke. Kokkos 3: programming model extensions for the exascale era. <em>IEEE Transactions on Parallel and Distributed Systems</em>, 33(4):805–817, 2022. <a class="reference external" href="https://doi.org/10.1109/TPDS.2021.3097283">doi:10.1109/TPDS.2021.3097283</a>.</p>
 </div>
 </div>

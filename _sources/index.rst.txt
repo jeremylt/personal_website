@@ -87,8 +87,8 @@ Background
 | |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
 | |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
 
-| |fa-file| CV:     `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
-| |fa-file| Resume: `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_ 
+| |fa-file| CV:                     `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
+| |fa-file| Resume:                 `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_ 
 
 I am a Research Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 I develop the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries as part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_.
@@ -109,5 +109,6 @@ Website Contents
 
    software.rst
    Research <research.rst>
-   publications.rst
+   Teaching <teaching.rst>
+   Publications <publications.rst>
    hobbies.rst
