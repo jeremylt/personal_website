@@ -107,8 +107,8 @@ Website Contents
 .. toctree::
    :maxdepth: 1
 
+   hobbies.rst
    software.rst
    Research <research.rst>
    Teaching <teaching.rst>
    Publications <publications.rst>
-   hobbies.rst

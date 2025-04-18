@@ -47,9 +47,29 @@ Various underlying reasons such as unconscious bias, systemic marginalization, a
 I provide a range of assessments so that students have multiple, different opportunities to demonstrate understanding of key course content.
 
 
-..
-  Mentoring
-  --------------------------------------------------------------------------------
+Mentoring
+--------------------------------------------------------------------------------
+
+Mentoring is a critical component of supporting graduate student research.
+When the student research involves contributions to open source software projects, that provides a natural framework to aid in the mentoring.
+The need for testing and documentation for all contributions in a healthy open source codebase helps frame discussions about what specifically the student is trying to accomplish and where they are encountering difficulty.
+Planning out a new contribution or series of contributions provides a concrete framework for discussing research goals.
+Similarly, the code review process provides a good structure to provide feedback on specific short term goals for the student.
+The format of open source contributions tends to focus on smaller, specific opportunities for mentoring but can generate conversations that are broader or more cross cutting.
+
+Members of research groups tend to naturally adopt different schedules, leading to asynchronous communication.
+GitLab's guide to asynchronous work :cite:`gitlabasync` provides some useful suggestions that applicable to mentorship in this context.
+A lot of their recommendations, such as providing complete messages with all of the relevant context for the question and all the resources required to replicate the current problem.
+This has the benefit of helping in person or realtime interactions be more productive, and the process of writing out clearly the question with background can help them discover the solution themselves or shift the conversation from basic fact finding to comparisons between different options or perspectives.
+
+I tend to push these mentoring discussions to public channels, such as Zulip (similar to Slack) or GitHub/GitLab issues when appropriate.
+This allows more people to participate in the discussion, leading to better advice and assistance.
+Also, this underscores a core value I try to share with students of learning in public.
+I like to emphasize that all of us always have more to learn.
+Academia operates best when we honestly and openly admit gaps in our knowledge and collaboratively pursue new knowledge.
+
+I also mentor students online outside of my research.
+My largest effort in this vein is volunteering my time as a mentor and community leader at `freeCodeCamp <https://www.freecodecamp.org>`_, a free and open source coding education platform designed to allow anyone in the world access to coding education resources necessary to learn the skills required to start a career in web development.
 
 
 References
