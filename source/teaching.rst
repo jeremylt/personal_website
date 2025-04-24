@@ -3,7 +3,7 @@ Teaching Statement
 
 My teaching has been focused on mathematics courses for engineering and computer science undergraduate students.
 I have taught several semesters of Calculus I/II/III, Differential Equations, Engineering Mathematics (introduction to Linear Algebra and PDEs survey course), and Discrete Mathematics white on the faculty at the Air Force Academy.
-Also, served as the course director for Calculus III, Engineering Mathematics, and Discrete Mathematics, coordinating the syllabus and exams for these courses and leading a team of the all instructors/professors for all sections in those semesters.
+I also served as the course director for Calculus III, Engineering Mathematics, and Discrete Mathematics, coordinating the syllabus and exams for these courses and leading a team of the all instructors/professors for all sections in those semesters.
 I was awarded Outstanding New Instructor, Outstanding Course Director, and Outstanding Academy Educator while at the U.S. Air Force Academy.
 Also, while on the faculty at the U.S. Air Force Academy and as a research associate at CU Boulder, I have had several opportunities to mentor undergraduate and graduate students in research.
 
@@ -17,7 +17,7 @@ I focus on three main goals, building intuition around core concepts, helping st
 These goals are in line with the learning outcomes and and program objectives in CU Boulder's Computer Science BS program :cite:`BSCS2025`.
 Specifically, graduates are expected to leverage foundational knowledge to design and implement solutions to problems.
 
-There exists some research suggesting that a clear presentation of material in a lecture can increase a student's confidence in their understanding, that confidence does not necessarily translate into greater understanding, at least as measured by exams :cite:`carpenter2016effect`.
+There exists some research suggesting that although a clear presentation of material in a lecture can increase a student's confidence in their understanding, that confidence does not necessarily translate into greater understanding, at least as measured by exams :cite:`carpenter2016effect`.
 While I find a clear lecture helpful in establishing common language and some understanding of core concepts, I use in class activities to build understanding and give the students the opportunity to locate the gaps or errors in their understanding.
 Historically I have relied upon MATLAB and Mathematica for these in class exercises, as well as printable worksheets.
 As my research has shifted to open source software, I have been investigating leveraging tools like Jupyter notebooks :cite:`jupyter` in the classroom to replace proprietary software for in class exercises.
@@ -30,10 +30,16 @@ After introducing the lesson content in a more traditional lecture style introdu
 Assessments
 --------------------------------------------------------------------------------
 
+I see curiosity and tangible applicability as important in helping student motivation.
+To that end, I prefer to use project based learning, with collaborative projects that illustrate practical applicability of core course concepts.
+I use smaller homework sets or quizzes as formative assessments that provide the students with quicker feedback on their understanding and progress, intermediate project deliverables as slower feedback, and final projects deliverables as the summative assessment.
+For some courses, in person examinations are the most appropriate summative assessment, but I avoid putting students into a high pressure, "all or nothing" situation with these exams representing a disproportionate portion of their grade.
+
 When designing assessments, I have three goals in mind.
-The primary goal of assessments is to provide students a way to measure their progress towards course goals.
+First, the primary goal of assessments is to provide students a way to measure their progress towards course goals.
 The concept of learning scaffolding does not exactly map to a university setting :cite:`stanier2015scaffolding`, but I try to build up student knowledge and capabilities throughout the semester with the goal of building independent problem solving skills in the course domain by the end of the semester.
 While students and instructors can often interpret the role of feedback :cite:`beaumont2011reconceptualising`, it remains an important in helping students build their skills.
+To this end, I employ smaller formative assessments such as quizzes and intermediate project deliverables to facilitate feedback and help students understand their progress and adapt and needed.
 
 There are several demands on student's time outside of the classroom, which means that out of class assessments such as homework and projects must compete with other obligations the students have.
 My second goal is to design assessments so that I make best use of the available student time.

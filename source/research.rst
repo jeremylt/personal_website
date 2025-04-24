@@ -4,19 +4,27 @@ Research Statement
 Open Source Scientific Software for Modern HPC Hardware
 --------------------------------------------------------------------------------
 
+Highly accurate physics based numerical simulations are important in a wide range of modern science and engineering applications.
+These simulations allow us to investigate many different scenarios where it is impractical or unsafe to conduct a large number of physical experiments or act as a prelude to a more limited and focused set of experiments.
+However, high fidelity simulations require a large amount of computational power.
+Additionally, if these simulations are being used in uncertainty quantification or optimization workflows, then the amount of compute resources required is amplified.
+It is important to innovate algorithmically to allow us to best use modern computing resources in support of our research goals.
+
 Many fluid dynamics and solid mechanics applications use finite-element like discretizations of the physically based PDEs in simulations modeling behavior of interest.
-High-order matrix-free finite element-like operators on elements with tensor-product bases offer superior performance on modern high performance computing (HPC) hardware when compared to assembled sparse matrices, both with respect to the number of floating point operations needed for operator evaluation and the memory transfer needed for a matrix-vector product.
+High-order matrix-free finite element-like operators on elements with tensor-product bases offer superior performance on modern high performance computing (HPC) hardware when compared to the standard industry approach of assembled sparse matrices, both with respect to the number of floating point operations needed for operator evaluation and the memory transfer needed for a matrix-vector product.
 However, matrix-free operators require iterative solvers, such as Krylov subspace methods, and these iterative solvers converge slowly for high-order operators because these operators tend to be increasingly ill-conditioned as polynomial order of the bases increases.
 Preconditioning techniques can significantly improve the convergence of these iterative solvers for high-order matrix-free finite element operators.
 
 In my research, I focus on using high-order matrix-free methods with appropriate preconditioners to achieve high performance on modern HPC hardware.
 I build core computational infrastructure and preconditioners to support a variety of application areas.
 To this end, my research efforts are centered around building open source software packages while enabling and accelerating the research of students and researchers in our group and among our collaborators who are using these packages for fluid dynamics and solid mechanics applications.
+This works allows us to complete simulations in hours or days that could take weeks to complete with older approaches.
 
 
 High-Order Matrix-Free
 --------------------------------------------------------------------------------
 
+In order to innovate algorithmically and best use modern HPC resources, we must understand the constraints of the hardware.
 Two key performance metrics for HPC hardware are Floating Point Operations per Second (FLOPs) and memory and network bandwidth.
 FLOPs is the more widely popularized of these two metrics, but memory and network bandwidth is a common bottleneck in HPC application codes.
 As discussed in McCalpin's Supercomputing 2016 invited talk :cite:`mccalpin2016memory`, the maximum FLOP rates for new HPC hardware have improved approximately twice as much as memory and network bandwidth, for both CPUs and GPUs.
@@ -24,13 +32,14 @@ The ratio of FLOPs to memory bandwidth required for high-order matrix-free finit
 
 The maximum FLOP rate given by the Top 500 :cite:`meuertop500` list is measured by High-Performance Linpack (HPL) :cite:`petitethpl`.
 High-Performance Geometric Multigrid (HPGMG) :cite:`adams2014hpgmg` and High-Performance Conjugate Gradient (HPCG) :cite:`dongarra2016high` measure performance with a benchmark problem that is more representative of scientific simulations.
-The disparity between the FLOPs achieved in HPGMG and HPCG using assembled sparse matrices and the maximum FLOPs measured by HPL highlights the need for matrix-free implementations.
+The disparity between the FLOPs achieved in HPCG with sparse matrices and the maximum FLOPs measured by HPL tends to be on the order of :math:`10^2-10^3`, which highlights the need for matrix-free implementations.
 
-High-order finite elements also offer high accuracy and exponential convergence for sufficiently smooth problems.
-While exponential convergence is not required to meet engineering tolerances and the smoothness of the solution for practical problems may prevent exponential convergence, high-order finite elements still offer convergence that is no worse a comparable low-order mesh with a larger number of elements.
+High-order finite elements also offer the high accuracy needed for modern simulations as well as exponential convergence for sufficiently smooth problems.
+While the smoothness of the solution for practical problems may prevent exponential convergence, high-order finite elements still offer convergence that is no worse than a comparable low-order mesh with a larger number of elements.
 For discussion of the convergence of high-order methods, see :cite:`babuvska1994p,babuska1982rates,guo1986hp`, among others.
 
-Although the benefits of high-order matrix-free implementations are well understood on modern HPC hardware, a significant amount of software development and research can be required to for a specific model and preconditioners needed in a simulation.
+Although the benefits of high-order matrix-free implementations on modern HPC hardware are well understood, a significant amount of software development and research can be required for the specific model and preconditioners needed in a simulation.
+For example, matrix-free implementations can expose numerical stability issues in alternate formulations of the same underlying physics :cite:`stablenumerics2024` and the preconditioners in iterative solvers may require parameter tuning or novel implications.
 
 
 Open Source Scientific Software
