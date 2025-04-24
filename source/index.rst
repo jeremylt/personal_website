@@ -101,14 +101,16 @@ My research interests include preconditioning for high order finite element-like
 I am a mentor and community leader online at `freeCodeCamp <https://www.freecodecamp.org/>`_, a free and open source resource for learning programming and web development.
 
 
-Website Contents
+Contents
 ********************************************************************************
 
 .. toctree::
    :maxdepth: 1
 
+   alt-mss.rst
    hobbies.rst
    software.rst
    Research <research.rst>
    Teaching <teaching.rst>
    Publications <publications.rst>
+
