@@ -86,6 +86,14 @@ My largest effort in this vein is volunteering my time as a mentor and community
 These students have highly varied backgrounds that present unique challenges when compared to mentoring traditional undergraduate students, but the work of helping provide free education is very important and rewarding for me.
 
 
+Future Work
+--------------------------------------------------------------------------------
+
+Moving into an Assistant Research Professor role, I look forward to sitting on thesis committees for graduate students and serving as the advisor for PhD candidates.
+I am also interested in advising independent study projects for undergraduate and masters students interested in research.
+Additionally, I see CU Boulder's Summer Program for Undergraduate Research as an important program for undergraduate students to learn about academic research and will continue my efforts to mentor SPUR students.
+
+
 References
 --------------------------------------------------------------------------------
 

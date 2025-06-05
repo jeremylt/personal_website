@@ -103,6 +103,15 @@ With appropriate parameter tuning, these preconditioning techniques can greatly 
 This allows us to make better us of resources and complete more simulations with the same allocation of HPC resources.
 
 
+Future Work
+--------------------------------------------------------------------------------
+
+The current funding landscape makes the process of finding adequate support for researchers and students challenging.
+I have been involved in research and reporting deliverables for several large Department of Energy funded projects, the Center for Efficient Exascale Discretizations as part of the Exascale Computing Project and the Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations within Exascale Computing Workflows as part of the Predictive Science Academic Alliance Program, and have helped make connections between libCEED and larger open source software packages, such as PETSc, MFEM, and deal.II.
+I am working to use the relationships I have established via this work to help identify funding for myself and graduate students.
+I have contributed to the proposal for SciDAC FASTMath, focused on sustainable scientific software development and maintenance, which is especially a good fit for students interested in the software engineering of open source scientific software.
+
+
 References
 --------------------------------------------------------------------------------
 
