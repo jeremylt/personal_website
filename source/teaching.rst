@@ -8,6 +8,39 @@ I was awarded Outstanding New Instructor, Outstanding Course Director, and Outst
 Also, while on the faculty at the U.S. Air Force Academy and as a research software engineer at CU Boulder, I have had several opportunities to mentor undergraduate and graduate students as well as research associates.
 
 
+Mentoring
+--------------------------------------------------------------------------------
+
+Mentoring is a critical component of supporting education and research.
+Researchers always have more to learn, and it is our responsibility to help peers and junior members of our teams with their development goals.
+As a leader in multiple research and open source research software projects, I have regular opportunities for direct mentoring of students and research associates.
+This mentoring ranges from smaller tasks like providing advice and support while working on new code, to moderate sized tasks like code review and large tasks like discussions about how to design code and meet our research goals.
+
+When graduate student research involves contributions to open source software projects, that provides a natural framework to aid in the mentoring.
+The need for testing and documentation for all contributions in a healthy open source codebase helps frame discussions about what specifically the student is trying to accomplish and where they are encountering difficulty.
+Planning out a new contribution or series of contributions provides a concrete framework for discussing research goals.
+Similarly, the code review process provides a good structure to provide feedback on specific short term goals for the student.
+The format of open source contributions tends to focus on smaller, specific opportunities for mentoring but can generate conversations that are broader or more cross cutting.
+
+Members of research groups tend to naturally adopt different schedules, leading to asynchronous communication.
+GitLab's guide to asynchronous work :cite:`gitlabasync` provides some useful suggestions that applicable to mentorship in this context.
+A lot of their recommendations, such as providing complete messages with all of the relevant context for the question and all the resources required to replicate the current problem.
+This has the benefit of helping in person or real-time interactions be more productive, and the process of writing out clearly the question with background can help them discover the solution themselves or shift the conversation from basic fact finding to comparisons between different options or perspectives.
+
+I prefer to push these mentoring discussions to public channels, such as Zulip (similar to Slack) or GitHub/GitLab issues when appropriate.
+This allows more people to participate in the discussion, leading to better advice and assistance.
+Also, this underscores a core value I try to model and instill in students - learning in public.
+Academia operates best when we honestly and openly admit gaps in our knowledge and collaboratively pursue new knowledge.
+
+Mentoring summer undergraduate students provides a unique challenge compared to mentoring graduate students and postgraduate researchers.
+These undergraduate students have a small span of time to gain context and make contributions, and their backgrounds typically require careful thought about the scope of the summer project and research goals.
+However, the compressed timeline can lead to a well focused project and a very rewarding experience for the undergraduate students.
+
+I also mentor students online outside of my research.
+My largest effort in this vein is volunteering my time as a mentor and community leader at `freeCodeCamp <https://www.freecodecamp.org>`_, a free and open source coding education platform designed to allow anyone in the world access to coding education resources necessary to learn the skills required to start a career in web development.
+These students have highly varied backgrounds that present unique challenges when compared to mentoring traditional undergraduate students, but the work of helping provide free education is very important and rewarding for me.
+
+
 Classroom Time
 --------------------------------------------------------------------------------
 
@@ -51,39 +84,6 @@ I have received largely positive feedback from FCQs around these considerations,
 Finally, and most importantly, I try to build assessments to be fair when considering the wide range of student backgrounds and challenges.
 Various underlying reasons, such as unconscious bias, systemic marginalization, and different levels of anxiety over assessments, can result in drastically different results between two different students with comparable levels of understanding on a topic.
 I provide a range of assessments so that students have multiple, different opportunities to demonstrate understanding of key course content.
-
-
-Mentoring
---------------------------------------------------------------------------------
-
-Mentoring is a critical component of supporting education and research.
-Researchers always have more to learn, and it is our responsibility to help peers and junior members of our teams with their development goals.
-As a leader in multiple research and open source research software projects, I have regular opportunities for direct mentoring of students and research associates.
-This mentoring ranges from smaller tasks like providing advice and support while working on new code, to moderate sized tasks like code review and large tasks like discussions about how to design code and meet our research goals.
-
-When graduate student research involves contributions to open source software projects, that provides a natural framework to aid in the mentoring.
-The need for testing and documentation for all contributions in a healthy open source codebase helps frame discussions about what specifically the student is trying to accomplish and where they are encountering difficulty.
-Planning out a new contribution or series of contributions provides a concrete framework for discussing research goals.
-Similarly, the code review process provides a good structure to provide feedback on specific short term goals for the student.
-The format of open source contributions tends to focus on smaller, specific opportunities for mentoring but can generate conversations that are broader or more cross cutting.
-
-Members of research groups tend to naturally adopt different schedules, leading to asynchronous communication.
-GitLab's guide to asynchronous work :cite:`gitlabasync` provides some useful suggestions that applicable to mentorship in this context.
-A lot of their recommendations, such as providing complete messages with all of the relevant context for the question and all the resources required to replicate the current problem.
-This has the benefit of helping in person or real-time interactions be more productive, and the process of writing out clearly the question with background can help them discover the solution themselves or shift the conversation from basic fact finding to comparisons between different options or perspectives.
-
-I prefer to push these mentoring discussions to public channels, such as Zulip (similar to Slack) or GitHub/GitLab issues when appropriate.
-This allows more people to participate in the discussion, leading to better advice and assistance.
-Also, this underscores a core value I try to model and instill in students - learning in public.
-Academia operates best when we honestly and openly admit gaps in our knowledge and collaboratively pursue new knowledge.
-
-Mentoring summer undergraduate students provides a unique challenge compared to mentoring graduate students and postgraduate researchers.
-These undergraduate students have a small span of time to gain context and make contributions, and their backgrounds typically require careful thought about the scope of the summer project and research goals.
-However, the compressed timeline can lead to a well focused project and a very rewarding experience for the undergraduate students.
-
-I also mentor students online outside of my research.
-My largest effort in this vein is volunteering my time as a mentor and community leader at `freeCodeCamp <https://www.freecodecamp.org>`_, a free and open source coding education platform designed to allow anyone in the world access to coding education resources necessary to learn the skills required to start a career in web development.
-These students have highly varied backgrounds that present unique challenges when compared to mentoring traditional undergraduate students, but the work of helping provide free education is very important and rewarding for me.
 
 
 Future Work
