@@ -14,7 +14,7 @@ Mentoring
 Mentoring is a critical component of supporting education and research.
 Researchers always have more to learn, and it is our responsibility to help peers and junior members of our teams with their development goals.
 As a leader in multiple research and open source research software projects, I have regular opportunities for direct mentoring of students and research associates.
-This mentoring ranges from smaller tasks like providing advice and support while working on new code, to moderate sized tasks like code review and large tasks like discussions about how to design code and meet our research goals.
+This mentoring ranges from supporting smaller tasks of design and implementation up to larger tasks such as the broader research conceptualization or open source software packaging and dissemination.
 
 When graduate student research involves contributions to open source software projects, that provides a natural framework to aid in the mentoring.
 The need for testing and documentation for all contributions in a healthy open source codebase helps frame discussions about what specifically the student is trying to accomplish and where they are encountering difficulty.
@@ -23,8 +23,8 @@ Similarly, the code review process provides a good structure to provide feedback
 The format of open source contributions tends to focus on smaller, specific opportunities for mentoring but can generate conversations that are broader or more cross cutting.
 
 Members of research groups tend to naturally adopt different schedules, leading to asynchronous communication.
-GitLab's guide to asynchronous work :cite:`gitlabasync` provides some useful suggestions that applicable to mentorship in this context.
-A lot of their recommendations, such as providing complete messages with all of the relevant context for the question and all the resources required to replicate the current problem.
+GitLab's guide to asynchronous work :cite:`gitlabasync` provides some useful suggestions that apply to mentorship in this context.
+Many of the recommendations, such as providing complete messages with all of the relevant context for the question and all the resources required to replicate the current problem,  are also best practices when communicating with collaborators.
 This has the benefit of helping in person or real-time interactions be more productive, and the process of writing out clearly the question with background can help them discover the solution themselves or shift the conversation from basic fact finding to comparisons between different options or perspectives.
 
 I prefer to push these mentoring discussions to public channels, such as Zulip (similar to Slack) or GitHub/GitLab issues when appropriate.
