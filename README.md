@@ -1,1 +1,1 @@
-personal website at jeremylt.org
+Source and deployment for personal website at jeremylt.org
