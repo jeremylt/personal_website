@@ -108,9 +108,10 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   alt-mss.rst
    hobbies.rst
    software.rst
+   alt-mss.rst
+   classes.rst
    Research <research.rst>
    Teaching <teaching.rst>
    Publications <publications.rst>
