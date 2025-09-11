@@ -89,7 +89,7 @@ Background
 
 | |fa-file| CV:                     `download <https://jeremylt.github.io/Presentations/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume:                 `download <https://jeremylt.github.io/Presentations/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_
-| |fa-file| Presentations:          `view <https://jeremylt.github.io/Presentations>`_
+| |fa-file| Presentations:          `view <https://jeremylt.org/presentations>`_
 
 I am a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 I develop the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries.
