@@ -23,7 +23,7 @@ Publications and Presentations
 
 | |fa-file| CV:                 `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume:             `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_
-| |fa-file| Presentations:      `view <https://jeremylt.github.io/Presentations>`_
+| |fa-file| Presentations:      `view <https://jeremylt.org/presentations>`_
 
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
 
