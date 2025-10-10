@@ -29,6 +29,10 @@
 
     <i class="fa-fw fab fa-linkedin"></i>
 
+.. |fa-xing| raw:: html
+
+    <i class="fa-fw fab fa-xing"></i>
+
 .. |fa-fcc| raw:: html
 
     <i class="fa-fw fab fa-free-code-camp"></i>
@@ -70,7 +74,8 @@ Contact
 
 | |fa-bluesky|  Bluesky:            `jeremylt <https://bsky.app/profile/jeremylt.bsky.social>`_
 | |fa-discord|  Discord:            `jeremylt <https://discordapp.com/users/513148167923957761>`_
-| |fa-linked|   LinkedIn:           `jeremylt <https://www.linkedin.com/in/jeremylt/>`__
+| |fa-linked|   LinkedIn:           `jeremylt <https://www.linkedin.com/in/jeremylt>`__
+| |fa-xing|     XING:               `Jeremy Thompson <https://www.xing.com/profile/Jeremy_Thompson019909>`__
 
 | |fa-fcc|      freeCodeCamp:       `jeremylt <https://www.freecodecamp.org/jeremylt>`__
 | |fa-fcc|      freeCodeCamp forum: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
