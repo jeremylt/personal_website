@@ -1,5 +1,5 @@
 ################################################################################
-|icon| Jeremy L Thompson
+|icon| Prof Dr Jeremy L Thompson
 ################################################################################
 
 .. meta::
@@ -104,6 +104,7 @@ I was named the `Air Combat Command Junior Military Scientist of the Year <https
 After this assignment, I joined the faculty at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where I taught math courses for engineering and computer science students.
 I was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
 After leaving the Air Force, I was part of the `Center for Efficient Exascale Discretizations (CEED) co-design center <https://ceed.exascaleproject.org/>`_ from 2017 to 2021 and `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_ from 2021 to 2025.
+I am currently a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 
 I completed my `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the `University of Colorado Boulder <https://www.colorado.edu/amath>`_ in 2021.
 My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
@@ -118,10 +119,10 @@ Contents
 
    hobbies.rst
    software.rst
-   alt-mss.rst
-   classes.rst
    Research <research.rst>
    Teaching <teaching.rst>
+   classes.rst
+   alt-mss.rst
    Publications <publications.rst>
    Presentations <presentations.rst>
 
