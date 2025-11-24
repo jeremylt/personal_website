@@ -47,4 +47,4 @@ Spring 2013
 
 Fall 2012
 
-* `Math 141 - Calculus <https://github.com/jeremylt/usafa-courses/tree/main/2012-Fall-Math-141-Calc-I>`_
+* `Math 141 - Calculus I <https://github.com/jeremylt/usafa-courses/tree/main/2012-Fall-Math-141-Calc-I>`_
