@@ -23,6 +23,8 @@ Publications and Presentations
 
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
+`2025-11-07 Performant Matrix-Free MPM with Ratel and libCEED <https://jeremylt.github.io/Presentations/20251107%20-%20Performant%20Matrix-Free%20MPM%20with%20Ratel%20and%20libCEED.pdf>`_
+
 `2025-09-11 Performant MPM Basis Operations for GPU Architectures <https://jeremylt.github.io/Presentations/20250911%20-%20Performant%20MPM%20Basis%20Operations%20for%20GPU%20Architectures.pdf>`_
 
 `2025-08-06 Ratel: Solid Mechanics for the Exascale Era <https://jeremylt.github.io/Presentations/20250806%20-%20Ratel%20Solid%20Mechanics%20for%20the%20Exascale%20Era.pdf>`_
