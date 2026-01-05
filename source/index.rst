@@ -33,10 +33,6 @@
 
     <i class="fa-fw fab fa-xing"></i>
 
-.. |fa-fcc| raw:: html
-
-    <i class="fa-fw fab fa-free-code-camp"></i>
-
 .. |fa-orcid| raw:: html
 
     <i class="fa-fw fab fa-orcid"></i>
@@ -77,9 +73,6 @@ Contact
 | |fa-linked|   LinkedIn:           `jeremylt <https://www.linkedin.com/in/jeremylt>`__
 | |fa-xing|     XING:               `Jeremy Thompson <https://www.xing.com/profile/Jeremy_Thompson019909>`__
 
-| |fa-fcc|      freeCodeCamp:       `jeremylt <https://www.freecodecamp.org/jeremylt>`__
-| |fa-fcc|      freeCodeCamp forum: `jeremylt <https://forum.freecodecamp.org/u/jeremylt/summary>`__
-
 | |fa-pronouns| pronouns:           he/they
 | |fa-email|    email:              `jeremy (at) jeremylt.org <mailto:jeremy@jeremylt.org>`__
 | |fa-language| languages:          English (native), German (A2-B1)
@@ -108,7 +101,6 @@ I am currently a Research Assistant Professor and Software Engineer in the depar
 
 I completed my `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the `University of Colorado Boulder <https://www.colorado.edu/amath>`_ in 2021.
 My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
-I am a mentor and community leader online at `freeCodeCamp <https://www.freecodecamp.org/>`_, a free and open source resource for learning programming and web development.
 
 
 Contents
