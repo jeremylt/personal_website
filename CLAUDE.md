@@ -99,10 +99,32 @@ Co-Authored-By: Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
 - Provide markdown links to files/lines for easy navigation
 - Format as `[filename.ext:line](path/to/file#Lline)`
 
+### Research & References
+**Always include references when making factual claims**, especially for:
+- Security vulnerabilities and statistics
+- Best practices and industry standards
+- Research findings and studies
+- Library/framework capabilities and limitations
+- Performance benchmarks
+
+**Reference Format:**
+- Use markdown hyperlinks: `[Source Name](URL)`
+- Include a "Sources:" or "References:" section at the end of responses
+- For web search results, cite authoritative sources (official docs, research papers, industry analysis)
+- Prefer primary sources over secondary when available
+
+**When to Include References:**
+- Discussing security concerns or vulnerabilities
+- Citing statistics or research data
+- Recommending specific approaches based on industry standards
+- Comparing technologies or tools
+- Explaining complex technical concepts
+
 ### Documentation
 - Explain AI usage transparently in PRs
 - Provide context for reviewers
 - Include reasoning behind implementation choices
+- Cite sources for technical decisions when based on research
 
 ## Project-Specific Notes
 
