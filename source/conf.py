@@ -43,12 +43,18 @@ bibtex_bibfiles = ['references.bib']
 # a list of builtin themes.
 #
 #import sphinx_theme
-html_theme = "alabaster"
+html_theme = "furo"
+# Note: Duplication here is mandatory for Furo
 html_theme_options = {
-    "nosidebar": "true",
-    "font_family": "sans-serif",
+    "light_css_variables": {
+        "font-stack": "sans-serif",
+    },
+    "dark_css_variables": {
+        "font-family": "sans-serif",
+    }
 }
 html_title = ""
+html_sidebars = { "**": [] }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
