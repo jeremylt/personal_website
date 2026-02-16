@@ -43,12 +43,25 @@ bibtex_bibfiles = ['references.bib']
 # a list of builtin themes.
 #
 #import sphinx_theme
-html_theme = "alabaster"
+html_theme = "furo"  # written by Claude Sonnet 4.5 with claude-sonnet-4-5-20250929
+# Start: written by Claude Sonnet 4.5 with claude-sonnet-4-5-20250929
 html_theme_options = {
-    "nosidebar": "true",
-    "font_family": "sans-serif",
+    "light_css_variables": {
+        "font-stack": "sans-serif",
+        "font-stack--monospace": "monospace",
+    },
+    "dark_css_variables": {
+        "font-stack": "sans-serif",
+        "font-stack--monospace": "monospace",
+    },
 }
+# End: written by Claude Sonnet 4.5 with claude-sonnet-4-5-20250929
 html_title = ""
+# Start: written by Claude Sonnet 4.5 with claude-sonnet-4-5-20250929
+html_sidebars = {
+    "**": []
+}
+# End: written by Claude Sonnet 4.5 with claude-sonnet-4-5-20250929
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
