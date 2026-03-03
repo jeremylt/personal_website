@@ -14,8 +14,14 @@ Hobbies
     <i class="fa-fw fa-solid fa-book"></i>
 
 
-BattleTech
+BattleTech Communities
 --------------------------------------------------------------------------------
+
+.. figure:: img/BTLogo.webp
+    :alt: BattleTech logo
+    :width: 250px
+
+I help moderate the `Catalyst Game Labs Discord <https://discord.com/invite/catalystgamelabs>`_ community.
 
 .. figure:: img/COBattleTechLogo.webp
     :alt: Colorado BattleTech logo
@@ -23,21 +29,29 @@ BattleTech
 
 I enjoy playing BattleTech and run events as part of `Colorado BattleTech <https://coloradobt.org>`_.
 See the `Colorado BattleTech <https://coloradobt.org>`_ website to find BattleTech players in Colorado.
-I also help moderate the `Catalyst Game Labs Discord <https://discord.com/invite/catalystgamelabs>`_ community.
+
+.. figure:: img/MPULogo.webp
+    :alt: Mech Painters Union logo
+    :width: 250px
+
+The `‘Mech Painters Union <https://mechpainters.org/>`_ is a BattleTech fan group dedicated to working together for better painting.
+We share miniatures that we’ve painted with advice to help each other improve our art.
+
+
+BattleTech Scenarios
+--------------------------------------------------------------------------------
 
 .. figure:: img/BattleTechOutworldsWastesLogo.webp
     :alt: BattleTech Outworlds Wastes logo
     :width: 250px
 
-I've developed a lightweight narrative league and event framework with simplified logistics rules, BattleTech: Outworlds Wastes.
-
 | |fa-mech| `BattleTech: Outworlds Wastes <https://outworlds-wastes.jeremylt.org>`_: lightweight narrative league and event framework
+
+I've developed a lightweight narrative league and event framework with simplified logistics rules, BattleTech: Outworlds Wastes.
 
 .. figure:: img/MercenarysPrideLogo.webp
     :alt: Mercenary's Pride logo
     :width: 250px
-
-Mercenary's Pride is a fun project retelling Jane Austin's Pride and Prejudice as a series of BattleTech scenarios and comm logs.
 
 | |fa-book| `Mercenary's Pride <https://mercenarys-pride.jeremylt.org/>`_: retelling Pride and Prejudice in BattleTech
 
@@ -47,6 +61,7 @@ Mercenary's Pride is a fun project retelling Jane Austin's Pride and Prejudice a
 
 Skirmishers is an effort to rebuild a game system like the old `BattleTroops <https://www.sarna.net/wiki/BattleTroops>`_ game from FASA.
 We are attempting to overhaul and streamline the rules while expanding them to cover additional weapons and units.
+
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
