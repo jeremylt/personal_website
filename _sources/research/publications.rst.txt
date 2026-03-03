@@ -1,4 +1,4 @@
-Publications and Presentations
+Publications
 ********************************************************************************
 
 .. |fa-orcid| raw:: html

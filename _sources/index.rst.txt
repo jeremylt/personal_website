@@ -81,6 +81,9 @@ Contact
 Background
 ********************************************************************************
 
+I am a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
+My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
+
 | |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
 | |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
 | |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
@@ -89,18 +92,20 @@ Background
 | |fa-file| Resume:                 `download <https://jeremylt.github.io/Presentations/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_
 | |fa-file| Presentations:          `view <https://jeremylt.org/presentations>`_
 
-I am a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
-I develop the `Ratel <https://gitlab.com/micromorph/ratel>`_ and `libCEED <https://github.com/ceed/libceed>`_ libraries.
-
 After graduating from the U.S. Air Force Academy, I served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
 I was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for my work helping restore U.S. Strategic Command's confidence in the U.S. Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
+
+
 After this assignment, I joined the faculty at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where I taught math courses for engineering and computer science students.
 I was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
-After leaving the Air Force, I was part of the `Center for Efficient Exascale Discretizations (CEED) co-design center <https://ceed.exascaleproject.org/>`_ from 2017 to 2021 and `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_ from 2021 to 2025.
-I am currently a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
 
-I completed my `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the `University of Colorado Boulder <https://www.colorado.edu/amath>`_ in 2021.
-My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
+After I left the Air Force, I went to `University of Colorado Boulder <https://www.colorado.edu/amath>`_ for my PhD.
+I was part of the `Center for Efficient Exascale Discretizations (CEED) co-design center <https://ceed.exascaleproject.org/>`_ from 2017 to 2021.
+In this center, I developed the `libCEED <https://github.com/ceed/libceed>`_ and `LFAToolkit.jl <https://www.github.com/jeremylt/LFAToolkit.jl>`_ open source scientific software libraries.
+I completed my `PhD in applied mathematics <https://www.proquest.com/docview/2572576599>`_ from the University of Colorado Boulder in 2021.
+
+I was part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_ from 2021 to 2025.
+In this center, I developed the `Ratel <https://gitlab.com/micromorph/ratel>`_ library and added Material Point Method capabilities to libCEED.
 
 
 Contents
@@ -111,10 +116,6 @@ Contents
 
    hobbies.rst
    software.rst
-   Research <research.rst>
-   Teaching <teaching.rst>
-   classes.rst
-   alt-mss.rst
-   Publications <publications.rst>
-   Presentations <presentations.rst>
+   research/index.rst
+   teaching/index.rst
 

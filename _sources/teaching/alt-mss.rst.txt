@@ -1,7 +1,7 @@
 Alt MSS 200
 ********************************************************************************
 
-.. image:: img/USAF.webp
+.. image:: ../img/USAF.webp
     :alt: USAF icon
     :width: 200px
 
