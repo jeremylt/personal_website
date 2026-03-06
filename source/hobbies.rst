@@ -14,11 +14,11 @@ Hobbies
     <i class="fa-fw fa-solid fa-book"></i>
 
 
-BattleTech Communities
+Communities
 --------------------------------------------------------------------------------
 
-.. figure:: img/BTLogo.webp
-    :alt: BattleTech logo
+.. figure:: img/CGLLogo.webp
+    :alt: CGL logo
     :width: 250px
 
 I help moderate the `Catalyst Game Labs Discord <https://discord.com/invite/catalystgamelabs>`_ community.
@@ -38,7 +38,7 @@ The `‘Mech Painters Union <https://mechpainters.org/>`_ is a BattleTech fan gr
 We share miniatures that we’ve painted with advice to help each other improve our art.
 
 
-BattleTech Scenarios
+BattleTech
 --------------------------------------------------------------------------------
 
 .. figure:: img/BattleTechOutworldsWastesLogo.webp
@@ -57,14 +57,22 @@ I've developed a lightweight narrative league and event framework with simplifie
 
 Mercenary's Pride is a fun project retelling Jane Austin's Pride and Prejudice as a series of BattleTech scenarios and comm logs.
 
+.. figure:: img/Skirmishers.webp
+    :alt: Skirmishers cover
+    :width: 250px
+
 | |fa-mech| `Skirmishers <https://skirmishers.jeremylt.org/>`_: rebuilding and expanding BattleTroops
 
-Skirmishers is an effort to rebuild a game system like the old `BattleTroops <https://www.sarna.net/wiki/BattleTroops>`_ game from FASA.
+Skirmishers is an effort to rebuild the old `BattleTroops <https://www.sarna.net/wiki/BattleTroops>`_ game from FASA.
 We are attempting to overhaul and streamline the rules while expanding them to cover additional weapons and units.
 
 
 Dungeons & Dragons
 --------------------------------------------------------------------------------
+
+.. figure:: img/DnDLogo.webp
+    :alt: Dungeons & Dragons logo
+    :width: 250px
 
 The lore for my home D&D games can be found here:
 
