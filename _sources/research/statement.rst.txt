@@ -101,20 +101,8 @@ With appropriate parameter tuning, these preconditioning techniques can greatly 
 This allows us to make better us of resources and complete more simulations with the same allocation of HPC resources.
 
 
-Future Work
---------------------------------------------------------------------------------
-
-I thrive in large research projects, such as the Center for Efficient Exascale Discretizations (CEED) as part of the Exascale Computing Project (ECP) and the Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations within Exascale Computing Workflows as part of the Predictive Science Academic Alliance Program (PSAAP), and have helped make connections between libCEED and larger open source software packages, such as PETSc, MFEM, and deal.II.
-My work in libCEED is partially funded in the FASTMath Institute of the Scientific Discovery through Advanced Computing (SciDAC).
-I am working to use the relationships I have established via this work to help identify funding for myself and graduate students.
-
-I have contributed to the proposal for the renewal FASTMath for SciDAC-6 and intend to pursue further partnerships as part of the upcoming SciDAC applications call.
-I have participated in a Small Business Innovation and Research (SBIR) proposal and anticipate future funding diversification will require a mix of government lab and industry partnerships.
-As computational needs grow and hardware technology continues to advance, performance portable software will continue to be an important area of research with wide range of stakeholders.
-
-
 References
 --------------------------------------------------------------------------------
 
 .. bibliography::
-   :filter: {"research"} & docnames
+   :filter: "research/statement" in docnames

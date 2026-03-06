@@ -86,16 +86,8 @@ Various underlying reasons, such as unconscious bias, systemic marginalization, 
 I provide a range of assessments so that students have multiple, different opportunities to demonstrate understanding of key course content.
 
 
-Future Work
---------------------------------------------------------------------------------
-
-Moving into an Assistant Research Professor role, I look forward to sitting on thesis committees for graduate students and serving as the advisor for PhD candidates.
-I am also interested in advising independent study projects for undergraduate and masters students interested in research.
-Additionally, I see CU Boulder's Summer Program for Undergraduate Research as an important program for undergraduate students to learn about academic research and will continue my efforts to mentor SPUR students.
-
-
 References
 --------------------------------------------------------------------------------
 
 .. bibliography::
-   :filter: {"teaching"} & docnames
+   :filter: "teaching/statement" in docnames
