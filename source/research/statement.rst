@@ -101,15 +101,8 @@ With appropriate parameter tuning, these preconditioning techniques can greatly 
 This allows us to make better us of resources and complete more simulations with the same allocation of HPC resources.
 
 
-Future Work
---------------------------------------------------------------------------------
-
-I thrive in large research projects, such as the Center for Efficient Exascale Discretizations (CEED) as part of the Exascale Computing Project (ECP) and the Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations within Exascale Computing Workflows as part of the Predictive Science Academic Alliance Program (PSAAP), and have helped make connections between libCEED and larger open source software packages, such as PETSc, MFEM, and deal.II.
-As computational needs grow and hardware technology continues to advance, performance portable software will continue to be an important area of research with wide range of stakeholders.
-
-
 References
 --------------------------------------------------------------------------------
 
 .. bibliography::
-   :filter: {"research"} & docnames
+   :filter: "research/statement" in docnames

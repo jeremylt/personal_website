@@ -36,6 +36,8 @@ exclude_patterns = []
 
 # sphinxcontrib-bibtex 2.0 requires listing all bibtex files here
 bibtex_bibfiles = ['references.bib']
+bibtex_default_style = 'plain'
+bibtex_reference_style = 'author_year'
 
 # -- Options for HTML output -------------------------------------------------
 
