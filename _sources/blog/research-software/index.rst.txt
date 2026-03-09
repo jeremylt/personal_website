@@ -1,13 +1,7 @@
-Blog
+Research Software Engineering
 ********************************************************************************
 
-This section will contain blog style posts about topics of interest to me.
+This section will contain blog style posts about research software engineering.
 
 Contents
 ================================================================================
-
-.. toctree::
-   :maxdepth: 1
-
-   research-software/index.rst
-   battletech/index.rst

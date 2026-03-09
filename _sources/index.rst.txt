@@ -118,4 +118,5 @@ Contents
    software.rst
    research/index.rst
    teaching/index.rst
+   blog/index.rst
 

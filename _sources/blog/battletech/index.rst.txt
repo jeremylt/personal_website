@@ -1,7 +1,7 @@
-Blog
+BattleTech
 ********************************************************************************
 
-This section will contain blog style posts about topics of interest to me.
+This section will contain blog style posts about BattleTech.
 
 Contents
 ================================================================================
@@ -9,5 +9,4 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   research-software/index.rst
-   battletech/index.rst
+   extrasapian-engineering.rst
