@@ -37,6 +37,8 @@ The only fixes I've identified are
 
 * Manually install the package from source
 
+Issue was reported to the maintainer in this `issue <https://github.com/biojppm/rapidyaml/issues/577>`_.
+
 
 Metadata
 ================================================================================

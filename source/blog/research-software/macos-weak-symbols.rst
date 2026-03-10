@@ -46,6 +46,8 @@ Fix
 Separate the fallback weak symbols into separate files for each group of backends requiring the same dependency.
 Then, when one of the weak symbol files is loaded, it only contains weak symbols that will be used, and none corresponding to backends that were successfully compiled.
 
+The full details of the fix are in this `pull request <https://github.com/CEED/libCEED/pull/1919>`_.
+
 
 Metadata
 ================================================================================
