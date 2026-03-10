@@ -231,7 +231,7 @@ Compiled backends were erroneously using the weak symbol instead of the strong s
 <section id="diagnosis">
 <h2>Diagnosis<a class="headerlink" href="#diagnosis" title="Link to this heading">¶</a></h2>
 <p>Debugging was complicated by the fact that I do not have access to a MacOS machine, so my only environment for testing was the project CI.
-I had to add MacOS to our <cite>GitHub Action &lt;https://github.com/CEED/libCEED/blob/0031f6c0bccfe00da73710d243af119549bbab9e/.github/workflows/rust-test-with-style.yml#L13&gt;</cite> for testing the Rust interface of libCEED to verify the issue and debug.</p>
+I had to add MacOS to our <a class="reference external" href="https://github.com/CEED/libCEED/blob/0031f6c0bccfe00da73710d243af119549bbab9e/.github/workflows/rust-test-with-style.yml#L13">GitHub Action</a> for testing the Rust interface of libCEED to verify the issue and debug.</p>
 <p>There is a lot of information out there on using weak symbols for <a class="reference external" href="https://en.wikipedia.org/wiki/Mach-O">Mach-O</a>, but this information is largely available for dynamic libraries.
 Nevertheless, I tried the different weak symbol markers and linkers recommended online, the problem persisted.</p>
 <p>After frustrating attempts at ‘fancy’ solutions, I attempted a ‘simple’ solution.
@@ -254,8 +254,8 @@ Then, when one of the weak symbol files is loaded, it only contains weak symbols
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
-<p>Started: 11 Mar 2026
-Last edited: 11 Mar 2026</p>
+<p>Started: 11 Mar 2026</p>
+<p>Last edited: 11 Mar 2026</p>
 </section>
 </section>
 
