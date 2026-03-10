@@ -18,7 +18,7 @@ Diagnosis
 ================================================================================
 
 Debugging was complicated by the fact that I do not have access to a MacOS machine, so my only environment for testing was the project CI.
-I had to add MacOS to our `GitHub Action <https://github.com/CEED/libCEED/blob/0031f6c0bccfe00da73710d243af119549bbab9e/.github/workflows/rust-test-with-style.yml#L13>` for testing the Rust interface of libCEED to verify the issue and debug.
+I had to add MacOS to our `GitHub Action <https://github.com/CEED/libCEED/blob/0031f6c0bccfe00da73710d243af119549bbab9e/.github/workflows/rust-test-with-style.yml#L13>`_ for testing the Rust interface of libCEED to verify the issue and debug.
 
 There is a lot of information out there on using weak symbols for `Mach-O <https://en.wikipedia.org/wiki/Mach-O>`_, but this information is largely available for dynamic libraries.
 Nevertheless, I tried the different weak symbol markers and linkers recommended online, the problem persisted.
@@ -51,4 +51,5 @@ Metadata
 ================================================================================
 
 Started: 11 Mar 2026
+
 Last edited: 11 Mar 2026
