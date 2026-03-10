@@ -11,3 +11,4 @@ Contents
 
    research-software/index.rst
    battletech/index.rst
+   birds/index.rst
