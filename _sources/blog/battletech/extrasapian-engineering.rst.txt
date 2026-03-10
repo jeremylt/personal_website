@@ -34,6 +34,7 @@ In section 4 we consider the unexplained events listed above, as well as several
 Lastly, in section 5 we outline the common techniques from this analysis and provide a framework for establishing the technical specifications required for these events to have occurred.
 In the conclusion, we demonstrate to the reader how these factors come together to demonstrate provide the current best estimates of technological capacity of extrasapien group or groups currently operating in the portion of the galaxy inhabited by humanity.
 
+
 A Sad Legacy
 ================================================================================
 
@@ -51,3 +52,10 @@ It remains unclear what ultimately happened to Dr Manu Kerner.
 
 Graduate programs hold the leaked review as an example of well executed, detailed peer review while also using the public spectacle as an example for their students of a breakdown in professional ethics and potential consequences.
 While academics are historically viewed as producing results that fail to meaningfully advance human knowledge or sometimes even engage with reality, examples such as this demonstrate that the peer review process is critical to maintaining the accuracy and credibility of scientific endeavors.
+
+
+Metadata
+================================================================================
+
+Started: 10 Mar 2026
+Last edited: 11 Mar 2026
