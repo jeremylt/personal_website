@@ -251,6 +251,7 @@ This issue was not detected earlier because MacOS will search for additional sym
 <h2>Fix<a class="headerlink" href="#fix" title="Link to this heading">¶</a></h2>
 <p>Separate the fallback weak symbols into separate files for each group of backends requiring the same dependency.
 Then, when one of the weak symbol files is loaded, it only contains weak symbols that will be used, and none corresponding to backends that were successfully compiled.</p>
+<p>The full details of the fix are in this <a class="reference external" href="https://github.com/CEED/libCEED/pull/1919">pull request</a>.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
