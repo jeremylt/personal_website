@@ -16,10 +16,18 @@ In this paper, the authors outline the expected levels of industrial capacity, b
 While we have not seen the level of degradation in the Inner Sphere that the Periphery powers have experienced, the progress of humanity has been more difficult than expected, despite many of the successor states adopting policy recommendations from this paper designed to preserve and expand the technological capacity of humanity.
 While there are several possible explanations for this higher that expected degradation [SR-2903, RM-2912, RO-1914], the scope of the degradation suggests either a widespread conspiracy, such as the theory that ComStar is secretly destroying Star League technology to ensure their dominance [PZ-2985], or an entity with surveillance and intervention capabilities currently surpassing those of any successor state.
 
+The widespread degradation of the technological capacity of the successor states is outstripped by the devastation of the Outworlds Alliance following the fall of the Star League.
+While the commonly held reason for the Outworlds Alliance abandoning two thirds of their worlds, approximately 100 systems, is the loss of infrastructure and trade from the Star League [RK-2830], this level of abandonment has not been seen in any of the other Periphery nations.
+This so called 'Outworlds Wastes' is one of humanity's furthest reaches into space from Terra; perhaps explorers discovered something so significant and powerful that prompted the extreme withdrawal and following economic devastation of the Outworlds Alliance, such as a extrasapian presence.
+
 The idea of an extrasapian presence begins to look more compelling when considering reports of events that exceed the capacity of the Star League.
-Take for instance the Tripitz Affair [TR-2979], where a strange group of white ships attacked recovery force attempting to salvage the Black Lion class battlecruiser, the SLS Tripitz.
+The Minnesota Tribe [OV-2828] struck various military targets in the Draconis Combine between 9 October 2825 and 9 March 2827, fanning fears of the Star League Defense Force returning [CB-2926].
+These forces outmatched Draconis Combine military forces, leading to a series of lopsided victories before the Minnesota Tribe vanished.
+While no conclusive proof has come of archeological expeditions, there is a compelling narrative for extrasapian origins for this group, as Minnesota was a region on Terra known for unexplained extrasapien encounters.
+The locations attacked by the Minnesota Tribe are within relatively short travel distance from the Outworlds Wastes region that was abandoned.
+
+Consider also the Tripitz Affair [TR-2979], where a strange group of white ships attacked recovery force attempting to salvage the Black Lion class battlecruiser, the SLS Tripitz.
 These strange white aerospace fighters were able to destroy all Taurian fighters and destroy the Tripitz with only their standard weapon compliment, even though Star League era fighters, the best humanity has seen, were not capable of posing a significant threat to warships of the era using only their primary weaponry.
-Interstellar Expeditions is famous for their pursuit of the Minnesota Tribe [OV-2994]; while no conclusive proof has come of their archeological expeditions, they present a compelling narrative for extrasapian origins for this group.
 
 Finally, accounts of mysterious disappearances indicate the presence of an extrasapian intelligence collecting human ships and crews.
 Consider the battle of Dieron in 2787 [TR-2788].
@@ -57,6 +65,8 @@ While academics are historically viewed as producing results that fail to meanin
 Metadata
 ================================================================================
 
-Started: 10 Mar 2026
+Started: 9 Mar 2026
 
 Last edited: 11 Mar 2026
+
+Special thanks to Dusty 'Star Colonel' Guerra for the idea of the rapid collapse of the Outworlds Wastes.
