@@ -8,10 +8,10 @@ Issue
 ================================================================================
 
 libCEED is based upon the `bridge pattern <https://en.wikipedia.org/wiki/Bridge_pattern>`_ where different hardware (CPU, GPU, etc) is supported with different backend implementations.
-When a user attempts to use an implementation but the associated dependency is not available (CUDA, ROCm, SYCL, etc), then the library defaults to a weak symbol with an error message directing the user to consult the installation instructions to build the library with the required dependency.
+When a user attempts to initialize libCEED to use an implementation but the associated dependency is not available (CUDA, ROCm, SYCL, etc), then the library defaults to a weak symbol for the internal initialization routine for the backend with an error message directing the user to consult the installation instructions to build the library with the required dependency.
 
-For libCEED on MacOS using a static build of the library, the build system was `failing to properly link all backends <https://github.com/CEED/libCEED/issues/1694>`_.
-Compiled backends were erroneously using the weak symbol instead of the strong symbol for supported 'backends'.
+For libCEED on MacOS using a static build of the library, the build system was `not properly linking all backends <https://github.com/CEED/libCEED/issues/1694>`_.
+Compiled backends were erroneously using the weak symbol instead of the strong symbol for the initialization routine.
 
 
 Diagnosis
@@ -21,11 +21,11 @@ Debugging was complicated by the fact that I do not have access to a MacOS machi
 I had to add MacOS to our `GitHub Action <https://github.com/CEED/libCEED/blob/0031f6c0bccfe00da73710d243af119549bbab9e/.github/workflows/rust-test-with-style.yml#L13>`_ for testing the Rust interface of libCEED to verify the issue and debug.
 
 There is a lot of information out there on using weak symbols for `Mach-O <https://en.wikipedia.org/wiki/Mach-O>`_, but this information is largely available for dynamic libraries.
-Nevertheless, I tried the different weak symbol markers and linkers recommended online, the problem persisted.
+Nevertheless, I tried the different weak symbol markers recommended online as well as the preferred linker for MacOS, but the problem persisted.
 
 After frustrating attempts at 'fancy' solutions, I attempted a 'simple' solution.
-I removed the weak symbols for backends I knew would always be successfully complied.
-This resulted in a successful build, but this was not feasible for actually supporting the conditional compilation and error message outline above.
+I removed the weak symbols to the initialization routine for backends I knew would always be successfully complied.
+This resulted in the static build successfully executing the initialization of the supported backends, but this was not feasible for actually supporting the conditional compilation and error message outlined above.
 
 I created a separate file with the weak symbols only for the backends that are always compiled, and the library still found the correct symbol in this case.
 The fix is to create separate files for the weak symbols of the backends based upon each dependency package.
@@ -54,4 +54,4 @@ Metadata
 
 Started: 10 Mar 2026
 
-Last edited: 10 Mar 2026
+Last edited: 11 Mar 2026

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Weak Symbols on MacOS" href="macos-weak-symbols.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Python Wheel Versions" href="python-wheels.html"><link rel="prev" title="Research Software Engineering" href="index.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Python Wheel Versions</title>
+        <title>GPU Porting</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -200,7 +200,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/blog/research-software/python-wheels.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/blog/research-software/gpu-porting.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -218,38 +218,26 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="python-wheel-versions">
-<h1>Python Wheel Versions<a class="headerlink" href="#python-wheel-versions" title="Link to this heading">¶</a></h1>
-<p>I found a curious and frustrating issue with an outdated version of a dependency being installed in my <cite>venv</cite>.</p>
-<section id="issue">
-<h2>Issue<a class="headerlink" href="#issue" title="Link to this heading">¶</a></h2>
-<p>The package <a class="reference external" href="https://github.com/biojppm/rapidyaml">rapidyaml</a> is required for <a class="reference external" href="https://github.com/4C-multiphysics/4C">4C</a>.
-During install of dependencies for the development environment, <cite>rapidyaml-0.1.0.post60-cp314-cp314-linux_x86_64.whl</cite> was installed instead of the newer <cite>rapidyaml-0.10.0*</cite>.
-When attempting to install the package manually on my system, the latest version was indeed used instead of the outdated version.</p>
+          <section id="gpu-porting">
+<h1>GPU Porting<a class="headerlink" href="#gpu-porting" title="Link to this heading">¶</a></h1>
+<p>High performance software with FLOP heavy but parallelization workloads can benefit from using GPU hardware.
+It is easier to develop a project with GPU support from the beginning; however it can be impractical to restart an existing project from scratch, especially a large project with hundreds of thousands or millions of lines of code representing years or decades of development effort.</p>
+<p>In this post, we explore different approaches to extending existing software to run on GPU hardware.
+There are two general families of approaches under consideration here - native support via the hardware specific language, such as <a class="reference external" href="https://developer.nvidia.com/cuda">CUDA</a>, <a class="reference external" href="https://www.amd.com/en/products/software/rocm">ROCm</a>, or <a class="reference external" href="https://www.khronos.org/sycl">SYCL</a>, and performance portability libraries, such as <a class="reference external" href="https://kokkos.org">Kokkos</a> or <a class="reference external" href="https://raja.readthedocs.io">Raja</a>.</p>
+<p>Note: ROCm and SYCL have the ability to target different hardware rather than just <a class="reference external" href="https://rocm.docs.amd.com/projects/HIP">AMD devices (ROCm)</a> or <a class="reference external" href="https://github.com/AdaptiveCpp/AdaptiveCpp">Intel devices (SYCL)</a> so in some sense they can be thought of having some capabilities in common with a performance portability library.
+However, that capability will not be the full focus of our discussion here, as the ability to target different hardware is not the only distinction under consideration.</p>
+<p>We will outline some pros and cons to consider when deciding what approach to take when extending existing software to run on GPU hardware.</p>
+<section id="native-gpu-support">
+<h2>Native GPU Support<a class="headerlink" href="#native-gpu-support" title="Link to this heading">¶</a></h2>
+<p>Hardware specific languages include <a class="reference external" href="https://developer.nvidia.com/cuda">CUDA</a>, <a class="reference external" href="https://www.amd.com/en/products/software/rocm">ROCm</a>, or <cite>SYCL &lt;https://www.khronos.org/sycl&gt;</cite>, or <a class="reference external" href="https://www.khronos.org/sycl">SYCL</a>.</p>
 </section>
-<section id="diagnosis">
-<h2>Diagnosis<a class="headerlink" href="#diagnosis" title="Link to this heading">¶</a></h2>
-<p>I am not as familiar with Python dependency management as I would like to be.
-The command <cite>pip install foo -vv</cite> (or <cite>-vvv</cite>) prompts <cite>pip</cite> to be more verbose.
-The verbose output indicated that <cite>pip</cite> was searching <a class="reference external" href="https://pypi.org/simple/rapidyaml">https://pypi.org/simple/rapidyaml</a> for compatible packages.</p>
-<p>The <a class="reference external" href="https://packaging.python.org/en/latest/specifications/simple-repository-api">pypi simple repository API</a> lists only the download links for a specific Python package.
-For instance, the package <cite>foo</cite> has its download links listed at <cite>https://pypi.org/simple/foo</cite>.</p>
-<p>Although this package had enabled <a class="reference external" href="https://github.com/biojppm/rapidyaml/pull/571">wheels for Python 3.14</a>, these wheels were not yet listed on <a class="reference external" href="https://pypi.org/simple/rapidyaml">rapidyaml’s simple repository API page</a>.
-Oddly enough, there was a wheel with support for Python 3.14, but only for v0.1.0 of <cite>rapidyaml</cite> and no other version.</p>
-</section>
-<section id="fix">
-<h2>Fix<a class="headerlink" href="#fix" title="Link to this heading">¶</a></h2>
-<p>The only fixes I’ve identified are</p>
-<ul class="simple">
-<li><p>Ask the package maintainer to fix the listed wheels</p></li>
-<li><p>Use a supported version of Python</p></li>
-<li><p>Manually install the package from source</p></li>
-</ul>
-<p>Issue was reported to the maintainer in this <a class="reference external" href="https://github.com/biojppm/rapidyaml/issues/577">issue</a>, and I installed an earlier version of Python for this project.</p>
+<section id="performance-portability-libraries">
+<h2>Performance Portability Libraries<a class="headerlink" href="#performance-portability-libraries" title="Link to this heading">¶</a></h2>
+<p>Performance portability libraries include <a class="reference external" href="https://kokkos.org">Kokkos</a> and <a class="reference external" href="https://raja.readthedocs.io">Raja</a>.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
-<p>Started: 10 Mar 2026</p>
+<p>Started: 11 Mar 2026</p>
 <p>Last edited: 11 Mar 2026</p>
 </section>
 </section>
@@ -259,23 +247,23 @@ Oddly enough, there was a wheel with support for Python 3.14, but only for v0.1.
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="macos-weak-symbols.html">
+          <a class="next-page" href="python-wheels.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Weak Symbols on MacOS</div>
+                <div class="title">Python Wheel Versions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="gpu-porting.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">GPU Porting</div>
+                <div class="title">Research Software Engineering</div>
                 
               </div>
             </a>
@@ -309,10 +297,9 @@ Oddly enough, there was a wheel with support for Python 3.14, but only for v0.1.
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Python Wheel Versions</a><ul>
-<li><a class="reference internal" href="#issue">Issue</a></li>
-<li><a class="reference internal" href="#diagnosis">Diagnosis</a></li>
-<li><a class="reference internal" href="#fix">Fix</a></li>
+<li><a class="reference internal" href="#">GPU Porting</a><ul>
+<li><a class="reference internal" href="#native-gpu-support">Native GPU Support</a></li>
+<li><a class="reference internal" href="#performance-portability-libraries">Performance Portability Libraries</a></li>
 <li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>
