@@ -1,12 +1,12 @@
-Extrasapian Engineering
+Extrasapien Engineering
 ********************************************************************************
 
 The Star League represented the pinnacle of technological achievement for humanity - scientific and engineering advancements far beyond our current capabilities.
 However, the pace of deterioration of humanity's technological capabilities has outstripped what can simply be explained by war while simultaneously reports of events requiring advanced technological capacity that exceed that of the Star League continue to occur.
-In this paper, we introduce the field of extasapian engineering and highlight examples of these conflicting themes that all but ensure that non-human intelligence must be at work in our corner of the galaxy.
+In this paper, we introduce the field of extrasapien engineering and highlight examples of these conflicting themes that all but ensure that non-human intelligence must be at work in our corner of the galaxy.
 
 Astrophysicist Frank Drake [FR-1961] established the Drake equation, which helps provide a probability of the existence of non-human intelligence in the universe.
-Despite the limited data at the time, this has become a foundational equation for the study of extrasapian engineering.
+Despite the limited data at the time, this has become a foundational equation for the study of extrasapien engineering.
 Despite claims that humanity has encountered zero non-human intelligence as we explore the galaxy, the Drake equation all but guarantees that the probability of non-human intelligence remains high.
 Indeed, Barison Reed [BR-2847] highlighted this curious discrepancy in his paper outlining the improbability of all life on every planet ever discovered by humanity remaining firmly below the thresholds for sentience.
 Given the statistical certainty of the existence of non-human intelligence, one must ask where these entities are to be found.
@@ -18,25 +18,28 @@ While there are several possible explanations for this higher that expected degr
 
 The widespread degradation of the technological capacity of the successor states is outstripped by the devastation of the Outworlds Alliance following the fall of the Star League.
 While the commonly held reason for the Outworlds Alliance abandoning two thirds of their worlds, approximately 100 systems, is the loss of infrastructure and trade from the Star League [RK-2830], this level of abandonment has not been seen in any of the other Periphery nations.
-This so called 'Outworlds Wastes' is one of humanity's furthest reaches into space from Terra; perhaps explorers discovered something so significant and powerful that prompted the extreme withdrawal and following economic devastation of the Outworlds Alliance, such as a extrasapian presence.
+This so called 'Outworlds Wastes' is one of humanity's furthest reaches into space from Terra; perhaps explorers discovered something so significant and powerful that prompted the extreme withdrawal and following economic devastation of the Outworlds Alliance, such as a extrasapien presence.
 
-The idea of an extrasapian presence begins to look more compelling when considering reports of events that exceed the capacity of the Star League.
+The idea of an extrasapien presence begins to look more compelling when considering reports of events that exceed the capacity of the Star League.
 The Minnesota Tribe [OV-2828] struck various military targets in the Draconis Combine between 9 October 2825 and 9 March 2827, fanning fears of the Star League Defense Force returning [CB-2926].
 These forces outmatched Draconis Combine military forces, leading to a series of lopsided victories before the Minnesota Tribe vanished.
-While no conclusive proof has come of archeological expeditions, there is a compelling narrative for extrasapian origins for this group, as Minnesota was a region on Terra known for unexplained extrasapien encounters.
+While no conclusive proof has come of archeological expeditions, there is a compelling narrative for extrasapien origins for this group, as Minnesota was a region on Terra known for unexplained extrasapien encounters.
 The locations attacked by the Minnesota Tribe are within relatively short travel distance from the Outworlds Wastes region that was abandoned.
 
-Consider also the Tripitz Affair [TR-2979], where a strange group of white ships attacked recovery force attempting to salvage the Black Lion class battlecruiser, the SLS Tripitz.
-These strange white aerospace fighters were able to destroy all Taurian fighters and destroy the Tripitz with only their standard weapon compliment, even though Star League era fighters, the best humanity has seen, were not capable of posing a significant threat to warships of the era using only their primary weaponry.
-
-Finally, accounts of mysterious disappearances indicate the presence of an extrasapian intelligence collecting human ships and crews.
+Finally, accounts of mysterious disappearances indicate the presence of an extrasapien intelligence collecting human ships and crews.
 Consider the battle of Dieron in 2787 [TR-2788].
 Although the Lyran Commonwealth forces were largely successful in their objectives, the four surviving ships of the Lyran naval squadron disappeared and no evidence of them has been found to this date.
 The disappearance of over 1,000 crew and 4 of the surviving warships of the era without any debris or sign of capture remains improbable without their capture by a more advanced force.
 
-This paper will explore these concerns within the new intellectual framework of extrasapiaen engineering.
+Consider also the SLS Tripitz [TR-2785], a SLDF Black Lion class battlecruser, which is widely considered one of the most successful SLDF warships [WY-2802].
+The SLS Tripitz was tasked with evacuating members of House Cameron in the event of an emergency, such as the Amaris Coup.
+Reports indicate that the SLS Tripitz left the Sol system following the coup; however there is no report of the warship  ever joining with other SLDF naval forces.
+Given its importance in the fleet, suggestions of maintenance issues, a misjump, or a mutiny are unlikely.
+The disappearance of the SLDF's most important warship and its cargo - the family of the First Lord - can be most simply explained by the intervention of an external entity with the capability to overwhelm a top of the line SLDF battlecruiser, such as an extrasapien entity.  
+
+This paper will explore these concerns within the new intellectual framework of *extrasapien engineering*.
 In the first section, we provide the prerequisite background information for the establishment of this field of study.
-We first outline the statistical probability of extrasapian intelligence in section 2.
+We first outline the statistical probability of extrasapien intelligence in section 2.
 In section 3 we explore the unprecedented degradation of humanity's technological capacity and explore the potential explanations.
 In section 4 we consider the unexplained events listed above, as well as several others, and outline the technological capacity required to execute these events as well as explain why they exceed the current or past capabilities of humanity.
 Lastly, in section 5 we outline the common techniques from this analysis and provide a framework for establishing the technical specifications required for these events to have occurred.
@@ -53,7 +56,7 @@ The dry critique was quickly taken as a sensational 'special interest' news item
 
 While the 3 reviewers steadfastly refused to disclose who had leaked the manuscript, Dr Kerner blamed longtime rival Professor Aias Snider.
 Footage of the resulting physical altercation at the University of Robinson added to the budding fervor over the leaked manuscript and helped ensure it would become widespread news.
-Following the altercation, Dr Kerner was banned from all academic institutions in the Fedeated Suns and several academic institutions in the rest of the Inner Sphere.
+Following the altercation, Dr Kerner was banned from all academic institutions in the Federated Suns and several academic institutions in the rest of the Inner Sphere.
 Dr Kerner vowed to find evidence to prove the theories in the manuscript correct and vanished from academic circles.
 Following sporadic reports of Dr "Spooky" Kerner sightings across the Inner Sphere, news coverage eventually faded.
 It remains unclear what ultimately happened to Dr Manu Kerner.
