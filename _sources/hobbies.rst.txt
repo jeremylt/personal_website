@@ -41,6 +41,8 @@ We share miniatures that we’ve painted with advice to help each other improve 
 BattleTech
 --------------------------------------------------------------------------------
 
+Additional content can be found on my `BattleTech page <https://battletech.jeremylt.org>`_.
+
 .. figure:: img/BattleTechOutworldsWastesLogo.webp
     :alt: BattleTech Outworlds Wastes logo
     :width: 250px
