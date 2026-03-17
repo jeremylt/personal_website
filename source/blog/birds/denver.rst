@@ -9,11 +9,19 @@ Denver, Colorado
 
 * `Red-winged blackbird <https://en.wikipedia.org/wiki/Red-winged_blackbird>`_
 
+* `Dark-eyed junco <https://en.wikipedia.org/wiki/Dark-eyed_junco>`_
+
+* `House sparrow <https://en.wikipedia.org/wiki/House_sparrow>`_
+
 * `Canadian goose <https://en.wikipedia.org/wiki/Canada_goose>`_
+
+* `Cackling goose <https://en.wikipedia.org/wiki/Cackling_goose>`_
 
 * `Double-crested cormorant <https://en.wikipedia.org/wiki/Double-crested_cormorant>`_
 
 * `Mallard duck <https://en.wikipedia.org/wiki/Mallard>`_
+
+* `Hooded merganser <https://en.wikipedia.org/wiki/Hooded_merganser>`_
 
 * `Bald eagle <https://en.wikipedia.org/wiki/Bald_eagle>`_
 
@@ -33,4 +41,4 @@ Metadata
 
 Started: 10 Mar 2026
 
-Last edited: 11 Mar 2026
+Last edited: 17 Mar 2026
