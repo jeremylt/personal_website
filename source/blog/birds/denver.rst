@@ -19,6 +19,8 @@ Denver, Colorado
 
 * `Double-crested cormorant <https://en.wikipedia.org/wiki/Double-crested_cormorant>`_
 
+* `Red-billed gull <https://en.wikipedia.org/wiki/Red-billed_gull>`_
+
 * `Mallard duck <https://en.wikipedia.org/wiki/Mallard>`_
 
 * `Hooded merganser <https://en.wikipedia.org/wiki/Hooded_merganser>`_
@@ -41,4 +43,4 @@ Metadata
 
 Started: 10 Mar 2026
 
-Last edited: 17 Mar 2026
+Last edited: 30 Mar 2026
