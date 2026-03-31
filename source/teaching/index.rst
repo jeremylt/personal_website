@@ -11,4 +11,4 @@ Contents
 
    statement.rst
    classes.rst
-   alt-mss.rst
+   alt-courses.rst
