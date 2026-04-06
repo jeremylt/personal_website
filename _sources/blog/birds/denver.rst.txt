@@ -13,9 +13,13 @@ Denver, Colorado
 
 * `House sparrow <https://en.wikipedia.org/wiki/House_sparrow>`_
 
+* `Black-capped chickadee <https://en.wikipedia.org/wiki/Black-capped_chickadee>`_
+
 * `Canadian goose <https://en.wikipedia.org/wiki/Canada_goose>`_
 
 * `Cackling goose <https://en.wikipedia.org/wiki/Cackling_goose>`_
+
+* `Greater white-fronted goose <https://en.wikipedia.org/wiki/Greater_white-fronted_goose>`_
 
 * `Double-crested cormorant <https://en.wikipedia.org/wiki/Double-crested_cormorant>`_
 
@@ -43,4 +47,4 @@ Metadata
 
 Started: 10 Mar 2026
 
-Last edited: 30 Mar 2026
+Last edited: 6 Apr 2026
