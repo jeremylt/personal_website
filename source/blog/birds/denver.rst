@@ -5,6 +5,8 @@ Denver, Colorado
 
 * `American robin <https://en.wikipedia.org/wiki/American_robin>`_
 
+* `White-breasted nuthatch <https://en.wikipedia.org/wiki/White-breasted_nuthatch>`_
+
 * `Northern flicker <https://en.wikipedia.org/wiki/Northern_flicker>`_
 
 * `Red-winged blackbird <https://en.wikipedia.org/wiki/Red-winged_blackbird>`_
@@ -13,7 +15,11 @@ Denver, Colorado
 
 * `House sparrow <https://en.wikipedia.org/wiki/House_sparrow>`_
 
+* `House finch <https://en.wikipedia.org/wiki/House_finch>`_
+
 * `Black-capped chickadee <https://en.wikipedia.org/wiki/Black-capped_chickadee>`_
+
+* `American white pelican <https://en.wikipedia.org/wiki/American_white_pelican>`_
 
 * `Canadian goose <https://en.wikipedia.org/wiki/Canada_goose>`_
 
