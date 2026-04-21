@@ -17,6 +17,8 @@ Denver, Colorado
 
 * `House finch <https://en.wikipedia.org/wiki/House_finch>`_
 
+* `European starling <https://en.wikipedia.org/wiki/Common_starling>`_
+
 * `Black-capped chickadee <https://en.wikipedia.org/wiki/Black-capped_chickadee>`_
 
 * `American white pelican <https://en.wikipedia.org/wiki/American_white_pelican>`_
