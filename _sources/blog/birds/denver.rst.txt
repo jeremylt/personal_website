@@ -11,11 +11,15 @@ Denver, Colorado
 
 * `Red-winged blackbird <https://en.wikipedia.org/wiki/Red-winged_blackbird>`_
 
+* `Common grackle <https://en.wikipedia.org/wiki/Common_grackle>`_
+
 * `Dark-eyed junco <https://en.wikipedia.org/wiki/Dark-eyed_junco>`_
 
 * `House sparrow <https://en.wikipedia.org/wiki/House_sparrow>`_
 
 * `House finch <https://en.wikipedia.org/wiki/House_finch>`_
+
+* `Say's phoebe <https://en.wikipedia.org/wiki/Say%27s_phoebe>`_
 
 * `European starling <https://en.wikipedia.org/wiki/Common_starling>`_
 
