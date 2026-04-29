@@ -3,7 +3,11 @@ Denver, Colorado
 
 * `Rock pigeon <https://en.wikipedia.org/wiki/Rock_dove>`_
 
+* `Eurasian collared dove <https://en.wikipedia.org/wiki/Eurasian_collared_dove>`_
+
 * `American robin <https://en.wikipedia.org/wiki/American_robin>`_
+
+* `Spotted towhee <https://en.wikipedia.org/wiki/Spotted_towhee>`_
 
 * `White-breasted nuthatch <https://en.wikipedia.org/wiki/White-breasted_nuthatch>`_
 
