@@ -1,6 +1,8 @@
 Seasons and Episodes
 ********************************************************************************
 
+I have watched the following seasons and episodes.
+
 * Season 1: 1 - 5
 * Season 6: 1363 - 1391
 * Season 7: 1392 - 1468
