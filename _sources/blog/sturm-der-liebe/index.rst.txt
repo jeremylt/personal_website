@@ -1,7 +1,7 @@
-Blog
+Sturm der Liebe
 ********************************************************************************
 
-This section will contain blog style posts about topics of interest to me.
+This section contains information about Sturm der Liebe
 
 Contents
 ================================================================================
@@ -9,7 +9,5 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   research-software/index.rst
-   battletech/index.rst
-   birds/index.rst
-   sturm-der-liebe/index.rst
+   episodes.rst
+   family-tree.rst
