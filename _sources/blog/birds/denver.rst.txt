@@ -21,6 +21,8 @@ Denver, Colorado
 
 * `House sparrow <https://en.wikipedia.org/wiki/House_sparrow>`_
 
+* `Chipping sparrow <https://en.wikipedia.org/wiki/Chipping_sparrow>`_
+
 * `House finch <https://en.wikipedia.org/wiki/House_finch>`_
 
 * `Say's phoebe <https://en.wikipedia.org/wiki/Say%27s_phoebe>`_
@@ -63,4 +65,4 @@ Metadata
 
 Started: 10 Mar 2026
 
-Last edited: 6 Apr 2026
+Last edited: 12 May 2026
