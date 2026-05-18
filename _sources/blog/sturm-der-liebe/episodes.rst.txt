@@ -3,10 +3,10 @@ Seasons and Episodes
 
 I have watched the following seasons and episodes.
 
-* Season 1: 1 - 5
-* Season 6: 1363 - 1391
-* Season 7: 1392 - 1468
-* Season 9: 1815 - 1912
+* Season 1:     1 - 6
+* Season 6:  1363 - 1391
+* Season 7:  1392 - 1479
+* Season 9:  1815 - 1912
 * Season 18: 3888 - 3957
 * Season 19: 3958 - 4151
 * Season 20: 4152 - 4334
