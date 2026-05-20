@@ -12,3 +12,4 @@ Contents
    gpu-porting.rst
    python-wheels.rst
    macos-weak-symbols.rst
+   popen-pclose.rst
