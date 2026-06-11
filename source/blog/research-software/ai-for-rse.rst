@@ -65,7 +65,39 @@ However, software development best practices are not the only guidelines for pro
 As academic researchers, RSEs must also follow research integrity standards.
 
 The European Code of Conduct for Research Integrity (available [here](https://zenodo.org/records/12729678)) calls out a few key points of note for this discussion.
-Firstly, researchers have an obligation to be transparent in their reporting of methods, including the using of AI tools.
+Firstly, researchers have an obligation to be transparent in their reporting of methods, including the use of AI tools.
 Secondly, researchers and institutions should treat software as 'legitimate and citable' research products (similar to the [San Francisco Declaration on Research Assessment](https://sfdora.org/read)).
 Thirdly, researchers must not plagiarize the work of others.
 RSE must keep these practices in mind while using agentic AI and other LLM based software development tools.
+
+The first point, an obligation to disclose methods, is consistent with many of the policies for AI and LLM generated content from [the list of open source policies](https://github.com/melissawm/open-source-ai-contribution-policies) by Melissa Weber Mendonça.
+Not only is disclosure consistent with research ethics, but also LLM based coding tools tend to make different types of errors than human software developers (Cotronen et al. [here](https://arxiv.org/abs/2508.21634), CodeRabbit [here](https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report), and Chong [here](https://c3.unu.edu/blog/strange-errors-and-familiar-flaws-how-ai-and-human-mistakes-compare) discuss different perspectives on this issue).
+As a result, disclosure allows the developers to better review the generated code and catch the types of errors more commonly found in LLM generated code.
+
+The second and third points are trickier.
+If we want research software to be considered a first class artifact like research papers, then novel algorithms or implementations from other researchers must be cited when used.
+Importing external libraries naturally acts as a citation mechanism; however, not all algorithms can be imported in this way, for various reasons.
+In such cases, the original researcher should be cited via another mechanism, such as in the project documentation.
+Unfortunately, LLMs can generate novel or copyrighted code without attribution, making it difficult to properly attribute the source of the generated content when using LLM based software development tools.
+
+Prof Tim Davis prompted GitHub's Copilot to generate large portions of his own copyrighted code from CSparse without any attribution or the LGPL license [here](https://x.com/DocSparse/status/1581461734665367554).
+LLMs can be prompted to generate sources for their content; however, this process is not the same as how humans generate citations.
+The target content is prompted and results with citations are generated (potentially with errors) instead of the typical academic process of ingesting the material and then citing the material as you design and create new research content.
+Additionally, a [study by Linardon et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12658395) found that GPT-4 fabricated or generated otherwise erroneous citations when prompted to generate 6 literature reviews for medical studies; and that prompt design can mitigate but not eliminate this behavior.
+Zhao et al. estimated that at least [146,932 hallucinated citations](https://arxiv.org/abs/2605.07723) were in papers submitted to arXiv in 2025 alone.
+Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, especially if the details of the tools are supplied, but this lacks the specificity expected for citations in research products.
+RSEs should carefully consider the scope of prompts to generate code to reduce this risk and carefully check all generated citations.
+
+Ultimately, the RSE is responsible for meeting the ethical requirement to cite the relevant sources when generating research products.
+Contributing code without proper attribution is plagiarism if usage of the LLM based tools are not disclosed, and even if the usage is disclosed it still is a violation of academic integrity to include no or inaccurate citations.
+ArXiv [announced](https://arstechnica.com/science/2026/05/preprint-server-arxiv-will-ban-submitters-of-ai-generated-hallucinations) that papers submitted to the platform containing LLM usage that violates academic integrity standards, such as plagiarism or fabricated citations, will result in a one year ban from using the platform and requiring the researcher to have their future publications undergo peer review before uploading them to arXiv.
+RSEs should similarly hold ourselves to high academic research integrity standards regardless of how we are generating the contents of our research products, including our software.
+
+
+Conclusions
+================================================================================
+
+Many software development teams in industry have reported benefits to using agentic AI and other LLM based software development tools.
+However, best practices are indicating that using these tools while maintaining high quality code requires a high degree of skill and training, which is a particular weakness of the research software engineering career field.
+Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
+RSEs need to be cognizant of these risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.
