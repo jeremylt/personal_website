@@ -101,3 +101,9 @@ Many software development teams in industry have reported benefits to using agen
 However, best practices are indicating that using these tools while maintaining high quality code requires a high degree of skill and training, which is a particular weakness of the research software engineering career field.
 Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
 RSEs need to be cognizant of these risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.
+
+
+Community Comments
+================================================================================
+
+This section contains reactions from community members on the topic of agentic AI and LLM based software development tools for research software development.
