@@ -12,4 +12,5 @@ Contents
    denver.rst
    san-francisco.rst
    pullman.rst
+   bloomington.rst
    berlin.rst
