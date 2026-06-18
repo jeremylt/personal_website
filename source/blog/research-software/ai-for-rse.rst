@@ -12,12 +12,11 @@ Furthemore, the the unique concerns of professional research ethics add addition
 In this article, we will discuss the ways in which developing LLM based best practices for industry software development do and do not map onto research software development.
 We will also discuss the specific concerns that professional research ethics bring to research software development with agentic AI and other LLM based software development tools.
 
-Author's Note
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Author's Note
 
-In this article, I am specifically focused on how emerging industry software development practices intersect with research software development and professional research standards.
-There is an important and interesting discussion to be had about the ethics of the LLM industry and what options may or may not exist for more ethical LLM based software development tools; however, there is not adequate space to have both discussions in this article.
-Both sets of concerns, practical and ethical, need to be addressed for agentic AI and other LLM based software development tools to be incorporated into research software development practices.
+   In this article, I am specifically focused on how emerging industry software development practices intersect with research software development and professional research standards.
+   There is an important and interesting discussion to be had about the ethics of the LLM industry and what options may or may not exist for more ethical LLM based software development tools; however, there is not adequate space to have both discussions in this article.
+   Both sets of concerns, practical and ethical, need to be addressed for agentic AI and other LLM based software development tools to be incorporated into research software development practices.
 
 
 Industry Best Practices
@@ -26,15 +25,14 @@ Industry Best Practices
 The response to so called agentic AI in industry software development teams has been varied.
 In this section, we will identify some common trends and best practices that are emerging and compare those against the known differences between academic and industry software development.
 
-Author's Note
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Author's Note
 
-It has proven somewhat difficult to find more neutral or pragmatic academic papers discussing agentic AI development practices.
-This may be due to the amount of research that is funded by industry on this topic (MIT's Sloan School discusses this `here <https://mitsloan.mit.edu/ideas-made-to-matter/study-industry-now-dominates-ai-research>`_ and MIT's Initiative on the Digital Economy `here <https://ide.mit.edu/wp-content/uploads/2023/03/0303PolicyForum_Ai_FF-2.pdf>`_) and the profit motives therein.
-This could also be due to a broader trend in scientific research articles towards positive language over the last 25 years (Yuan and Yao discuss this `here <https://pmc.ncbi.nlm.nih.gov/articles/PMC9526210/pdf/11192_2022_Article_4515.pdf>`_).
-Or it could be due to my personal search process only producing positive results.
-Or perhaps this is due to other contributing factors.
-In any case, I have included written accounts from senior software developers in industry in this section to provide a more pragmatic assessment of current best practices and concerns in usage.
+   It has proven somewhat difficult to find more neutral or pragmatic academic papers discussing agentic AI development practices.
+   This may be due to the amount of research that is funded by industry on this topic (MIT's Sloan School discusses this `here <https://mitsloan.mit.edu/ideas-made-to-matter/study-industry-now-dominates-ai-research>`_ and MIT's Initiative on the Digital Economy `here <https://ide.mit.edu/wp-content/uploads/2023/03/0303PolicyForum_Ai_FF-2.pdf>`_) and the profit motives therein.
+   This could also be due to a broader trend in scientific research articles towards positive language over the last 25 years (Yuan and Yao discuss this `here <https://pmc.ncbi.nlm.nih.gov/articles/PMC9526210/pdf/11192_2022_Article_4515.pdf>`_).
+   Or it could be due to my personal search process only producing positive results.
+   Or perhaps this is due to other contributing factors.
+   In any case, I have included written accounts from senior software developers in industry in this section to provide a more pragmatic assessment of current best practices and concerns in usage.
 
 Industry Practice
 -------------------------------------------------------------------------------
@@ -46,12 +44,11 @@ Largely, this means that a codebase that follows best practices for human code d
 A similar finding linking code quality and LLM output quality was also discussed by Borg et al. `here <https://arxiv.org/abs/2601.02200>`_.
 Tornhill notes that disciplined engineering practices with planning, review, and testing are required.
 
-Author's Note
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Author's Note
 
-I have found a limited diversity of sources for this sort of research, with most of it coming from one group, but the research here matches my impressions from discussions with industry software developers.
-Many of the resources I have found in this section all seem to be associated with the CodeHealth tool from CodeScene, a company that provides enterprise software tools for industry software development teams.
-See my comment above about the difficulty in finding quality articles about best practices for using agentic AI and LLM based software development tools due, in part, to the amount of money and the profit motives that generates.
+   I have found a limited diversity of sources for this sort of research, with most of it coming from one group, but the research here matches my impressions from discussions with industry software developers.
+   Many of the resources I have found in this section all seem to be associated with the CodeHealth tool from CodeScene, a company that provides enterprise software tools for industry software development teams.
+   See my comment above about the difficulty in finding quality articles about best practices for using agentic AI and LLM based software development tools due, in part, to the amount of money and the profit motives that generates.
 
 Research Software Engineer Challenges
 -------------------------------------------------------------------------------
@@ -157,14 +154,13 @@ However, best practices are indicating that using these tools while maintaining 
 Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
 RSEs need to be cognizant of these risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.
 
-Author's Note
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Author's Note
 
-I see research software development as the process by which RSEs further research by way of software.
-That places the software as secondary to the understanding communicated in the codebase, as with research papers; the logical structure of the code should matter more than the code itself.
-Agentic AI and other LLM based software development tools can generate lines of code faster than we can generate understanding, which offers the enticing trap of creating the appearance of productivity with a large volume of code without generating the actual understanding that is the true goal of the research process.
-This reminds me of Forscher's letter to Science in 1963 (available `here <https://www.rpgroup.caltech.edu/virus_bootcamp/assets/pdfs/339.1.full.pdf>`_).
-I think it would help all of us when deciding if and how to incorporate LLM based tools into our research processes to consider our ultimate goals instead of just the intermediate products which are intended to help us meet those goals.
+   I see research software development as the process by which RSEs further research by way of software.
+   That places the software as secondary to the understanding communicated in the codebase, as with research papers; the logical structure of the code should matter more than the code itself.
+   Agentic AI and other LLM based software development tools can generate lines of code faster than we can generate understanding, which offers the enticing trap of creating the appearance of productivity with a large volume of code without generating the actual understanding that is the true goal of the research process.
+   This reminds me of Forscher's letter to Science in 1963 (available `here <https://www.rpgroup.caltech.edu/virus_bootcamp/assets/pdfs/339.1.full.pdf>`_).
+   I think it would help all of us when deciding if and how to incorporate LLM based tools into our research processes to consider our ultimate goals instead of just the intermediate products which are intended to help us meet those goals.
 
 
 Metadata
