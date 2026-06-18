@@ -228,37 +228,42 @@ Best practices and areas of concern are solidifying on many industry software de
 Furthemore, the the unique concerns of professional research ethics add additional constraints not present in industry software development.</p>
 <p>In this article, we will discuss the ways in which developing LLM based best practices for industry software development do and do not map onto research software development.
 We will also discuss the specific concerns that professional research ethics bring to research software development with agentic AI and other LLM based software development tools.</p>
-<section id="author-s-note">
-<h2>Author’s Note<a class="headerlink" href="#author-s-note" title="Link to this heading">¶</a></h2>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
 <p>In this article, I am specifically focused on how emerging industry software development practices intersect with research software development and professional research standards.
 There is an important and interesting discussion to be had about the ethics of the LLM industry and what options may or may not exist for more ethical LLM based software development tools; however, there is not adequate space to have both discussions in this article.
 Both sets of concerns, practical and ethical, need to be addressed for agentic AI and other LLM based software development tools to be incorporated into research software development practices.</p>
+</div>
 <section id="industry-best-practices">
-<h3>Industry Best Practices<a class="headerlink" href="#industry-best-practices" title="Link to this heading">¶</a></h3>
+<h2>Industry Best Practices<a class="headerlink" href="#industry-best-practices" title="Link to this heading">¶</a></h2>
 <p>The response to so called agentic AI in industry software development teams has been varied.
 In this section, we will identify some common trends and best practices that are emerging and compare those against the known differences between academic and industry software development.</p>
-</section>
-</section>
-<section id="id1">
-<h2>Author’s Note<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
 <p>It has proven somewhat difficult to find more neutral or pragmatic academic papers discussing agentic AI development practices.
 This may be due to the amount of research that is funded by industry on this topic (MIT’s Sloan School discusses this <a class="reference external" href="https://mitsloan.mit.edu/ideas-made-to-matter/study-industry-now-dominates-ai-research">here</a> and MIT’s Initiative on the Digital Economy <a class="reference external" href="https://ide.mit.edu/wp-content/uploads/2023/03/0303PolicyForum_Ai_FF-2.pdf">here</a>) and the profit motives therein.
 This could also be due to a broader trend in scientific research articles towards positive language over the last 25 years (Yuan and Yao discuss this <a class="reference external" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9526210/pdf/11192_2022_Article_4515.pdf">here</a>).
 Or it could be due to my personal search process only producing positive results.
 Or perhaps this is due to other contributing factors.
 In any case, I have included written accounts from senior software developers in industry in this section to provide a more pragmatic assessment of current best practices and concerns in usage.</p>
+</div>
+<section id="industry-practice">
+<h3>Industry Practice<a class="headerlink" href="#industry-practice" title="Link to this heading">¶</a></h3>
 <p>Adam Tornhill provides quality focused best practices <a class="reference external" href="https://codescene.com/blog/agentic-ai-coding-best-practice-patterns-for-speed-with-quality">here</a>).
 A common theme throughout his article is that agentic AI relies upon healthy, high quality codebases and testing to control risk and produce high quality output code.
 Specifically, he notes that AI models have no understanding of maintainability or charge risk inside of a codebase and can easily generate ‘unhealthy’ code (see discussion <a class="reference external" href="https://codescene.io/docs/guides/technical/code-health.html#code-health-identifies-factors-known-to-impact-maintenance-costs-and-delivery-risks">here</a>) and perform better in codebase with ‘healthy’ code (see discussion <a class="reference external" href="https://arxiv.org/abs/2601.02200">here</a>).
 Largely, this means that a codebase that follows best practices for human code development is a prerequisite for successful development with agentic AI.
 A similar finding linking code quality and LLM output quality was also discussed by Borg et al. <a class="reference external" href="https://arxiv.org/abs/2601.02200">here</a>.
 Tornhill notes that disciplined engineering practices with planning, review, and testing are required.</p>
-</section>
-<section id="id9">
-<h2>Author’s Note<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
 <p>I have found a limited diversity of sources for this sort of research, with most of it coming from one group, but the research here matches my impressions from discussions with industry software developers.
 Many of the resources I have found in this section all seem to be associated with the CodeHealth tool from CodeScene, a company that provides enterprise software tools for industry software development teams.
 See my comment above about the difficulty in finding quality articles about best practices for using agentic AI and LLM based software development tools due, in part, to the amount of money and the profit motives that generates.</p>
+</div>
+</section>
+<section id="research-software-engineer-challenges">
+<h3>Research Software Engineer Challenges<a class="headerlink" href="#research-software-engineer-challenges" title="Link to this heading">¶</a></h3>
 <p>Unfortunately, RSEs frequently encounter difficulties meeting standard industry best practices for software development (see discussion by Anzt et al. <a class="reference external" href="https://arxiv.org/abs/2005.01469">here</a> for discussion of specific challenges faced in Germany and by Carver at al. <a class="reference external" href="https://arxiv.org/abs/2103.01880">here</a> for similar challenges in the United States).
 In particular, sufficient training and resources particularly are a common challenge for RSEs.
 This is exacerbated by unstable or unclear career trajectories that make it difficult for research teams to identify, train, and retain individuals with the appropriate interests and skills for research software development.
@@ -272,21 +277,32 @@ Considering the fact that LLMs do not process instructions like deterministic so
 Critically, Stetskov notes the importance of senior developer skill in catching errors in generated code, which is problematic when considering the issues around training and skill acquisition for RSEs.
 Additionally, time is consistently a constrained resource for research teams, but high quality code review is a time consuming activity.
 As a result of these constraints, it can be difficult for RSEs to implement industry best practices intended to ensure high quality code when using LLM based software development tools.</p>
+</section>
+<section id="llm-aided-code-review">
+<h3>LLM Aided Code Review<a class="headerlink" href="#llm-aided-code-review" title="Link to this heading">¶</a></h3>
 <p>Another way industry software development teams have been using LLM based tools is in the review process.
 Almeida et al. discuss LLM based code review <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2352711024000487">here</a> and conclude that this is a promising application of LLMs in software development.
 While the deskilling risk is still present, as code review is a task that requires high skill, using LLMs in addition to humans for code review may present a way to improve overall code quality in academic codebases rather than amplifying any existing flaws in the codebase.
 Note however that LLM code review appears to consume many tokens, according to Salim et al. <a class="reference external" href="https://arxiv.org/abs/2601.14470">here</a>, so this may be an expensive process if cost per token continues to rise, especially since research budgets are frequently very constrained.
 Token usage is a complex and emerging area of research in these tasks; another perspective on the topic is given by Bai et al. <a class="reference external" href="https://arxiv.org/abs/2604.22750">here</a>.</p>
+</section>
+<section id="open-source-policies">
+<h3>Open Source Policies<a class="headerlink" href="#open-source-policies" title="Link to this heading">¶</a></h3>
 <p>Open source software development overlaps with both industry and research software communities.
 Several scientific open source software packages have released contribution guidelines for AI and LLM generated content (<a class="reference external" href="https://numpy.org/devdocs/dev/ai_policy.html">NumPy</a>, <a class="reference external" href="https://matplotlib.org/devdocs/devel/contribute.html#generative-ai">matplotlib</a>, <a class="reference external" href="https://pandas.pydata.org/docs/dev/development/contributing.html#automated-contributions-policy">Pandas</a>, and <a class="reference external" href="https://scipy.github.io/devdocs/dev/conduct/ai_policy.html">SciPy</a> just to name a few from <a class="reference external" href="https://github.com/melissawm/open-source-ai-contribution-policies">this list</a> by Melissa Weber Mendonça).
 A common theme in many of these policies is the need for developers to understand and accept responsibility for the code they submit.
 Understanding in code and especially in complex codebases requires, again, time and training, which are points of concern for RSEs.
 (While not immediately sanguine to the discussion of the intersection between industry software development best practices and research software engineering, <a class="reference external" href="https://blog.scientific-python.org/scientific-python/community-considerations-around-ai">van der Walt’s post on the Scientific Python Blog</a> highlights many concerns and thoughts relevant to development of research software.)</p>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h3>
 <p>This combination of factors emphasizes the need to focus on training and further highlights a vulnerability for research software - high skill is required to appropriately use agentic AI and other LLM based software development tools while ensuring high quality code.
 Given the consistent concerns over training and resources for RSEs, achieving the productivity benefits that some industry software development teams have reported while maintaining software quality may prove difficult for RSEs to achieve while using agentic AI and other LLM based software development tools.
 Code review is one area that may be less risky for RSEs to incorporate LLM based software development tools.</p>
+</section>
+</section>
 <section id="research-software-ethics">
-<h3>Research Software Ethics<a class="headerlink" href="#research-software-ethics" title="Link to this heading">¶</a></h3>
+<h2>Research Software Ethics<a class="headerlink" href="#research-software-ethics" title="Link to this heading">¶</a></h2>
 <p>The challenges faced by the research software development community make it difficult to implement industry software development best practices for agentic AI and other LLM based software development.
 However, software development best practices are not the only guidelines for professional research software development.
 As academic researchers, RSEs must also follow research integrity standards.</p>
@@ -296,13 +312,13 @@ Secondly, researchers and institutions should treat software as ‘legitimate an
 Thirdly, researchers must not plagiarize the work of others.
 RSE must keep these practices in mind while using agentic AI and other LLM based software development tools.</p>
 <section id="disclosure">
-<h4>Disclosure<a class="headerlink" href="#disclosure" title="Link to this heading">¶</a></h4>
+<h3>Disclosure<a class="headerlink" href="#disclosure" title="Link to this heading">¶</a></h3>
 <p>The first point, an obligation to disclose methods, is consistent with many of the policies for AI and LLM generated content from <a class="reference external" href="https://github.com/melissawm/open-source-ai-contribution-policies">the list of open source policies</a> by Melissa Weber Mendonça.
 Not only is disclosure consistent with research ethics, but also LLM based coding tools tend to make different types of errors than human software developers (Cotronen et al. <a class="reference external" href="https://arxiv.org/abs/2508.21634">here</a>, CodeRabbit <a class="reference external" href="https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report">here</a>, and Chong <a class="reference external" href="https://c3.unu.edu/blog/strange-errors-and-familiar-flaws-how-ai-and-human-mistakes-compare">here</a> discuss different perspectives on this issue).
 As a result, disclosure is not only a professional ethical requirement but also allows the developers to better review the generated code and catch the types of errors more commonly found in LLM generated code.</p>
 </section>
 <section id="citations">
-<h4>Citations<a class="headerlink" href="#citations" title="Link to this heading">¶</a></h4>
+<h3>Citations<a class="headerlink" href="#citations" title="Link to this heading">¶</a></h3>
 <p>The second and third points are trickier.
 If we want research software to be considered first class artifacts like research papers, then novel algorithms or implementations from other researchers must be cited when used.
 Importing external libraries naturally acts as a citation mechanism; however, not all algorithms can be imported in this way, for various reasons.
@@ -319,8 +335,8 @@ Disclosure of usage of LLM based tools does indirectly cite the training data fo
 <p>RSEs should carefully consider the scope of prompts to generate code to reduce the risk of generating code containing novel algorithms with inadequate attribution and carefully check all generated citations.
 Note however, that curating prompts carefully can only mitigate, not eliminate, concerns around citations.</p>
 </section>
-<section id="summary">
-<h4>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h4>
+<section id="id25">
+<h3>Summary<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
 <p>Ultimately, the RSE is responsible for meeting the ethical requirement to cite the relevant sources when generating research products.
 Contributing code without proper attribution is plagiarism if usage of the LLM based tools are not disclosed, and even if the usage is disclosed it still is a violation of academic integrity to have missing or inaccurate citations.
 ArXiv <a class="reference external" href="https://arstechnica.com/science/2026/05/preprint-server-arxiv-will-ban-submitters-of-ai-generated-hallucinations">announced</a> that papers submitted to the platform containing LLM usage that violates academic integrity standards, such as plagiarism or fabricated citations, will result in a one year ban from using the platform and requiring the researcher to have their future publications undergo peer review before uploading them to arXiv.
@@ -328,29 +344,28 @@ RSEs should similarly hold ourselves to high academic research integrity standar
 </section>
 </section>
 <section id="conclusions">
-<h3>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">¶</a></h3>
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">¶</a></h2>
 <p>Many software development teams in industry have reported benefits to using agentic AI and other LLM based software development tools.
 However, best practices are indicating that using these tools while maintaining high quality code requires a high degree of skill and training, which is a particular weakness of the research software engineering career field.
 Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
 RSEs need to be cognizant of these risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.</p>
-</section>
-</section>
-<section id="id27">
-<h2>Author’s Note<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h2>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
 <p>I see research software development as the process by which RSEs further research by way of software.
 That places the software as secondary to the understanding communicated in the codebase, as with research papers; the logical structure of the code should matter more than the code itself.
 Agentic AI and other LLM based software development tools can generate lines of code faster than we can generate understanding, which offers the enticing trap of creating the appearance of productivity with a large volume of code without generating the actual understanding that is the true goal of the research process.
 This reminds me of Forscher’s letter to Science in 1963 (available <a class="reference external" href="https://www.rpgroup.caltech.edu/virus_bootcamp/assets/pdfs/339.1.full.pdf">here</a>).
 I think it would help all of us when deciding if and how to incorporate LLM based tools into our research processes to consider our ultimate goals instead of just the intermediate products which are intended to help us meet those goals.</p>
+</div>
+</section>
 <section id="metadata">
-<h3>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h3>
+<h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 11 June 2026</p>
 <p>Last edited: 18 Jun 2026</p>
 </section>
 <section id="community-comments">
-<h3>Community Comments<a class="headerlink" href="#community-comments" title="Link to this heading">¶</a></h3>
+<h2>Community Comments<a class="headerlink" href="#community-comments" title="Link to this heading">¶</a></h2>
 <p>This section contains reactions from community members on the topic of agentic AI and LLM based software development tools for research software development.</p>
-</section>
 </section>
 </section>
 
@@ -410,26 +425,23 @@ I think it would help all of us when deciding if and how to incorporate LLM base
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Agentic AI Usage for RSE</a><ul>
-<li><a class="reference internal" href="#author-s-note">Author’s Note</a><ul>
-<li><a class="reference internal" href="#industry-best-practices">Industry Best Practices</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id1">Author’s Note</a></li>
-<li><a class="reference internal" href="#id9">Author’s Note</a><ul>
-<li><a class="reference internal" href="#research-software-ethics">Research Software Ethics</a><ul>
-<li><a class="reference internal" href="#disclosure">Disclosure</a></li>
-<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#industry-best-practices">Industry Best Practices</a><ul>
+<li><a class="reference internal" href="#industry-practice">Industry Practice</a></li>
+<li><a class="reference internal" href="#research-software-engineer-challenges">Research Software Engineer Challenges</a></li>
+<li><a class="reference internal" href="#llm-aided-code-review">LLM Aided Code Review</a></li>
+<li><a class="reference internal" href="#open-source-policies">Open Source Policies</a></li>
 <li><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#conclusions">Conclusions</a></li>
+<li><a class="reference internal" href="#research-software-ethics">Research Software Ethics</a><ul>
+<li><a class="reference internal" href="#disclosure">Disclosure</a></li>
+<li><a class="reference internal" href="#citations">Citations</a></li>
+<li><a class="reference internal" href="#id25">Summary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id27">Author’s Note</a><ul>
+<li><a class="reference internal" href="#conclusions">Conclusions</a></li>
 <li><a class="reference internal" href="#metadata">Metadata</a></li>
 <li><a class="reference internal" href="#community-comments">Community Comments</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
