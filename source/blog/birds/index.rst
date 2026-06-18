@@ -13,4 +13,5 @@ Contents
    san-francisco.rst
    pullman.rst
    bloomington.rst
+   ithaca.rst
    berlin.rst
