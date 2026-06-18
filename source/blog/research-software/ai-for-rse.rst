@@ -157,6 +157,15 @@ However, best practices are indicating that using these tools while maintaining 
 Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
 RSEs need to be cognizant of these risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.
 
+Author's Note
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I see research software development as the process by which RSEs further research by way of software.
+That places the software as secondary to the understanding communicated in the codebase, as with research papers; the logical structure of the code should matter more than the code itself.
+Agentic AI and other LLM based software development tools can generate lines of code faster than we can generate understanding, which offers the enticing trap of creating the appearance of productivity with a large volume of code without generating the actual understanding that is the true goal of the research process.
+This reminds me of Forscher's letter to Science in 1963 (available [here](https://www.rpgroup.caltech.edu/virus_bootcamp/assets/pdfs/339.1.full.pdf)).
+I think it would help all of us when deciding if and how to incorporate LLM based tools into our research processes to consider our ultimate goals instead of just the intermediate products which are intended to help us meet those goals.
+
 
 Metadata
 ================================================================================
