@@ -1,9 +1,9 @@
-Agentic AI Usage for RSE
+Agentic AI Usage for RSEs
 ********************************************************************************
 
-Research Software Engineers (RSE) combine the expertise of professional software development with domain specific skills for academic research.
-Several groups and professional declarations, such as the `Journal of Open Source Software <https://joss.theoj.org>`_ and the `San Francisco Declaration on Research Assessment <https://sfdora.org/read)>`_ have advocated for treating research software as first class artifacts, on par with peer-reviewed papers, especially for the purposes of career assessment and promotions for RSE.
-In order for RSE to enrich scientific research and our software to be considered first class artifacts, we need to adhere to both software development best practices and professional research ethics.
+Research Software Engineers (RSEs) combine the expertise of professional software development with domain specific skills for academic research.
+Several groups and professional declarations, such as the `Journal of Open Source Software <https://joss.theoj.org>`_ and the `San Francisco Declaration on Research Assessment <https://sfdora.org/read)>`_ have advocated for treating research software as first class artifacts, on par with peer-reviewed papers, especially for the purposes of career assessment and promotions for RSEs.
+In order for RSEs to enrich scientific research and our software to be considered first class artifacts, we need to adhere to both software development best practices and professional research ethics.
 
 Large Language Model (LLM) based development practices, including agentic AI (Happy Bhati provides a summary `here <https://arxiv.org/abs/2604.26275>`_), are changing software development workflows for many industry software engineers.
 Best practices and areas of concern are solidifying on many industry software development teams; however these practices and concerns do not perfectly align with research software development due to both the differences between industry and academic software development and developers.
@@ -106,7 +106,7 @@ The European Code of Conduct for Research Integrity (available `here <https://ze
 Firstly, researchers have an obligation to be transparent in their reporting of methods, including the use of AI tools.
 Secondly, researchers and institutions should treat software as 'legitimate and citable' research products (similar to the `San Francisco Declaration on Research Assessment <https://sfdora.org/read>`_).
 Thirdly, researchers must not plagiarize the work of others.
-RSE must keep these practices in mind while using agentic AI and other LLM based software development tools.
+RSEs must keep these practices in mind while using agentic AI and other LLM based software development tools.
 
 Disclosure
 -------------------------------------------------------------------------------
