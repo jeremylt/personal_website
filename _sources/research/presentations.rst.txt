@@ -23,6 +23,8 @@ Presentations
 
 The source and PDFs of my presentations can be found on `GitHub <https://github.com/jeremylt/Presentations>`_.
 
+`2026-07-14 AI for Research Software Engineers <https://jeremylt.github.io/Presentations/20260714%20-%20AI%20for%20RSEng.pdf>`_
+
 `2026-03-30 Memory Bandwidth vs FLOPs Tradeoffs on Modern Hardware <https://jeremylt.github.io/Presentations/20260330%20-%20Memory%20Bandwidth%20vs%20FLOPs%20Tradeoffs%20on%20Modern%20Hardware.pdf>`_
 
 `2026-03-19 Motivating Matrix-Free Finite Elements <https://jeremylt.github.io/Presentations/20260319%20-%20Motivating%20Matrix-Free%20Finite%20Elements.pdf>`_
