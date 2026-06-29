@@ -18,6 +18,10 @@ We will also discuss the specific concerns that professional research ethics bri
    There is an important and interesting discussion to be had about the ethics of the LLM industry and what options may or may not exist for more ethical LLM based software development tools; however, there is not adequate space to have both discussions in this article.
    Both sets of concerns, practical and ethical, need to be addressed for agentic AI and other LLM based software development tools to be incorporated into research software development practices.
 
+Ultimately, researchers who let AI/LLMs write their code will have bad code.
+Software developers who let AI/LLMs do their research will violate research ethics.
+As experts in two domains - research and software development - RSEs require skills in both professional software development and research practices to ensure they meet the quality and ethical standards in both domains.
+
 
 Industry Best Practices
 ================================================================================
