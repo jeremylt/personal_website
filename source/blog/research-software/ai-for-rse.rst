@@ -41,6 +41,25 @@ In this section, we will identify some common trends and best practices that are
 Industry Practice
 -------------------------------------------------------------------------------
 
+Some industry software development teams have reported benefits to using LLMs or agentic AI in their software development workflows; however, these benefits are deeply tied to the workflows and quality standards of these teams.
+These benefits do not easily translate into software development that does not include these mechanisms.
+
+The concept of the `Software Development Life Cycle (SLDC) <https://en.wikipedia.org/wiki/Systems_development_life_cycle>`_ is important in industry software development.
+The exact steps of the SDLC depend upon the exact model, but it can be broken approximately into 3 phases: planning, development, and review.
+In the planning phase, the developers determine what a new feature needs to do and how it should be designed - a 'definition of done' is agreed upon before the development is started.
+In the development phase, the code itself is written along with unit tests and documentation as needed.
+Finally, in the review phase, the developers review the code and determine if it meets requirements and quality standards.
+Industry best practices center around incorporating LLMs into their existing SDLC practices while RSEs tend to only loosely follow a SDLC, if at all.
+This planning and review structure helps control LLM output quality, and RSEs need similar structure if we want to see the benefits that some industry development teams have observed.
+This pattern can be replicated in a smaller scale during the development phase to prompt, generate, and review code from and LLM.
+The smaller pieces are easier for humans to review, helping control quality and ensure developer intent is met.
+
+.. admonition:: Author's Note
+
+   We academics seem to be particularly alergic to these sorts of software development processes.
+   Perhaps we feel they are too constrictive or we are simiply unfamiliar with them due to a lack of training.
+   In any case, LLMs can only generate output, not decisions, so some sort of framework for planning and then reviewing the generated content is required, as ultimately the humans (the RSEs) are responsible for the work we submit.
+
 Adam Tornhill provides quality focused best practices `here <https://codescene.com/blog/agentic-ai-coding-best-practice-patterns-for-speed-with-quality>`_).
 A common theme throughout his article is that agentic AI relies upon healthy, high quality codebases and testing to control risk and produce high quality output code.
 Specifically, he notes that AI models have no understanding of maintainability or charge risk inside of a codebase and can easily generate 'unhealthy' code (see discussion `here <https://codescene.io/docs/guides/technical/code-health.html#code-health-identifies-factors-known-to-impact-maintenance-costs-and-delivery-risks>`_) and perform better in codebase with 'healthy' code (see discussion `here <https://arxiv.org/abs/2601.02200>`_).
