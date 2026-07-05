@@ -1,5 +1,5 @@
 ################################################################################
-|icon| Prof Dr Jeremy L Thompson
+|icon| Dr Jeremy L Thompson
 ################################################################################
 
 .. meta::
@@ -81,7 +81,7 @@ Contact
 Background
 ********************************************************************************
 
-I am a Research Assistant Professor and Software Engineer in the department of Computer Science at the University of Colorado Boulder.
+I am a Research Software Engineer at Helmholtz-Zentrum Hereon, where I develop the 4C scientific simulation software.
 My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
 
 | |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
@@ -97,6 +97,7 @@ I was named the `Air Combat Command Junior Military Scientist of the Year <https
 
 
 After this assignment, I joined the faculty at the `U.S. Air Force Academy <https://www.usafa.edu/department/mathematics/>`_, where I taught math courses for engineering and computer science students.
+I was an Instructor (2012 to 2014) and Assistant Professor (2014 to 2016) while on the faculty at the U.S. Air Force Academy.
 I was awarded Outstanding New Instructor and Outstanding Academy Educator while at the Air Force Academy.
 
 After I left the Air Force, I went to `University of Colorado Boulder <https://www.colorado.edu/amath>`_ for my PhD.
@@ -106,6 +107,7 @@ I completed my `PhD in applied mathematics <https://www.proquest.com/docview/257
 
 I was part of the `PSAAP Multi-disciplinary Simulation Center for Micromorphic Multiphysics Porous and Particulate Materials Simulations Within Exascale Computing Workflows <https://micromorph.gitlab.io>`_ from 2021 to 2025.
 In this center, I developed the `Ratel <https://gitlab.com/micromorph/ratel>`_ library and added Material Point Method capabilities to libCEED.
+I was a Research Assistant Professor in the Computer Science department at University of Colorado, Boulder from 2025 to 2026.
 
 
 Contents

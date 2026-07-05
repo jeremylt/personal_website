@@ -13,6 +13,17 @@ Software
 | |fa-github| GitHub: `jeremylt <https://www.github.com/jeremylt>`__
 
 
+`4C <https://github.com/4C-multiphysics/4C>`_
+--------------------------------------------------------------------------------
+
+.. figure:: img/4CLogo.webp
+    :alt: 4C logo
+    :width: 225px
+
+`4C (Comprehensive Computational Community Code) <https://www.4c-multiphysics.org>`_ is a powerful research code for multiphysics computer simulations.
+Building on over 20 years of research, 4C can model a plethora of physical problems, including solid mechanics, fluid mechanics, scalar transport, and chemical reactions, among others.
+
+
 `libCEED <https://www.github.com/CEED/libCEED>`_
 --------------------------------------------------------------------------------
 
