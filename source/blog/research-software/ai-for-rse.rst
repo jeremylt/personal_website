@@ -104,6 +104,11 @@ While the deskilling risk is still present, as code review is a task that requir
 Note however that LLM code review appears to consume many tokens, according to Salim et al. `here <https://arxiv.org/abs/2601.14470>`_, so this may be an expensive process if cost per token continues to rise, especially since research budgets are frequently very constrained.
 Token usage is a complex and emerging area of research in these tasks; another perspective on the topic is given by Bai et al. `here <https://arxiv.org/abs/2604.22750>`_.
 
+.. admonition:: Author's Note
+
+   Local or so called 'Small Language Models' (SLM) may provide a way to address this concern, as well as concerns about data privacy and dependence upon large corporations.
+   Note, however, that these models have smaller context windows and are therefore less capable than LLMs, as a general rule.
+
 Open Source Policies
 -------------------------------------------------------------------------------
 
