@@ -3,7 +3,7 @@ Seasons and Episodes
 
 I have watched the following seasons and episodes.
 
-* Season 1:     1 - 9
+* Season 1:     1 - 20
 * Season 6:  1363 - 1391
 * Season 7:  1392 - 1489
 * Season 9:  1815 - 1912
