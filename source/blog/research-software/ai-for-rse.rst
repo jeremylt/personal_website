@@ -189,6 +189,10 @@ RSEs need to be cognizant of the risks if they decide to incorporate agentic AI 
    This reminds me of Forscher's letter to Science in 1963 (available `here <https://www.rpgroup.caltech.edu/virus_bootcamp/assets/pdfs/339.1.full.pdf>`_).
    I think it would help all of us when deciding if and how to incorporate LLM based tools into our research processes to consider our ultimate goals instead of just the intermediate products which are intended to help us meet those goals.
 
+.. admonition:: Author's Note
+
+   The `Leiden Declaration of Artifical Intelligence and Mathematics <https://leidendeclaration.ai>`_ may also be of note to readers, as it echos many of the themes I captured in this post.
+
 
 Metadata
 ================================================================================
