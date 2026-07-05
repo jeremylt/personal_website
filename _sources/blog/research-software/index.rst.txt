@@ -9,7 +9,8 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   gpu-porting.rst
-   python-wheels.rst
+   ai-for-rse.rst
    macos-weak-symbols.rst
+   python-wheels.rst
    popen-pclose.rst
+   gpu-porting.rst
