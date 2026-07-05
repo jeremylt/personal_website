@@ -202,9 +202,9 @@ RSEs need to be cognizant of the risks if they decide to incorporate agentic AI 
 Metadata
 ================================================================================
 
-Started: 11 June 2026
+Started: 11 Jun 2026
 
-Last edited: 29 Jun 2026
+Last edited: 05 Jul 2026
 
 
 Community Comments
