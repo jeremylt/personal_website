@@ -17,15 +17,23 @@ Native GPU Support
 ================================================================================
 
 Hardware specific languages include `CUDA <https://developer.nvidia.com/cuda>`_, `ROCm <https://www.amd.com/en/products/software/rocm>`_, or `SYCL <https://www.khronos.org/sycl>`, or `SYCL <https://www.khronos.org/sycl>`_.
+These packages allow more direct control over usage of the device and how  the kernels are launched.
+As a drawback however, these languages are more intrusive to integrate into your code.
+Additionally, these languages are often paired with specific hardware, though this requirement is sometimes relaxed.
+
 
 Performance Portability Libraries
 ================================================================================
 
 Performance portability libraries include `Kokkos <https://kokkos.org>`_ and `Raja <https://raja.readthedocs.io>`_.
+With these libraries, incorporating GPU capabilities is less obtrusive, and these libraries typically  support a wider variety of hardware instead of only hardware from a particular manufacturer.
+Also, the specifics of some of the common details, such of memory management and synchronization, are handled for the users.
+However, these libraries typically do not offer as direct of control over the configuration of the device kernels, as a natural byproduct of their generality and flexibility.
+
 
 Metadata
 ================================================================================
 
 Started: 11 Mar 2026
 
-Last edited: 11 Mar 2026
+Last edited: 07 Jul 2026

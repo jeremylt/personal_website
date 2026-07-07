@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="BattleTech" href="../battletech/index.html"><link rel="prev" title="Popen and pclose bufer" href="popen-pclose.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Python Wheel Versions" href="python-wheels.html"><link rel="prev" title="Research Software Engineering" href="index.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>GPU Porting</title>
@@ -229,16 +229,22 @@ However, that capability will not be the full focus of our discussion here, as t
 <p>We will outline some pros and cons to consider when deciding what approach to take when extending existing software to run on GPU hardware.</p>
 <section id="native-gpu-support">
 <h2>Native GPU Support<a class="headerlink" href="#native-gpu-support" title="Link to this heading">¶</a></h2>
-<p>Hardware specific languages include <a class="reference external" href="https://developer.nvidia.com/cuda">CUDA</a>, <a class="reference external" href="https://www.amd.com/en/products/software/rocm">ROCm</a>, or <cite>SYCL &lt;https://www.khronos.org/sycl&gt;</cite>, or <a class="reference external" href="https://www.khronos.org/sycl">SYCL</a>.</p>
+<p>Hardware specific languages include <a class="reference external" href="https://developer.nvidia.com/cuda">CUDA</a>, <a class="reference external" href="https://www.amd.com/en/products/software/rocm">ROCm</a>, or <cite>SYCL &lt;https://www.khronos.org/sycl&gt;</cite>, or <a class="reference external" href="https://www.khronos.org/sycl">SYCL</a>.
+These packages allow more direct control over usage of the device and how  the kernels are launched.
+As a drawback however, these languages are more intrusive to integrate into your code.
+Additionally, these languages are often paired with specific hardware, though this requirement is sometimes relaxed.</p>
 </section>
 <section id="performance-portability-libraries">
 <h2>Performance Portability Libraries<a class="headerlink" href="#performance-portability-libraries" title="Link to this heading">¶</a></h2>
-<p>Performance portability libraries include <a class="reference external" href="https://kokkos.org">Kokkos</a> and <a class="reference external" href="https://raja.readthedocs.io">Raja</a>.</p>
+<p>Performance portability libraries include <a class="reference external" href="https://kokkos.org">Kokkos</a> and <a class="reference external" href="https://raja.readthedocs.io">Raja</a>.
+With these libraries, incorporating GPU capabilities is less obtrusive, and these libraries typically  support a wider variety of hardware instead of only hardware from a particular manufacturer.
+Also, the specifics of some of the common details, such of memory management and synchronization, are handled for the users.
+However, these libraries typically do not offer as direct of control over the configuration of the device kernels, as a natural byproduct of their generality and flexibility.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 11 Mar 2026</p>
-<p>Last edited: 11 Mar 2026</p>
+<p>Last edited: 07 Jul 2026</p>
 </section>
 </section>
 
@@ -247,23 +253,23 @@ However, that capability will not be the full focus of our discussion here, as t
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../battletech/index.html">
+          <a class="next-page" href="python-wheels.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">BattleTech</div>
+                <div class="title">Python Wheel Versions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="popen-pclose.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Popen and pclose bufer</div>
+                <div class="title">Research Software Engineering</div>
                 
               </div>
             </a>
