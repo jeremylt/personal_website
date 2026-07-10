@@ -10,6 +10,7 @@ Contents
    :maxdepth: 1
 
    gpu-porting.rst
+   local-llm.rst
    python-wheels.rst
    macos-weak-symbols.rst
    popen-pclose.rst
