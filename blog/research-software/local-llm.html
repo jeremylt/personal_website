@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="GPU Porting" href="gpu-porting.html"><link rel="prev" title="Blog" href="../index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Python Wheel Versions" href="python-wheels.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Research Software Engineering</title>
+        <title>Local LLMs for Development</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -200,7 +200,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/blog/research-software/index.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/blog/research-software/local-llm.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -218,20 +218,79 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="research-software-engineering">
-<h1>Research Software Engineering<a class="headerlink" href="#research-software-engineering" title="Link to this heading">¶</a></h1>
-<p>This section will contain blog style posts about research software engineering.</p>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gpu-porting.html">GPU Porting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local-llm.html">Local LLMs for Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-wheels.html">Python Wheel Versions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macos-weak-symbols.html">Weak Symbols on MacOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="popen-pclose.html">Popen and pclose bufer</a></li>
+          <section id="local-llms-for-development">
+<h1>Local LLMs for Development<a class="headerlink" href="#local-llms-for-development" title="Link to this heading">¶</a></h1>
+<p>I am experimenting with local instances of Large Language Models (LLMs) for software development.
+While this experimentation continues, I will update this post with further information.</p>
+<section id="reasoning">
+<h2>Reasoning<a class="headerlink" href="#reasoning" title="Link to this heading">¶</a></h2>
+<p>Local LLMs, at least in theory, may offer advantages over using APIs to access LLMs operated by large corporations in commercial data centers.</p>
+<ul class="simple">
+<li><p>Local hardware can use less water and power than large data centers</p></li>
+<li><p>Data stays on the developer’s device, addressing privacy concerns</p></li>
+<li><p>With open source models, developers are not dependent upon large corporations who may have conflicting values with the developer</p></li>
 </ul>
+<p>Note however that concerns around skill formation, de-skilling, and plagiarism persist with local LLMs.</p>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">¶</a></h2>
+<p>I have selected <a class="reference external" href="https://code.visualstudio.com">VS Code</a> as my IDE, as it has support for various extensions that support different levels of LLM integration into software development.</p>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
+<p>Note that VS Code is <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_Studio_Code">owned by Microsoft</a>, there is both a proprietary and open source version of the code.
+The open source version of the code is <a class="reference external" href="https://github.com/microsoft/vscode">under the MIT license</a>.</p>
 </div>
+<p>Specifically, I am using the <a class="reference external" href="https://www.continue.dev">Continue</a> extension.</p>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
+<p>Note that while Continue is an open source project, the company Continue has been <a class="reference external" href="https://en.wikipedia.org/wiki/Cursor_(company)">purchased by Cursor</a>.
+Cursor is itself being <a class="reference external" href="https://en.wikipedia.org/wiki/SpaceXAI">purchased by SpaceX as part of its xAI</a> subsidiary.
+While the extension will remain open source (at this time), it is worth monitoring this development for developers who wish to avoid directly relying upon large US software corporations.
+The Cursor extension is <a class="reference external" href="https://github.com/continuedev/continue">under the Apache 2.0 license</a>.</p>
+</div>
+<p>I am using <a class="reference external" href="https://ollama.com">Ollama</a> to operate the open LLM models.</p>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
+<p>Ollama is an open source software <a class="reference external" href="https://github.com/ollama/ollama">under the MIT license</a>.</p>
+</div>
+<p>Finally, I am currently using the <a class="reference external" href="https://en.wikipedia.org/wiki/Qwen">Qwen3</a> model.</p>
+<div class="admonition-author-s-note admonition">
+<p class="admonition-title">Author’s Note</p>
+<p>Qwen3 is an open source model <a class="reference external" href="https://github.com/QwenLM/Qwen3">under the Apache 2.0 license</a>.</p>
+</div>
+<p>The relevant portion of the Continue configuration file is given below:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Qwen3 8B</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama</span>
+<span class="w">  </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qwen3:8b</span>
+<span class="w">  </span><span class="nt">apiBase</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:11434</span>
+<span class="w">  </span><span class="nt">contextLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9742</span>
+<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tool_use</span>
+<span class="w">  </span><span class="nt">defaultCompletionOptions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contextLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9742</span>
+<span class="w">    </span><span class="nt">maxTokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
+<span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chat</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autocomplete</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apply</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">summarize</span>
+</pre></div>
+</div>
+</section>
+<section id="observations">
+<h2>Observations<a class="headerlink" href="#observations" title="Link to this heading">¶</a></h2>
+<p>Experimentation to select the correct model and context length is important.
+I am working with a development machine that has a GPU with only 6GB of VRAM.
+This limits the models and context length that I can select.</p>
+<p>Specifically, I am currently experimenting with using Qwen3 8B via Ollama with a <cite>contextLength</cite> of <cite>10**13.25≈9742</cite> tokens and a <cite>maxTokens</cite> of <cite>2048</cite>.
+While these settings limit the capability of the model to ingest large codebases, it keeps the performance relatively responsive while allowing me to generate smaller snippets of code.
+I do not see this limitation as particularly problematic, as this is consistent with my general recommendation to RSEs to only generate small, focused amounts of code at once and maintain control over the overall design and review while creating research software.</p>
+</section>
+<section id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
+<p>Started: 10 Jul 2026</p>
+<p>Last edited: 10 Jul 2026</p>
 </section>
 </section>
 
@@ -240,23 +299,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gpu-porting.html">
+          <a class="next-page" href="python-wheels.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">GPU Porting</div>
+                <div class="title">Python Wheel Versions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="gpu-porting.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Blog</div>
+                <div class="title">GPU Porting</div>
                 
               </div>
             </a>
@@ -290,8 +349,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Research Software Engineering</a><ul>
-<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#">Local LLMs for Development</a><ul>
+<li><a class="reference internal" href="#reasoning">Reasoning</a></li>
+<li><a class="reference internal" href="#implementation">Implementation</a></li>
+<li><a class="reference internal" href="#observations">Observations</a></li>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>
 </ul>
