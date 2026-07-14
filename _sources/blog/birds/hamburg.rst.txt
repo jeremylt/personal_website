@@ -9,7 +9,13 @@ Hamburg, Germany
 
 * `Common wood pigeon <https://en.wikipedia.org/wiki/Common_wood_pigeon>`_
 
+* `Stock dove <https://en.wikipedia.org/wiki/Stock_dove>`_
+
+* `Eurasian collared dove <https://en.wikipedia.org/wiki/Eurasian_collared_dove>`_
+
 * `Common starling <https://en.wikipedia.org/wiki/Common_starling>`_
+
+* `Mallard <https://en.wikipedia.org/wiki/Mallard>`_
 
 
 Metadata
@@ -17,4 +23,4 @@ Metadata
 
 Started: 29 Jun 2026
 
-Last edited: 05 Jul 2026
+Last edited: 14 Jul 2026
