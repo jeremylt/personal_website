@@ -184,6 +184,14 @@ Many software development teams in industry have reported benefits to using agen
 However, best practices are indicating that using these tools while maintaining high quality code requires a high degree of skill and training, which is a particular weakness of the research software engineering career field.
 Furthermore, research ethics require appropriate citations for research artifacts, but LLMs omit, fabricate, or make errors with citations.
 According to `Nature <https://www.nature.com/articles/d41586-026-01690-7>`_, in a poll posted on Nature's website, social media, and e-mail newsletter researchers reported being broadly negative towards AI, believing that the risks of these tools outweigh the potential benefits, while also feeling like we would be left behind if we do not use these tools.
+In that vein, `Zhang and Lee <https://arxiv.org/abs/2606.03560>`_ describe how social pressures and fears of being left behind or eliminated results in problematic AI usage for undergraduate students, which for researches indicates a potential new pressure to violate research ethics, even if accidentally through careless usage of LLMs.
+Our undergraduate and graduate students are feeling stress and anxiety from AI displacement of jobs, according to `Farooqi et al. <https://arxiv.org/abs/2601.10468>`_, and we are not immune to these effects either.
+RSEs need to ensure that we are continuing to add value and ensure quality in research software as LLM based options proliferate.
+
+.. admonition:: Author's Note
+
+   I find it personally interesting that the results in the Zhang and Lee paper mirror previous results about problematic social media usage or smart phone addiction.
+
 RSEs need to be cognizant of the risks if they decide to incorporate agentic AI and other LLM based software development tools into their research work, including generating academic software.
 
 .. admonition:: Author's Note
