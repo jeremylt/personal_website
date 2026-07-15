@@ -15,6 +15,8 @@ Hamburg, Germany
 
 * `Common starling <https://en.wikipedia.org/wiki/Common_starling>`_
 
+* `Great spotted woodpecker <https://en.wikipedia.org/wiki/Great_spotted_woodpecker>`_
+
 * `Mallard <https://en.wikipedia.org/wiki/Mallard>`_
 
 
@@ -23,4 +25,4 @@ Metadata
 
 Started: 29 Jun 2026
 
-Last edited: 14 Jul 2026
+Last edited: 15 Jul 2026
