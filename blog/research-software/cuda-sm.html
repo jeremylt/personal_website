@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="GPU Porting" href="gpu-porting.html"><link rel="prev" title="Blog" href="../index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="BattleTech" href="../battletech/index.html"><link rel="prev" title="Popen and pclose bufer" href="popen-pclose.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Research Software Engineering</title>
+        <title>CUDA SM Versions</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -200,7 +200,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/blog/research-software/index.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/blog/research-software/cuda-sm.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -218,31 +218,88 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="research-software-engineering">
-<h1>Research Software Engineering<a class="headerlink" href="#research-software-engineering" title="Link to this heading">¶</a></h1>
-<p>This section will contain blog style posts about research software engineering.</p>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
-<section id="research">
-<h3>Research<a class="headerlink" href="#research" title="Link to this heading">¶</a></h3>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gpu-porting.html">GPU Porting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local-llm.html">Local LLMs for Development</a></li>
-</ul>
+          <section id="cuda-sm-versions">
+<h1>CUDA SM Versions<a class="headerlink" href="#cuda-sm-versions" title="Link to this heading">¶</a></h1>
+<p>When compiling CUDA code, you can target specific hardware by specifying the ‘compute capability’ of the NVIDIA hardware you are working with.
+This is known as the SM or Streaming Multiprocessor version.
+CUDA publishes a <a class="reference external" href="https://developer.nvidia.com/cuda/gpus">list of compute capability for common NVIDIA hardware</a>.</p>
+<p>When compiling and testing the 4C library, I received the following error message for a GPU enabled test:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C++ exception with description &quot;(cuda_instance-&gt;cuda_func_get_attributes_wrapper(&amp;attr, func)) error( cudaErrorNoKernelImageForDevice): no kernel image is available for execution on the device /home/thompson/Dev/4C-dependencies/tk_cuda/include/kokkos/Cuda/Kokkos_Cuda_KernelLaunch.hpp:141&quot; thrown in the test fixture&#39;s constructor.</span>
+</pre></div>
 </div>
+<section id="issue">
+<h2>Issue<a class="headerlink" href="#issue" title="Link to this heading">¶</a></h2>
+<p>The effort to trace the exact problem is complicated by the fact that I am building 4C, which relies upon Trilinos with Kokkos where the CUDA backend is enabled, and this version of Kokkos is being used in Mirco to compile the offending kernel.
+Somewhere along the line the correct SM appears to be not set.</p>
 </section>
-<section id="bugs">
-<h3>Bugs<a class="headerlink" href="#bugs" title="Link to this heading">¶</a></h3>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="macos-weak-symbols.html">Weak Symbols on MacOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-wheels.html">Python Wheel Versions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="popen-pclose.html">Popen and pclose bufer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cuda-sm.html">CUDA SM Versions</a></li>
-</ul>
+<section id="diagnosis">
+<h2>Diagnosis<a class="headerlink" href="#diagnosis" title="Link to this heading">¶</a></h2>
+<p>This followed issues getting the CUDA toolkit set up on this machine, so I first investigated if CUDA and the NVIDIA drivers were correctly configured.
+The commands <cite>nvidia-smi</cite> and <cite>nvcc –version</cite> verify that CUDA and the NVIDIA drivers are correctly configured.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nvidia-smi
+<span class="go">Thu Jul 16 08:58:16 2026</span>
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+<span class="go">| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |</span>
+<span class="go">+-----------------------------------------+------------------------+----------------------+</span>
+<span class="go">| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |</span>
+<span class="go">| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |</span>
+<span class="go">|                                         |                        |               MIG M. |</span>
+<span class="go">|=========================================+========================+======================|</span>
+<span class="go">|   0  NVIDIA RTX A1000 6GB Lap...    Off |   00000000:01:00.0 Off |                  N/A |</span>
+<span class="go">| N/A   66C    P0            312W /   35W |      14MiB /   6144MiB |      8%      Default |</span>
+<span class="go">|                                         |                        |                  N/A |</span>
+<span class="go">+-----------------------------------------+------------------------+----------------------+</span>
+
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+<span class="go">| Processes:                                                                              |</span>
+<span class="go">|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |</span>
+<span class="go">|        ID   ID                                                               Usage      |</span>
+<span class="go">|=========================================================================================|</span>
+<span class="go">|    0   N/A  N/A            3291      G   /usr/lib/xorg/Xorg                        4MiB |</span>
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+</pre></div>
 </div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nvcc<span class="w"> </span>--version
+<span class="go">nvcc: NVIDIA (R) Cuda compiler driver</span>
+<span class="go">Copyright (c) 2005-2026 NVIDIA Corporation</span>
+<span class="go">Built on Tue_Jun_09_02:43:40_PM_PDT_2026</span>
+<span class="go">Cuda compilation tools, release 13.3, V13.3.73</span>
+<span class="go">Build cuda_13.3.r13.3/compiler.38244171_0</span>
+</pre></div>
+</div>
+<p>CUDA and NVIDIA drivers are correctly installed, which was also verified by running the test suite on a simpler library, so the problem must lie elsewhere.</p>
 </section>
+<section id="root-cause">
+<h2>Root Cause<a class="headerlink" href="#root-cause" title="Link to this heading">¶</a></h2>
+<p>I was having trouble locating the exact root cause of the issue, and putting the error message into a search engine was not giving helpful results.
+I provided the error message as an input to Copilot, and while the result was not terribly useful, the output did include the suggestion to try the <cite>cuobjdump</cite> command.
+With this command, I could verify that Kokkos was built to target my SM, <cite>sm_86</cite>, but I could not locate the compiled test case to determine what SM that test case was being compiled to target.</p>
+<p>However, I did at this point recall that we were using a compiler wrapper <cite>clangcuda++</cite>, and this wrapper was using <cite>clang++</cite> in place of <cite>nvcc</cite> with some extra logic to inject the correct compiler flags if the file should be compiled to target GPU hardware.
+This compiler wrapper relies upon the environment variable <cite>CLANGCUDA_ARCH</cite> being set to the correct SM, and it has a default value of <cite>sm_90</cite> if the environment variable is not set.
+Changing this default to <cite>sm_86</cite>, the SM for my hardware, fixed the issue.</p>
+<p>This indicated that the environment variable was in fact not correctly set and being passed to the build system.
+It turned out there was an issue with my <cite>.bashrc</cite> file.
+However, this highlighted a vulnerability with the <cite>clangcuda++</cite> compiler wrapper assuming a SM to target.
+Cross compilation (targeting different hardware for runtime than is present on the hardware where the library is built) is desirable, but it can lead to a silent error where the user appears to have a successful build but it is targeting different hardware than they have.</p>
+</section>
+<section id="fix">
+<h2>Fix<a class="headerlink" href="#fix" title="Link to this heading">¶</a></h2>
+<p>There are a few possible fixes in this case</p>
+<ol class="arabic simple">
+<li><p>Warn or error when the user has not set the environment variable <cite>CLANGCUDA_ARCH</cite></p></li>
+<li><p>Attempt to query the hardware via <cite>nvidia-smi</cite> to determine the supported SM</p></li>
+<li><p>Set a more general default</p></li>
+</ol>
+<p>The first option is the most reliable but does require user interaction.
+The second could fail but can fall back to the first option upon failure.
+I found a nice <a class="reference external" href="https://stackoverflow.com/a/72854145">stackoverflow answer</a> that extracts the compute capacity out of the output of <cite>nvidia-smi</cite>.
+The third option does not really address the core issue of possibly setting an unsupported default.</p>
+<p>The full details of the related work are in this <a class="reference external" href="https://github.com/4C-multiphysics/4C/pull/2012">pull request</a>.</p>
+</section>
+<section id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
+<p>Started: 16 Jul 2026</p>
+<p>Last edited: 16 Jul 2026</p>
 </section>
 </section>
 
@@ -251,23 +308,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gpu-porting.html">
+          <a class="next-page" href="../battletech/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">GPU Porting</div>
+                <div class="title">BattleTech</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="popen-pclose.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Blog</div>
+                <div class="title">Popen and pclose bufer</div>
                 
               </div>
             </a>
@@ -301,12 +358,12 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Research Software Engineering</a><ul>
-<li><a class="reference internal" href="#contents">Contents</a><ul>
-<li><a class="reference internal" href="#research">Research</a></li>
-<li><a class="reference internal" href="#bugs">Bugs</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">CUDA SM Versions</a><ul>
+<li><a class="reference internal" href="#issue">Issue</a></li>
+<li><a class="reference internal" href="#diagnosis">Diagnosis</a></li>
+<li><a class="reference internal" href="#root-cause">Root Cause</a></li>
+<li><a class="reference internal" href="#fix">Fix</a></li>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>
 </ul>

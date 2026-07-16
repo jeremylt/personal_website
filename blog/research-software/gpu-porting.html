@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="BattleTech" href="../battletech/index.html"><link rel="prev" title="Popen and pclose bufer" href="popen-pclose.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="Research Software Engineering" href="index.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>GPU Porting</title>
@@ -240,11 +240,13 @@ Additionally, these languages are often paired with specific hardware, though th
 With these libraries, incorporating GPU capabilities is less obtrusive, and these libraries typically  support a wider variety of hardware instead of only hardware from a particular manufacturer.
 Also, the specifics of some of the common details, such of memory management and synchronization, are handled for the users.
 However, these libraries typically do not offer as direct of control over the configuration of the device kernels, as a natural byproduct of their generality and flexibility.</p>
+<p>Additionally, using one of these performance portability libraries requires both the appropriate dependency for the hardware (CUDA, ROCm, SYCL, etc) and the performance portability library.
+This means that the dependency stack is deeper, which adds more to configure and manage, especially for legacy software projects which may already have a heavy dependency stack.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 11 Mar 2026</p>
-<p>Last edited: 07 Jul 2026</p>
+<p>Last edited: 16 Jul 2026</p>
 </section>
 </section>
 
@@ -253,23 +255,23 @@ However, these libraries typically do not offer as direct of control over the co
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../battletech/index.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">BattleTech</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="popen-pclose.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Popen and pclose bufer</div>
+                <div class="title">Research Software Engineering</div>
                 
               </div>
             </a>
