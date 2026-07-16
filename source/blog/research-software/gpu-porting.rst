@@ -30,10 +30,13 @@ With these libraries, incorporating GPU capabilities is less obtrusive, and thes
 Also, the specifics of some of the common details, such of memory management and synchronization, are handled for the users.
 However, these libraries typically do not offer as direct of control over the configuration of the device kernels, as a natural byproduct of their generality and flexibility.
 
+Additionally, using one of these performance portability libraries requires both the appropriate dependency for the hardware (CUDA, ROCm, SYCL, etc) and the performance portability library.
+This means that the dependency stack is deeper, which adds more to configure and manage, especially for legacy software projects which may already have a heavy dependency stack.
+
 
 Metadata
 ================================================================================
 
 Started: 11 Mar 2026
 
-Last edited: 07 Jul 2026
+Last edited: 16 Jul 2026
