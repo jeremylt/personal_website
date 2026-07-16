@@ -6,11 +6,22 @@ This section will contain blog style posts about research software engineering.
 Contents
 ================================================================================
 
+Research
+--------------------------------------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
 
    gpu-porting.rst
    local-llm.rst
-   python-wheels.rst
+
+Bugs
+---------------------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+ 
    macos-weak-symbols.rst
+   python-wheels.rst
    popen-pclose.rst
+   cuda-sm.rst
