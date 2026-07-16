@@ -33,6 +33,13 @@ However, these libraries typically do not offer as direct of control over the co
 Additionally, using one of these performance portability libraries requires both the appropriate dependency for the hardware (CUDA, ROCm, SYCL, etc) and the performance portability library.
 This means that the dependency stack is deeper, which adds more to configure and manage, especially for legacy software projects which may already have a heavy dependency stack.
 
+Demo
+================================================================================
+
+A small demo application exploring some of the challenges to in-place modification of legacy CPU based code can be found `here <https://github.com/jeremylt/legacy-kokkos-integration-demo>`_.
+This demo uses Kokkos and can be used to target any device that Kokkos (and your hardware) supports.
+The source code has several comments discussing common points to consider when porting legacy CPU based code to GPUs.
+
 
 Metadata
 ================================================================================
