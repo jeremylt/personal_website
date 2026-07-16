@@ -90,7 +90,7 @@ My research interests include preconditioning for high order finite element-like
 
 | |fa-file| CV:                     `download <https://jeremylt.github.io/Presentations/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume:                 `download <https://jeremylt.github.io/Presentations/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_
-| |fa-file| Presentations:          `view <https://jeremylt.org/presentations>`_
+| |fa-file| Presentations:          `view <https://jeremylt.org/research/presentations>`_
 
 After graduating from the U.S. Air Force Academy, I served as an advanced weapon systems analyst, testing the `Air Launched Cruise Missile on the B-52 <https://en.wikipedia.org/wiki/49th_Test_and_Evaluation_Squadron>`_.
 I was named the `Air Combat Command Junior Military Scientist of the Year <https://www.acc.af.mil/News/Article-Display/Article/200165/acc-announces-2012-stem-award-winners>`_ for my work helping restore U.S. Strategic Command's confidence in the U.S. Air Force's annual accuracy and reliability report for aircraft based nuclear weapons.
