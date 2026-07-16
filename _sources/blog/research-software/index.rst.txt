@@ -12,9 +12,8 @@ Research
 .. toctree::
    :maxdepth: 1
 
-   ai-for-rse.rst
-   local-llm.rst
    gpu-porting.rst
+   local-llm.rst
 
 Bugs
 ---------------------------------------------------------------------------------
