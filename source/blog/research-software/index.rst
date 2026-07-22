@@ -13,6 +13,7 @@ Research
    :maxdepth: 1
 
    gpu-porting.rst
+   4c-initial-gpu-porting.rst
    local-llm.rst
 
 Bugs
