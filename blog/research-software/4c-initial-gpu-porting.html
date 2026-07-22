@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Agentic AI Usage for RSEs" href="ai-for-rse.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>4C Initial GPU Porting</title>
@@ -685,10 +685,10 @@ The time loop has the following control flow:</p>
 </details><ol class="arabic simple" start="3">
 <li><p>integrate</p></li>
 </ol>
-<details> <summary>Click to expand</summary><ul>
+<details> <summary>Click to expand</summary><ul class="simple">
 <li><p>intergrator specific pre-interaction routine</p></li>
 <li><p>update connectivity</p>
-<ul class="simple">
+<ul>
 <li><p>check particle interaction distance wrt bin size</p>
 <ul>
 <li><p>Note: need MPI communication</p></li>
@@ -734,12 +734,12 @@ The time loop has the following control flow:</p>
 <li><p>evaluate time step</p>
 <ul>
 <li><p>clear rigid body forces and torques, if rigid body</p>
-<ul class="simple">
+<ul>
 <li><p>Note: parallelize once rigid body computed on device</p></li>
 </ul>
 </li>
 <li><p>set gravity acceleration, if gravity</p>
-<ul class="simple">
+<ul>
 <li><p>Note: parallelize once downstream computation is also on device</p></li>
 <li><p>Note: <cite>set_state_specific_container()</cite> may want to set state in currently most up to date memory space or have optional argument to target specific space</p></li>
 </ul>
@@ -748,7 +748,7 @@ The time loop has the following control flow:</p>
 <ul>
 <li><p>Note: modifies <cite>particlepair</cite> data, would need to tweak editing of single <cite>particlepairdata_</cite> vector</p></li>
 <li><p>DEM</p>
-<ul class="simple">
+<ul>
 <li><p>clear force and moment states</p>
 <ul>
 <li><p>Note: parallelize once downstream is on device</p></li>
@@ -784,7 +784,7 @@ The time loop has the following control flow:</p>
 </ul>
 </li>
 <li><p>SPH</p>
-<ul class="simple">
+<ul>
 <li><p>evaluate neighbor pairs</p>
 <ul>
 <li><p>Note: parallelization candidate, writes to individual pair data instead of to each particle</p></li>
@@ -800,35 +800,26 @@ The time loop has the following control flow:</p>
 <li><p>Note: parallelize once downstream is on device</p></li>
 </ul>
 </li>
-<li><p>compute density</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+<li><p>compute density</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
+</li>
 <li><p>compute pressure</p>
 <ul>
 <li><p>Note: parallelization candidate</p></li>
 </ul>
 </li>
-<li><p>compute surface tension interface, if surface tension</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+<li><p>compute surface tension interface, if surface tension</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>compute temperature field, if temperature</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>compute temperature field, if temperature</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
+</li>
 <li><p>interpolate open boundary states</p></li>
 <li><p>initialize boundary particle states, if boundary particles</p>
 <ul>
@@ -845,35 +836,28 @@ The time loop has the following control flow:</p>
 <li><p>Note: parallelization candidate</p></li>
 </ul>
 </li>
-<li><p>add surface tension contribution to acceleration, if surface tension</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+<li><p>add surface tension contribution to acceleration, if surface tension</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>add rigid particle contact contribution to force, if rigid body</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>add rigid particle contact contribution to force, if rigid body</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>add peridynamics contribution to acceleration, if peridynamics</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>add peridynamics contribution to acceleration, if peridynamics</p>
+<ul>
 <li><p>Note: parallelization complicated by particle pairs writing to each other</p></li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 <li><p>apply viscous damping, if viscous damping</p></li>
 <li><p>compute accelerations, if rigid body and particle interaction</p>
-<ul class="simple">
+<ul>
 <li><p>Note: Involves MPI communication for acceleration on rigid body</p></li>
 </ul>
 </li>
@@ -921,12 +905,12 @@ This has to be solved somewhere and have a common strategy that is known to be a
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="ai-for-rse.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Agentic AI Usage for RSEs</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

@@ -572,7 +572,7 @@ The time loop has the following control flow:
 
       - compute density
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
       - compute pressure
 
@@ -580,11 +580,11 @@ The time loop has the following control flow:
 
       - compute surface tension interface, if surface tension
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
       - compute temperature field, if temperature
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
       - interpolate open boundary states
       - initialize boundary particle states, if boundary particles
@@ -601,15 +601,15 @@ The time loop has the following control flow:
 
       - add surface tension contribution to acceleration, if surface tension
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
       - add rigid particle contact contribution to force, if rigid body
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
       - add peridynamics contribution to acceleration, if peridynamics
 
-       - Note: parallelization complicated by particle pairs writing to each other
+        - Note: parallelization complicated by particle pairs writing to each other
 
 
   - apply viscous damping, if viscous damping
