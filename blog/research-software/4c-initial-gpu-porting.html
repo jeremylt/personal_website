@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Agentic AI Usage for RSEs" href="ai-for-rse.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>4C Initial GPU Porting</title>
@@ -610,8 +610,50 @@ It also appears that some of the data from the <cite>fem</cite> module may be im
 <section id="particle-methods">
 <h3>Particle methods<a class="headerlink" href="#particle-methods" title="Link to this heading">¶</a></h3>
 <p>The method <cite>container-&gt;get_ptr_to_state()</cite> will need to return device or host memory, as appropriate.
-Only setting <cite>const</cite> on the returned pointer seems to be the way to determine if this is read-only or read-write access.</p>
-<p>The following approach, I believe, allows this <cite>const</cite>-ness to be tracked to facilitate memory sync</p>
+Only setting <cite>const</cite> on the returned pointer seems to be the current way to determine if this is read-only or read-write access.</p>
+<p>We need separate getters for read-only and writable access for the synchronization to function correctly.
+We can leverage the existing Kokkos DualView to facilitate this synchronization.
+Note: The DualView interface has changes between Kokkos 4.7.4 and Kokkos 5.0, but my usage of the interface below should be valid under both.
+See my experiments <cite>in this repo &lt;https://github.com/jeremylt/legacy-kokkos-integration-demo&gt;</cite>, which was inspired in part by PETSc’s usage of Kokkos and my experience with libCEED.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">MemorySpace</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">DefaultSpace</span><span class="p">,</span><span class="w"> </span><span class="c1">// Device data access</span>
+<span class="w">  </span><span class="n">HostSpace</span><span class="p">,</span><span class="w">    </span><span class="c1">// Host data access</span>
+<span class="p">};</span>
+
+<span class="c1">// ...</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">get_ptr_to_state</span><span class="p">(</span><span class="n">ParticleState</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">MemorySpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">space</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_device</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_device</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_host</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_host</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="nf">get_ptr_to_state_writable</span><span class="p">(</span><span class="n">ParticleState</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">MemorySpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">space</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_device</span><span class="p">();</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">modify_device</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_device</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_host</span><span class="p">();</span>
+<span class="w">    </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">modify_host</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_host</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The proposed snippet above can be trivially extended for separate Views (vectors) for each state, which would be synced and managed separately.
+This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
+If the number of copies becomes a bottleneck, we can revisit that decision.
+I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.</p>
+<section id="bad-attempt">
+<h4>Bad attempt<a class="headerlink" href="#bad-attempt" title="Link to this heading">¶</a></h4>
+<p>The proposed solution I’ve hidden below would require C++ to allow function overloading by return type alone, which <cite>it does not support &lt;https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean&gt;</cite>.
+I kept it here for posterity anyways because it was an interesting point in learning C++ for me.</p>
+<details> <summary>Click to expand</summary><p>The following approach, I believe, allows this <cite>const</cite>-ness to be tracked to facilitate memory sync</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">MemorySpace</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="n">Default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="c1">// Current Kokkos ExecutionSpace, which could be CPU</span>
@@ -649,10 +691,7 @@ This point will require further research, especially since it is not clear to me
 <p>In any case, the code above shows the basic idea of the synchronization, as we want to keep track of when memory is modified and not.
 Using the current getter allows us to be minimally intrusive and focus our changes in one location.
 As an additional benefit, using the existing getter like this means we can change the internal implementation, such making changes to usage of a <cite>DualView</cite> for Kokkos 5.0, without it requiring changes in the rest of the code.</p>
-<p>The proposed snippet above keeps the same approach of using separate Views (vectors) for each state, which would be synced and managed separately.
-This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
-If the number of copies becomes a bottleneck, we can revisit that decision.
-I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.</p>
+</details></section>
 </section>
 </section>
 <section id="control-flow">
@@ -905,12 +944,12 @@ This has to be solved somewhere and have a common strategy that is known to be a
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="ai-for-rse.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Agentic AI Usage for RSEs</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -968,7 +1007,10 @@ This has to be solved somewhere and have a common strategy that is known to be a
 <li><a class="reference internal" href="#wall">Wall</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#particle-methods">Particle methods</a></li>
+<li><a class="reference internal" href="#particle-methods">Particle methods</a><ul>
+<li><a class="reference internal" href="#bad-attempt">Bad attempt</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#control-flow">Control flow</a></li>
