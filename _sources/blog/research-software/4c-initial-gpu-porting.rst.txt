@@ -483,7 +483,7 @@ I also have this version with 'lazy' allocation of the device side memory to pre
 Bad attempt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The proposed solution I've hidden below would require C++ to allow function overloading by return type alone, which `it does not support <https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean>`.
+The proposed solution I've hidden below would require C++ to allow function overloading by return type alone, which `it does not support <https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean>`_.
 I kept it here for posterity anyways because it was an interesting point in learning C++ for me.
 
 .. raw:: html

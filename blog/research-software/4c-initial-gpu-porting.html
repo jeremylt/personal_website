@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Agentic AI Usage for RSEs" href="ai-for-rse.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>4C Initial GPU Porting</title>
@@ -700,7 +700,7 @@ As the intention is to update the entire <cite>particle</cite> module to run on 
 </div>
 <section id="bad-attempt">
 <h4>Bad attempt<a class="headerlink" href="#bad-attempt" title="Link to this heading">¶</a></h4>
-<p>The proposed solution I’ve hidden below would require C++ to allow function overloading by return type alone, which <cite>it does not support &lt;https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean&gt;</cite>.
+<p>The proposed solution I’ve hidden below would require C++ to allow function overloading by return type alone, which <a class="reference external" href="https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean">it does not support</a>.
 I kept it here for posterity anyways because it was an interesting point in learning C++ for me.</p>
 <details> <summary>Click to expand</summary><p>The following approach, I believe, allows this <cite>const</cite>-ness to be tracked to facilitate memory sync</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">MemorySpace</span>
@@ -993,12 +993,12 @@ This has to be solved somewhere and have a common strategy that is known to be a
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="ai-for-rse.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Agentic AI Usage for RSEs</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
