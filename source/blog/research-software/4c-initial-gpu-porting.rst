@@ -385,7 +385,58 @@ Particle methods
 ---------------------------------------------------------------------------
 
 The method `container->get_ptr_to_state()` will need to return device or host memory, as appropriate.
-Only setting `const` on the returned pointer seems to be the way to determine if this is read-only or read-write access.
+Only setting `const` on the returned pointer seems to be the current way to determine if this is read-only or read-write access.
+
+We need separate getters for read-only and writable access for the synchronization to function correctly.
+We can leverage the existing Kokkos DualView to facilitate this synchronization.
+Note: The DualView interface has changes between Kokkos 4.7.4 and Kokkos 5.0, but my usage of the interface below should be valid under both.
+See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-integration-demo>`, which was inspired in part by PETSc's usage of Kokkos and my experience with libCEED.
+
+.. code:: c++
+
+   enum MemorySpace {
+     DefaultSpace, // Device data access
+     HostSpace,    // Host data access
+   };
+
+   // ...
+   
+   inline const int *get_ptr_to_state(ParticleState state, MemorySpace space = DefaultSpace) {
+     if (space == DefaultSpace) {
+       states_[state].sync_device();
+       return states_[state].view_device().data();
+     } else {
+       states_[state].sync_host();
+       return states_[state].view_host().data();
+     }
+   }
+
+   inline int *get_ptr_to_state_writable(ParticleState state, MemorySpace space = DefaultSpace) {
+     if (space == DefaultSpace) {
+       states_[state].sync_device();
+       states_[state].modify_device();
+       return states_[state].view_device().data();
+     } else {
+       states_[state].sync_host();
+       states_[state].modify_host();
+       return states_[state].view_host().data();
+     }
+   }
+
+The proposed snippet above can be trivially extended for separate Views (vectors) for each state, which would be synced and managed separately.
+This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
+If the number of copies becomes a bottleneck, we can revisit that decision.
+I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.
+
+Bad attempt
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The proposed solution I've hidden below would require C++ to allow function overloading by return type alone, which `it does not support <https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean>`.
+I kept it here for posterity anyways because it was an interesting point in learning C++ for me.
+
+.. raw:: html
+
+   <details> <summary>Click to expand</summary>
 
 The following approach, I believe, allows this `const`-ness to be tracked to facilitate memory sync
 
@@ -429,10 +480,9 @@ In any case, the code above shows the basic idea of the synchronization, as we w
 Using the current getter allows us to be minimally intrusive and focus our changes in one location.
 As an additional benefit, using the existing getter like this means we can change the internal implementation, such making changes to usage of a `DualView` for Kokkos 5.0, without it requiring changes in the rest of the code.
 
-The proposed snippet above keeps the same approach of using separate Views (vectors) for each state, which would be synced and managed separately.
-This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
-If the number of copies becomes a bottleneck, we can revisit that decision.
-I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.
+.. raw:: html
+
+   </details>
 
 
 Control flow
