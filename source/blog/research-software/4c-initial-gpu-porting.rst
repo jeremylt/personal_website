@@ -423,10 +423,62 @@ See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-inte
      }
    }
 
-The proposed snippet above can be trivially extended for separate Views (vectors) for each state, which would be synced and managed separately.
+The proposed snippet above has separate Views (vectors) for each state, which would be synced and managed separately.
 This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
 If the number of copies becomes a bottleneck, we can revisit that decision.
 I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.
+
+One open question is if it is preferable to use the host or device memory state as a default.
+As the intention is to update the entire `particle` module to run on the device, I am using device memory as the default initially.
+
+I also have this version with 'lazy' allocation of the device side memory to prevent a large number of unneeded allocations.
+
+.. code:: c++
+
+   enum MemorySpace {
+     DefaultSpace, // Device data access
+     HostSpace,    // Host data access
+   };
+
+   // ...
+
+   inline void init_dual_view(ParticleState state) {
+     if (is_dual_valid_[state]) return;
+     auto host_view = host_states_[state];
+     Kokkos::View<int *> device_view(host_view.label(), host_view.size());
+     // Note: need to copy to device, as DualView must start with both Views in sync
+     Kokkos::deep_copy(device_view, host_view);
+     dual_states_[state] = Kokkos::DualView<int *>(device_view, host_view);
+     is_dual_valid_[state] = true;
+   }
+  
+   // ...
+   
+   inline const int* get_ptr_to_state(ParticleState state, MemorySpace space = DefaultSpace) {
+     if (space == DefaultSpace) {
+       if (!is_dual_valid_[state]) init_dual_view(state);
+       dual_states_[state].sync_device();
+       return dual_states_[state].view_device().data();
+     } else {
+       if (!is_dual_valid_[state]) return host_states_[state].data();
+       dual_states_[state].sync_host();
+       return dual_states_[state].view_host().data();
+     }
+   }
+
+   inline int* get_ptr_to_state_writable(ParticleState state, MemorySpace space = DefaultSpace) {
+     if (space == DefaultSpace) {
+       if (!is_dual_valid_[state]) init_dual_view(state);
+       dual_states_[state].sync_device();
+       dual_states_[state].modify_device();
+       return dual_states_[state].view_device().data();
+     } else {
+       if (!is_dual_valid_[state]) return host_states_[state].data();
+       dual_states_[state].sync_host();
+       dual_states_[state].modify_host();
+       return dual_states_[state].view_host().data();
+     }
+   }
 
 Bad attempt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
