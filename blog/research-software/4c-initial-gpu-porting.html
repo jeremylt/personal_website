@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Agentic AI Usage for RSEs" href="ai-for-rse.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>4C Initial GPU Porting</title>
@@ -614,7 +614,7 @@ Only setting <cite>const</cite> on the returned pointer seems to be the current 
 <p>We need separate getters for read-only and writable access for the synchronization to function correctly.
 We can leverage the existing Kokkos DualView to facilitate this synchronization.
 Note: The DualView interface has changes between Kokkos 4.7.4 and Kokkos 5.0, but my usage of the interface below should be valid under both.
-See my experiments <cite>in this repo &lt;https://github.com/jeremylt/legacy-kokkos-integration-demo&gt;</cite>, which was inspired in part by PETSc’s usage of Kokkos and my experience with libCEED.</p>
+See my experiments <a class="reference external" href="https://github.com/jeremylt/legacy-kokkos-integration-demo">in this repo</a>, which was inspired in part by PETSc’s usage of Kokkos and my experience with libCEED.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">MemorySpace</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">DefaultSpace</span><span class="p">,</span><span class="w"> </span><span class="c1">// Device data access</span>
 <span class="w">  </span><span class="n">HostSpace</span><span class="p">,</span><span class="w">    </span><span class="c1">// Host data access</span>
@@ -944,12 +944,12 @@ This has to be solved somewhere and have a common strategy that is known to be a
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="ai-for-rse.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Agentic AI Usage for RSEs</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
