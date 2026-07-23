@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Agentic AI Usage for RSEs" href="ai-for-rse.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="GPU Porting" href="gpu-porting.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>4C Initial GPU Porting</title>
@@ -645,10 +645,59 @@ See my experiments <a class="reference external" href="https://github.com/jeremy
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The proposed snippet above can be trivially extended for separate Views (vectors) for each state, which would be synced and managed separately.
+<p>The proposed snippet above has separate Views (vectors) for each state, which would be synced and managed separately.
 This could mean multiple separate copies from the device to the host inside of one function, but overall less data in each copy.
 If the number of copies becomes a bottleneck, we can revisit that decision.
 I do not know if Kokkos has some way to smartly manage multiple copies requested on back to back lines or if putting these Views inside of a getter affects any such capability.</p>
+<p>One open question is if it is preferable to use the host or device memory state as a default.
+As the intention is to update the entire <cite>particle</cite> module to run on the device, I am using device memory as the default initially.</p>
+<p>I also have this version with ‘lazy’ allocation of the device side memory to prevent a large number of unneeded allocations.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">MemorySpace</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">DefaultSpace</span><span class="p">,</span><span class="w"> </span><span class="c1">// Device data access</span>
+<span class="w">  </span><span class="n">HostSpace</span><span class="p">,</span><span class="w">    </span><span class="c1">// Host data access</span>
+<span class="p">};</span>
+
+<span class="c1">// ...</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init_dual_view</span><span class="p">(</span><span class="n">ParticleState</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">])</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">host_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">host_states_</span><span class="p">[</span><span class="n">state</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">device_view</span><span class="p">(</span><span class="n">host_view</span><span class="p">.</span><span class="n">label</span><span class="p">(),</span><span class="w"> </span><span class="n">host_view</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="w">  </span><span class="c1">// Note: need to copy to device, as DualView must start with both Views in sync</span>
+<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">deep_copy</span><span class="p">(</span><span class="n">device_view</span><span class="p">,</span><span class="w"> </span><span class="n">host_view</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">DualView</span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">device_view</span><span class="p">,</span><span class="w"> </span><span class="n">host_view</span><span class="p">);</span>
+<span class="w">  </span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ...</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="nf">get_ptr_to_state</span><span class="p">(</span><span class="n">ParticleState</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">MemorySpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">space</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">])</span><span class="w"> </span><span class="n">init_dual_view</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_device</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_device</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">])</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">host_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">data</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_host</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_host</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="nf">get_ptr_to_state_writable</span><span class="p">(</span><span class="n">ParticleState</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">MemorySpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">space</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DefaultSpace</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">])</span><span class="w"> </span><span class="n">init_dual_view</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_device</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">modify_device</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_device</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">is_dual_valid_</span><span class="p">[</span><span class="n">state</span><span class="p">])</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">host_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">data</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">sync_host</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">modify_host</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dual_states_</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">view_host</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <section id="bad-attempt">
 <h4>Bad attempt<a class="headerlink" href="#bad-attempt" title="Link to this heading">¶</a></h4>
 <p>The proposed solution I’ve hidden below would require C++ to allow function overloading by return type alone, which <cite>it does not support &lt;https://stackoverflow.com/questions/28420921/what-does-cannot-overload-functions-distinguished-by-return-type-alone-mean&gt;</cite>.
@@ -944,12 +993,12 @@ This has to be solved somewhere and have a common strategy that is known to be a
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="ai-for-rse.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Agentic AI Usage for RSEs</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
