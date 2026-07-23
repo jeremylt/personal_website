@@ -401,7 +401,7 @@ See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-inte
 
    // ...
    
-   inline const int *get_ptr_to_state(ParticleState state, MemorySpace space = DefaultSpace) {
+   inline const int* get_ptr_to_state(ParticleState state, MemorySpace space = DefaultSpace) {
      if (space == DefaultSpace) {
        states_[state].sync_device();
        return states_[state].view_device().data();
@@ -411,7 +411,7 @@ See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-inte
      }
    }
 
-   inline int *get_ptr_to_state_writable(ParticleState state, MemorySpace space = DefaultSpace) {
+   inline int* get_ptr_to_state_writable(ParticleState state, MemorySpace space = DefaultSpace) {
      if (space == DefaultSpace) {
        states_[state].sync_device();
        states_[state].modify_device();
