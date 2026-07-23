@@ -390,7 +390,7 @@ Only setting `const` on the returned pointer seems to be the current way to dete
 We need separate getters for read-only and writable access for the synchronization to function correctly.
 We can leverage the existing Kokkos DualView to facilitate this synchronization.
 Note: The DualView interface has changes between Kokkos 4.7.4 and Kokkos 5.0, but my usage of the interface below should be valid under both.
-See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-integration-demo>`, which was inspired in part by PETSc's usage of Kokkos and my experience with libCEED.
+See my experiments `in this repo <https://github.com/jeremylt/legacy-kokkos-integration-demo>`_, which was inspired in part by PETSc's usage of Kokkos and my experience with libCEED.
 
 .. code:: c++
 
