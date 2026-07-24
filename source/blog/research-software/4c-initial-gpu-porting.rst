@@ -387,6 +387,9 @@ Particle methods
 The method `container->get_ptr_to_state()` will need to return device or host memory, as appropriate.
 Only setting `const` on the returned pointer seems to be the current way to determine if this is read-only or read-write access.
 
+Dual memory spaces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 We need separate getters for read-only and writable access for the synchronization to function correctly.
 We can leverage the existing Kokkos DualView to facilitate this synchronization.
 Note: The DualView interface has changes between Kokkos 4.7.4 and Kokkos 5.0, but my usage of the interface below should be valid under both.
@@ -431,6 +434,9 @@ I do not know if Kokkos has some way to smartly manage multiple copies requested
 One open question is if it is preferable to use the host or device memory state as a default.
 As the intention is to update the entire `particle` module to run on the device, I am using device memory as the default initially.
 
+Lazy memory allocation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 I also have this version with 'lazy' allocation of the device side memory to prevent a large number of unneeded allocations.
 
 .. code:: c++
@@ -445,10 +451,10 @@ I also have this version with 'lazy' allocation of the device side memory to pre
    inline void init_dual_view(ParticleState state) {
      if (is_dual_valid_[state]) return;
      auto host_view = host_states_[state];
-     Kokkos::View<int *> device_view(host_view.label(), host_view.size());
+     Kokkos::View<double *> device_view(host_view.label(), host_view.size());
      // Note: need to copy to device, as DualView must start with both Views in sync
      Kokkos::deep_copy(device_view, host_view);
-     dual_states_[state] = Kokkos::DualView<int *>(device_view, host_view);
+     dual_states_[state] = Kokkos::DualView<double *>(device_view, host_view);
      is_dual_valid_[state] = true;
    }
   
@@ -479,6 +485,31 @@ I also have this version with 'lazy' allocation of the device side memory to pre
        return dual_states_[state].view_host().data();
      }
    }
+
+Fix double allocation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This has the risk of a double allocation when Kokkos is configured for CPU only.
+This small tweak fixes that risk.
+
+.. code:: c++
+
+   enum MemorySpace {
+     DefaultSpace, // Device data access
+     HostSpace,    // Host data access
+   };
+
+   // ...
+
+   inline void init_dual_view(ParticleState state) {
+     if (is_dual_valid_[state]) return;
+     auto host_view = host_states_[state];
+     // Create mirror view and copy so both views are in sync before creating DualView
+     Kokkos::View<double *> device_view = Kokkos::create_mirror_view_and_copy(Kokkos::DefaultExecutionSpace::memory_space(), host_view);
+     dual_states_[state] = Kokkos::DualView<double *>(device_view, host_view);
+     is_dual_valid_[state] = true;
+   }
+
 
 Bad attempt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
