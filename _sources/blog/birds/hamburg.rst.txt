@@ -5,6 +5,8 @@ Hamburg, Germany
 
 * `Carrion crow <https://en.wikipedia.org/wiki/Carrion_crow>`_
 
+* `Eurasian jay <https://en.wikipedia.org/wiki/Eurasian_jay>`_
+
 * `Rock dove <https://en.wikipedia.org/wiki/Rock_dove>`_
 
 * `Common wood pigeon <https://en.wikipedia.org/wiki/Common_wood_pigeon>`_
@@ -17,6 +19,8 @@ Hamburg, Germany
 
 * `Great spotted woodpecker <https://en.wikipedia.org/wiki/Great_spotted_woodpecker>`_
 
+* `Great tit <https://en.wikipedia.org/wiki/Great_tit>`_
+
 * `Mallard <https://en.wikipedia.org/wiki/Mallard>`_
 
 
@@ -25,4 +29,4 @@ Metadata
 
 Started: 29 Jun 2026
 
-Last edited: 15 Jul 2026
+Last edited: 28 Jul 2026
