@@ -1,4 +1,4 @@
-Agentic AI Usage for RSEs
+LLM Usage for RSEs
 ********************************************************************************
 
 Research Software Engineers (RSEs) combine the expertise of professional software development with domain specific skills for academic research.
