@@ -14,6 +14,7 @@ Research
 
    gpu-porting.rst
    4c-initial-gpu-porting.rst
+   ai-for-rse.rst
    local-llm.rst
 
 Bugs
