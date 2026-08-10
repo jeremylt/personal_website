@@ -24,7 +24,7 @@ jobs:
           touch build/html/.nojekyll
           sed -i -- 's/<meta name="viewport" content="width=device-width, initial-scale=0\.9, maximum-scale=0\.9" \/>/ /g' build/html/index.html
           echo 'jeremylt.org' > build/html/CNAME
-      - name: Deploy documentation
+      - name: Deploy website
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
