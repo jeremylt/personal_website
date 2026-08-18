@@ -42,10 +42,26 @@ First, the matter of consent when gathering training data matters greatly to me.
 Secondly, the disproportionate resource consumption when training these models, even if they are run locally, is a concern.
 Additionally, the training process's disassociation of the data from attribution and licensing considerations is problematic.
 
+LLM performance scales with training dataset size and many modern LLMs are trained on hundreds of billions or trillions of tokens, according to a `survey by Zhao et. al. <https://arxiv.org/abs/2303.18223>`_.
+This is a massive amount of data, collected from web pages, books, academic publications, Wikipedia, open source software repositories, and additional sources.
+Many of these sources did not consent to their data being used to train LLMs, leading to lawsuits such as `The New York Times suing OpenAI and Microsoft <https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face>`_, `a 1.5 billion dollar settlement between authors and Anthropic <https://www.anthropiccopyrightsettlement.com/faq>`, `Elseiver and other companies suing Meta <https://www.nature.com/articles/d41586-026-01481-0>`_, among other examples.
+The collection of this data without permission and in some cases against the wishes of the authors and creators violates basic ethics around consent.
+US courts appear to agree with LLM companies, at least in part and in some cases, that `lawfully acquired training data may be fair use <https://www.reuters.com/legal/legalindustry/copyright-law-2025-courts-begin-draw-lines-around-ai-training-piracy-market-harm--pracin-2026-03-16>`_, though many cases are still ongoing and different countries have different legal frameworks.
+In any case, it may be the case that collection practices for LLM training data may be legal but that still does not address the ethical concern of using the data without the permission and sometimes against the expressed wishes of the originators.
+Research guidelines, such as the `The European Code of Conduct for Research Integrity <https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/european-code-of-conduct-for-research-integrity_horizon_en.pdf>`_ set the expectation that search subjects and materials should be treated with respect and consistent with ethical guidelines.
+For researchers using LLMs during their research, this distinction between legal and ethical data collection is important.
+
+There have been efforts to ensure ethical collection of training data, such as the `Common Corpus project <https://proceedings.iclr.cc/paper_files/paper/2026/file/2b5c5689fae6fa9a4883e73e511d52c8-Paper-Conference.pdf>`_.
+This dataset consists of approximately 2 billion tokens, which is in line with the size of data sets for several of the recent larger models.
+The data set is filtered by permissive licenses, and personally identifiable information was removed.
+Furthermore, the Common Corpus team attempted to filter out data that was deemed toxic by a specifically trained multilingual small model for this purpose.
+These efforts address the ethics of data collection, or at least attempts to, but does not address the questions of resources consumed training the model or attribution concerns.
+
+
 
 Metadata
 ================================================================================
 
 Started: 10 Aug 2026
 
-Last edited: 10 Aug 2026
+Last edited: 18 Aug 2026
