@@ -224,7 +224,7 @@
 This is known as the SM or Streaming Multiprocessor version.
 CUDA publishes a <a class="reference external" href="https://developer.nvidia.com/cuda/gpus">list of compute capability for common NVIDIA hardware</a>.</p>
 <p>When compiling and testing the 4C library, I received the following error message for a GPU enabled test:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C++ exception with description &quot;(cuda_instance-&gt;cuda_func_get_attributes_wrapper(&amp;attr, func)) error( cudaErrorNoKernelImageForDevice): no kernel image is available for execution on the device /home/thompson/Dev/4C-dependencies/tk_cuda/include/kokkos/Cuda/Kokkos_Cuda_KernelLaunch.hpp:141&quot; thrown in the test fixture&#39;s constructor.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C++ exception with description "(cuda_instance-&gt;cuda_func_get_attributes_wrapper(&amp;attr, func)) error( cudaErrorNoKernelImageForDevice): no kernel image is available for execution on the device /home/thompson/Dev/4C-dependencies/tk_cuda/include/kokkos/Cuda/Kokkos_Cuda_KernelLaunch.hpp:141" thrown in the test fixture's constructor.</span>
 </pre></div>
 </div>
 <section id="issue">
