@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Weak Symbols on MacOS" href="macos-weak-symbols.html"><link rel="prev" title="LLM Ethical Considerations for RSE" href="ai-ethics.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Local LLMs for Development" href="local-llm.html"><link rel="prev" title="LLM Usage for RSEs" href="ai-for-rse.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Local LLMs for Development</title>
+        <title>LLM Ethical Considerations for RSE</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -200,7 +200,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/blog/research-software/local-llm.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/blog/research-software/ai-ethics.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -218,84 +218,57 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="local-llms-for-development">
-<h1>Local LLMs for Development<a class="headerlink" href="#local-llms-for-development" title="Link to this heading">¶</a></h1>
-<p>I am experimenting with local instances of Large Language Models (LLMs) for software development.
-While this experimentation continues, I will update this post with further information.</p>
-<section id="reasoning">
-<h2>Reasoning<a class="headerlink" href="#reasoning" title="Link to this heading">¶</a></h2>
-<p>Local LLMs, at least in theory, may offer advantages over using APIs to access LLMs operated by large corporations in commercial data centers.</p>
-<ul class="simple">
-<li><p>Local hardware can use less water and power than large data centers</p></li>
-<li><p>Data stays on the developer’s device, addressing privacy concerns</p></li>
-<li><p>With open source models, developers are not dependent upon large corporations who may have conflicting values with the developer</p></li>
-</ul>
-<p>Note however that concerns around skill formation, de-skilling, and plagiarism persist with local LLMs.
-Additionally, fundamental ethical concerns, such as around training data and environmental costs remain.
-See <a class="reference external" href="jeremylt.org/blog/research-software/ai-ethics">here</a> for my thoughts on the ethics surrounding AI/LLM based software development tools more generally.</p>
+          <section id="llm-ethical-considerations-for-rse">
+<h1>LLM Ethical Considerations for RSE<a class="headerlink" href="#llm-ethical-considerations-for-rse" title="Link to this heading">¶</a></h1>
+<p>In <a class="reference external" href="https://jeremylt.org/blog/research-software/ai-for-rse">my post</a> I discussed using AI/LLM based software development tools for Research Software Engineers strictly from the lens of considering skills, risks, and research ethics.
+I tried to focus on a purely pragmatic perspective that considered if or how it could be possible for RSEs to see the benefits that some industry software development teams have experienced.</p>
+<p>However, these are not the only considerations present.
+In this post I want to gather various perspectives on the ethical considerations around the LLMs themselves, including training and environmental impact concerns.</p>
+<section id="data-center-impacts">
+<h2>Data Center Impacts<a class="headerlink" href="#data-center-impacts" title="Link to this heading">¶</a></h2>
+<p>Perhaps one of the most publicized impacts of LLMs is the environmental impacts of data centers.
+Two of the common factors are water and electricity usage.
+While this is a rather limited lens to capture the impacts of LLM usage, I am including this here because it has a tangible direct impact upon local communities.
+Even if these impacts were successfully mitigated, other ethical considerations presented in this article would also be present.</p>
+<p>The <a class="reference external" href="https://greatercle.com/clientuploads/Data_Centers_and_the_Climate_Landscape_An_Actionable_Resource_for_US_Mayors.pdf?_t=1782241863">Data Centers and the Climate Landscape: An Actionable Resource for US Mayors</a> report states that two thirds of the data centers built in the US since 2022 were constructed in water stressed areas and 97 percent of data centers get their operating water from municipal water systems.
+Large data centers can consume water approximately equivalent to 10,000 to 50,000 people while smaller centers can consume approximately 2,000 people’s water, or less.</p>
+<p>The <a class="reference external" href="https://www.osti.gov/biblio/3374245">2025 Update</a> to the <a class="reference external" href="https://eta-publications.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report">2024 Data Center Energy Usage Report</a> from Lawrence Berkeley National Laboratory reports that data centers could account for between 6.7 and 12.0 percent of total US electricity usage by 2028.
+Data centers represented 4.4 percent of US electricity usage in 2023 and 4.7 percent in 2024.
+<a class="reference external" href="https://www.reuters.com/sustainability/boards-policy-regulation/americas-largest-power-grid-is-struggling-meet-demand-ai-2025-07-09">Various reporting</a> has indicated that data center growth is one of the factor leading to increasing strain on the US power grid.
+This also coincides with <a class="reference external" href="https://www.reuters.com/business/energy/scorching-heat-forecast-threatens-demand-records-us-electric-grid-2026-06-30">increasing strain from extreme weather due to climate change</a>.
+Considering how much critical infrastructure relies upon electricity, this strain from data centers represents a real safety threat to people who live in locations where these centers are being built.</p>
+<p>This strain is not spread over all data centers equally.
+The <a class="reference external" href="https://greatercle.com/clientuploads/Data_Centers_and_the_Climate_Landscape_An_Actionable_Resource_for_US_Mayors.pdf?_t=1782241863">Data Centers and the Climate Landscape: An Actionable Resource for US Mayors</a> report states that facilities involved with model training and hyperscale facilities represent the largest impact in terms of power and water consumption.
+While these concerns are not the limits of impacts of LLMs on people, it seems clear that these data centers do indeed result in less water and power being available for people to use.
+Participating in the demand for LLMs would thus be participating in this reduced access to water and power.
+While it is true that interacting with internet based technologies does have an impact and require the usage of data centers, LLM usage itself has a particularly high usage, with queries submitted to LLMs requiring <a class="reference external" href="https://www.scientificamerican.com/article/what-do-googles-ai-answers-cost-the-environment">10 to 30 times more energy than traditional internet search engines require</a>.
+These and other impacts seem to be especially concentrated on <a class="reference external" href="https://thenarrativematters.com/data-centers-impact-on-low-income-marginalized-communities-balancing-economic-opportunity-and-community-burden">marginalized and minority communities in the US</a>.
+Reinforcing existing systematic biases and issues is a theme that will come up in other contexts in this article.</p>
 </section>
-<section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">¶</a></h2>
-<p>I have selected <a class="reference external" href="https://code.visualstudio.com">VS Code</a> as my IDE, as it has support for various extensions that support different levels of LLM integration into software development.</p>
-<div class="admonition-author-s-note admonition">
-<p class="admonition-title">Author’s Note</p>
-<p>Note that VS Code is <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_Studio_Code">owned by Microsoft</a>, there is both a proprietary and open source version of the code.
-The open source version of the code is <a class="reference external" href="https://github.com/microsoft/vscode">under the MIT license</a>.</p>
-</div>
-<p>Specifically, I am using the <a class="reference external" href="https://www.continue.dev">Continue</a> extension.</p>
-<div class="admonition-author-s-note admonition">
-<p class="admonition-title">Author’s Note</p>
-<p>Note that while Continue is an open source project, the company Continue has been <a class="reference external" href="https://en.wikipedia.org/wiki/Cursor_(company)">purchased by Cursor</a>.
-Cursor is itself being <a class="reference external" href="https://en.wikipedia.org/wiki/SpaceXAI">purchased by SpaceX as part of its xAI</a> subsidiary.
-While the extension will remain open source (at this time), it is worth monitoring this development for developers who wish to avoid directly relying upon large US software corporations.
-The Cursor extension is <a class="reference external" href="https://github.com/continuedev/continue">under the Apache 2.0 license</a>.</p>
-</div>
-<p>I am using <a class="reference external" href="https://ollama.com">Ollama</a> to operate the open LLM models.</p>
-<div class="admonition-author-s-note admonition">
-<p class="admonition-title">Author’s Note</p>
-<p>Ollama is an open source software <a class="reference external" href="https://github.com/ollama/ollama">under the MIT license</a>.</p>
-</div>
-<p>Finally, I am currently using the <a class="reference external" href="https://en.wikipedia.org/wiki/Qwen">Qwen3</a> model.</p>
-<div class="admonition-author-s-note admonition">
-<p class="admonition-title">Author’s Note</p>
-<p>Qwen3 is an open source model <a class="reference external" href="https://github.com/QwenLM/Qwen3">under the Apache 2.0 license</a>.</p>
-</div>
-<p>The relevant portion of the Continue configuration file is given below:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Qwen3 8B</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama</span>
-<span class="w">  </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qwen3:8b</span>
-<span class="w">  </span><span class="nt">apiBase</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:11434</span>
-<span class="w">  </span><span class="nt">contextLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9742</span>
-<span class="w">  </span><span class="nt">capabilities</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tool_use</span>
-<span class="w">  </span><span class="nt">defaultCompletionOptions</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">contextLength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9742</span>
-<span class="w">    </span><span class="nt">maxTokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
-<span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chat</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autocomplete</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edit</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apply</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">summarize</span>
-</pre></div>
-</div>
-</section>
-<section id="observations">
-<h2>Observations<a class="headerlink" href="#observations" title="Link to this heading">¶</a></h2>
-<p>Experimentation to select the correct model and context length is important.
-I am working with a development machine that has a GPU with only 6GB of VRAM.
-This limits the models and context length that I can select.</p>
-<p>Specifically, I am currently experimenting with using Qwen3 8B via Ollama with a <cite>contextLength</cite> of <cite>10**13.25≈9742</cite> tokens and a <cite>maxTokens</cite> of <cite>2048</cite>.
-While these settings limit the capability of the model to ingest large codebases, it keeps the performance relatively responsive while allowing me to generate smaller snippets of code.
-I do not see this limitation as particularly problematic, as this is consistent with my general recommendation to RSEs to only generate small, focused amounts of code at once and maintain control over the overall design and review while creating research software.</p>
-<p>However, this does make it difficult to prompt the LLM to review generated code, which is one of the usages I am personally more comfortable with.
-This usage feels less fraught when compared to using an LLM to plan development or generate code, especially considering the issues around attribution.
-Though, as noted above, I do not see local LLMs as an ethical ‘get out of jail free’ card.</p>
+<section id="model-training">
+<h2>Model Training<a class="headerlink" href="#model-training" title="Link to this heading">¶</a></h2>
+<p>There are a few components of model training that feel particularly noteworthy to me.
+First, the matter of consent when gathering training data matters greatly to me.
+Secondly, the disproportionate resource consumption when training these models, even if they are run locally, is a concern.
+Additionally, the training process’s disassociation of the data from attribution and licensing considerations is problematic.</p>
+<p>LLM performance scales with training dataset size and many modern LLMs are trained on hundreds of billions or trillions of tokens, according to a <a class="reference external" href="https://arxiv.org/abs/2303.18223">survey by Zhao et. al.</a>.
+This is a massive amount of data, collected from web pages, books, academic publications, Wikipedia, open source software repositories, and additional sources.
+Many of these sources did not consent to their data being used to train LLMs, leading to lawsuits such as <a class="reference external" href="https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face">The New York Times suing OpenAI and Microsoft</a>, <cite>a 1.5 billion dollar settlement between authors and Anthropic &lt;https://www.anthropiccopyrightsettlement.com/faq&gt;</cite>, <a class="reference external" href="https://www.nature.com/articles/d41586-026-01481-0">Elseiver and other companies suing Meta</a>, among other examples.
+The collection of this data without permission and in some cases against the wishes of the authors and creators violates basic ethics around consent.
+US courts appear to agree with LLM companies, at least in part and in some cases, that <a class="reference external" href="https://www.reuters.com/legal/legalindustry/copyright-law-2025-courts-begin-draw-lines-around-ai-training-piracy-market-harm--pracin-2026-03-16">lawfully acquired training data may be fair use</a>, though many cases are still ongoing and different countries have different legal frameworks.
+In any case, it may be the case that collection practices for LLM training data may be legal but that still does not address the ethical concern of using the data without the permission and sometimes against the expressed wishes of the originators.
+Research guidelines, such as the <a class="reference external" href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/european-code-of-conduct-for-research-integrity_horizon_en.pdf">The European Code of Conduct for Research Integrity</a> set the expectation that search subjects and materials should be treated with respect and consistent with ethical guidelines.
+For researchers using LLMs during their research, this distinction between legal and ethical data collection is important.</p>
+<p>There have been efforts to ensure ethical collection of training data, such as the <a class="reference external" href="https://proceedings.iclr.cc/paper_files/paper/2026/file/2b5c5689fae6fa9a4883e73e511d52c8-Paper-Conference.pdf">Common Corpus project</a>.
+This dataset consists of approximately 2 billion tokens, which is in line with the size of data sets for several of the recent larger models.
+The data set is filtered by permissive licenses, and personally identifiable information was removed.
+Furthermore, the Common Corpus team attempted to filter out data that was deemed toxic by a specifically trained multilingual small model for this purpose.
+These efforts address the ethics of data collection, or at least attempts to, but does not address the questions of resources consumed training the model or attribution concerns.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
-<p>Started: 10 Jul 2026</p>
-<p>Last edited: 10 Aug 2026</p>
+<p>Started: 10 Aug 2026</p>
+<p>Last edited: 18 Aug 2026</p>
 </section>
 </section>
 
@@ -304,23 +277,23 @@ Though, as noted above, I do not see local LLMs as an ethical ‘get out of jail
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="macos-weak-symbols.html">
+          <a class="next-page" href="local-llm.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Weak Symbols on MacOS</div>
+                <div class="title">Local LLMs for Development</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="ai-ethics.html">
+          <a class="prev-page" href="ai-for-rse.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">LLM Ethical Considerations for RSE</div>
+                <div class="title">LLM Usage for RSEs</div>
                 
               </div>
             </a>
@@ -354,10 +327,9 @@ Though, as noted above, I do not see local LLMs as an ethical ‘get out of jail
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Local LLMs for Development</a><ul>
-<li><a class="reference internal" href="#reasoning">Reasoning</a></li>
-<li><a class="reference internal" href="#implementation">Implementation</a></li>
-<li><a class="reference internal" href="#observations">Observations</a></li>
+<li><a class="reference internal" href="#">LLM Ethical Considerations for RSE</a><ul>
+<li><a class="reference internal" href="#data-center-impacts">Data Center Impacts</a></li>
+<li><a class="reference internal" href="#model-training">Model Training</a></li>
 <li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>
