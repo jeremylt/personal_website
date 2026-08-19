@@ -21,6 +21,8 @@ Hamburg, Germany
 
 * `Great tit <https://en.wikipedia.org/wiki/Great_tit>`_
 
+* `Eurasian blue tit <https://en.wikipedia.org/wiki/Eurasian_blue_tit>`_
+
 * `Mallard <https://en.wikipedia.org/wiki/Mallard>`_
 
 
@@ -29,4 +31,4 @@ Metadata
 
 Started: 29 Jun 2026
 
-Last edited: 28 Jul 2026
+Last edited: 19 Aug 2026
