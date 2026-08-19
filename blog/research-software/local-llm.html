@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Weak Symbols on MacOS" href="macos-weak-symbols.html"><link rel="prev" title="LLM Ethical Considerations for RSE" href="ai-ethics.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Weak Symbols on MacOS" href="macos-weak-symbols.html"><link rel="prev" title="LLM Usage for RSEs" href="ai-for-rse.html">
 
     <link rel="shortcut icon" href="../../_static/Icon.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Local LLMs for Development</title>
@@ -230,9 +230,7 @@ While this experimentation continues, I will update this post with further infor
 <li><p>Data stays on the developer’s device, addressing privacy concerns</p></li>
 <li><p>With open source models, developers are not dependent upon large corporations who may have conflicting values with the developer</p></li>
 </ul>
-<p>Note however that concerns around skill formation, de-skilling, and plagiarism persist with local LLMs.
-Additionally, fundamental ethical concerns, such as around training data and environmental costs remain.
-See <a class="reference external" href="jeremylt.org/blog/research-software/ai-ethics">here</a> for my thoughts on the ethics surrounding AI/LLM based software development tools more generally.</p>
+<p>Note however that concerns around skill formation, de-skilling, and plagiarism persist with local LLMs.</p>
 </section>
 <section id="implementation">
 <h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">¶</a></h2>
@@ -288,14 +286,11 @@ This limits the models and context length that I can select.</p>
 <p>Specifically, I am currently experimenting with using Qwen3 8B via Ollama with a <cite>contextLength</cite> of <cite>10**13.25≈9742</cite> tokens and a <cite>maxTokens</cite> of <cite>2048</cite>.
 While these settings limit the capability of the model to ingest large codebases, it keeps the performance relatively responsive while allowing me to generate smaller snippets of code.
 I do not see this limitation as particularly problematic, as this is consistent with my general recommendation to RSEs to only generate small, focused amounts of code at once and maintain control over the overall design and review while creating research software.</p>
-<p>However, this does make it difficult to prompt the LLM to review generated code, which is one of the usages I am personally more comfortable with.
-This usage feels less fraught when compared to using an LLM to plan development or generate code, especially considering the issues around attribution.
-Though, as noted above, I do not see local LLMs as an ethical ‘get out of jail free’ card.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 10 Jul 2026</p>
-<p>Last edited: 10 Aug 2026</p>
+<p>Last edited: 10 Jul 2026</p>
 </section>
 </section>
 
@@ -313,14 +308,14 @@ Though, as noted above, I do not see local LLMs as an ethical ‘get out of jail
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="ai-ethics.html">
+          <a class="prev-page" href="ai-for-rse.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">LLM Ethical Considerations for RSE</div>
+                <div class="title">LLM Usage for RSEs</div>
                 
               </div>
             </a>
