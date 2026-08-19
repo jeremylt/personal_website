@@ -61,6 +61,10 @@
 
     <i class="fa fa-fw fa-file-text"></i>
 
+.. |fa-arxiv| raw:: html
+
+    <i class="ai ai-fw ai-arxiv"></i>
+
 
 Contact
 ********************************************************************************
@@ -85,8 +89,9 @@ I am a Research Software Engineer at Helmholtz-Zentrum Hereon, where I develop t
 My research interests include preconditioning for high order finite element-like operators and sustainable open source scientific software development.
 
 | |fa-orcid|    ORCiD:              `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
-| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
-| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+| |fa-research| ResearchGate:       `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`_
+| |fa-gscholar| Google Scholar:     `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_
+| |fa-arxiv|    arXiv:              `Jeremy L Thompson <https://arxiv.org/a/thompson_j_3.html>`_
 
 | |fa-file| CV:                     `download <https://jeremylt.github.io/Presentations/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume:                 `download <https://jeremylt.github.io/Presentations/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_

@@ -17,7 +17,6 @@ We will also discuss the specific concerns that professional research ethics bri
    In this article, I am specifically focused on how emerging industry software development practices intersect with research software development and professional research standards.
    There is an important and interesting discussion to be had about the ethics of the LLM industry and what options may or may not exist for more ethical LLM based software development tools; however, there is not adequate space to have both discussions in this article.
    Both sets of concerns, practical and ethical, need to be addressed for agentic AI and other LLM based software development tools to be incorporated into research software development practices.
-   See `here <jeremylt.org/blog/research-software/ai-ethics>`_ for my thoughts on the ethics surrounding AI/LLM based software development tools more generally.
 
 Ultimately, researchers who let AI/LLMs write their code will have bad code.
 Software developers who let AI/LLMs do their research will violate research ethics.
@@ -213,4 +212,4 @@ Metadata
 
 Started: 11 Jun 2026
 
-Last edited: 10 Aug 2026
+Last edited: 06 Aug 2026

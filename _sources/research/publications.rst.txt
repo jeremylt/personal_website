@@ -17,6 +17,10 @@ Publications
 
     <i class="fa fa-fw fa-file-text"></i>
 
+.. |fa-arxiv| raw:: html
+
+    <i class="ai ai-fw ai-arxiv"></i>
+
 | |fa-file| CV:                 `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/00%20-%20Thompson%20Jeremy%20Luke%20CV.pdf>`_
 | |fa-file| Resume:             `download <https://raw.githubusercontent.com/jeremylt/Presentations/main/01%20-%20Thompson%20Jeremy%20Luke%20Resume.pdf>`_
 | |fa-file| Presentations:      `view <https://jeremylt.org/presentations>`_
@@ -24,7 +28,9 @@ Publications
 | |fa-orcid|    ORCiD:          `0000-0003-2980-0899 <https://orcid.org/0000-0003-2980-0899>`_
 | |fa-research| ResearchGate:   `Jeremy L Thompson <https://www.researchgate.net/profile/Jeremy-Thompson>`__
 | |fa-gscholar| Google Scholar: `Jeremy L Thompson <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`__
+| |fa-arxiv|    arXiv:          `Jeremy L Thompson <https://arxiv.org/a/thompson_j_3.html>`_
 
 A list of my publications can be found on `ORCiD <https://orcid.org/0000-0003-2980-0899>`_, `ResearchGate <https://www.researchgate.net/profile/Jeremy-Thompson>`_, and `Google Scholar <https://scholar.google.com/citations?user=UCKh6wcAAAAJ>`_.
+Some of my preprints are available on `arXiv <https://arxiv.org/a/thompson_j_3.html>`_.
 
 My entire PhD dissertation is also archived on `GitHub <https://github.com/jeremylt/dissertation>`_ and `ProQuest <https://www.proquest.com/docview/2572576599>`_.
