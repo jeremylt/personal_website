@@ -17,8 +17,6 @@ Local LLMs, at least in theory, may offer advantages over using APIs to access L
 - With open source models, developers are not dependent upon large corporations who may have conflicting values with the developer
 
 Note however that concerns around skill formation, de-skilling, and plagiarism persist with local LLMs.
-Additionally, fundamental ethical concerns, such as around training data and environmental costs remain.
-See `here <jeremylt.org/blog/research-software/ai-ethics>`_ for my thoughts on the ethics surrounding AI/LLM based software development tools more generally.
 
 
 Implementation
@@ -85,14 +83,10 @@ Specifically, I am currently experimenting with using Qwen3 8B via Ollama with a
 While these settings limit the capability of the model to ingest large codebases, it keeps the performance relatively responsive while allowing me to generate smaller snippets of code.
 I do not see this limitation as particularly problematic, as this is consistent with my general recommendation to RSEs to only generate small, focused amounts of code at once and maintain control over the overall design and review while creating research software.
 
-However, this does make it difficult to prompt the LLM to review generated code, which is one of the usages I am personally more comfortable with.
-This usage feels less fraught when compared to using an LLM to plan development or generate code, especially considering the issues around attribution.
-Though, as noted above, I do not see local LLMs as an ethical 'get out of jail free' card.
-
 
 Metadata
 ================================================================================
 
 Started: 10 Jul 2026
 
-Last edited: 10 Aug 2026
+Last edited: 10 Jul 2026

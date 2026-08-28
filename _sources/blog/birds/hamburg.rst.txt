@@ -19,6 +19,8 @@ Hamburg, Germany
 
 * `Great spotted woodpecker <https://en.wikipedia.org/wiki/Great_spotted_woodpecker>`_
 
+* `European robin <https://en.wikipedia.org/wiki/European_robin>`_
+
 * `Great tit <https://en.wikipedia.org/wiki/Great_tit>`_
 
 * `Eurasian blue tit <https://en.wikipedia.org/wiki/Eurasian_blue_tit>`_
@@ -31,4 +33,4 @@ Metadata
 
 Started: 29 Jun 2026
 
-Last edited: 19 Aug 2026
+Last edited: 28 Aug 2026
