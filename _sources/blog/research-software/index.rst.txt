@@ -6,7 +6,7 @@ This section will contain blog style posts about research software engineering.
 Contents
 ================================================================================
 
-Research
+GPUs
 --------------------------------------------------------------------------------
 
 .. toctree::
@@ -14,7 +14,15 @@ Research
 
    gpu-porting.rst
    4c-initial-gpu-porting.rst
+
+AI/LLM Usage
+--------------------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
    ai-for-rse.rst
+   ai-ethics.rst
    local-llm.rst
 
 Bugs
