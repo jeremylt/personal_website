@@ -60,6 +60,21 @@ The data set is filtered by permissive licenses, and personally identifiable inf
 Furthermore, the Common Corpus team attempted to filter out data that was deemed toxic by a specifically trained multilingual small model for this purpose.
 These efforts address the ethics of data collection, or at least attempts to, but does not address the questions of resources consumed training the model or attribution concerns.
 
+The second point I will not spend long on here except to note that even with ethically sourced training data, the cost of training these LLMs noted in the previous section still remains.
+Using these models directly encourages the training costs of new models as various corporations attempt to secure additional users in their efforts to become profitable.
+
+As I noted in `my other post <https://jeremylt.org/blog/research-software/ai-for-rse>`_, the third point is a particular concern for academics, including Research Software Engineers.
+From a purely pragmatic point of view, it is currently not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
+That's not how the training works, at a fundamental level.
+Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, especially if the details of the tools are supplied, but this lacks the specificity expected for citations.
+
+LLMs can be prompted to generate sources for their content; however, this process is not the same as traditional methods of identify the source of information and attributing that information the the source.
+A `study by Linardon et al. <https://pmc.ncbi.nlm.nih.gov/articles/PMC12658395>`_ found that GPT-4 fabricated or generated otherwise erroneous citations when prompted to generate 6 literature reviews for medical studies; and that prompt design can mitigate but not eliminate this behavior.
+Zhao et al. estimated that at least `146,932 hallucinated citations <https://arxiv.org/abs/2605.07723>`_ were in papers submitted to arXiv in 2025 alone.
+The true sources of the information that correspond to the LLM generated output are not reliably recoverable from the models themselves.
+
+Additionally, LLMs have a tendency to reinforce or exacerbate gender imbalances in citations by underreporting the works of women in generated citations (see discussion by He `here <https://arxiv.org/abs/2508.02740>`_), meaning that references to important contributions may be omitted or misattributed.
+LLM generated output in some sense captures 'average' replies, meaning that it reinforces existing power structures and systems of inequality.
 
 
 Metadata
