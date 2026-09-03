@@ -271,20 +271,35 @@ These efforts address the ethics of data collection, or at least attempts to, bu
 <p>The second point I will not spend long on here except to note that even with ethically sourced training data, the cost of training these LLMs noted in the previous section still remains.
 Using these models directly encourages the training costs of new models as various corporations attempt to secure additional users in their efforts to become profitable.</p>
 <p>As I noted in <a class="reference external" href="https://jeremylt.org/blog/research-software/ai-for-rse">my other post</a>, the third point is a particular concern for academics, including Research Software Engineers.
-From a purely pragmatic point of view, it is currently not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
+From a purely pragmatic point of view, it is not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
 That’s not how the training works, at a fundamental level.
-Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, especially if the details of the tools are supplied, but this lacks the specificity expected for citations.</p>
+Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, if the details of the tools are supplied, but this lacks the specificity expected for citations.</p>
 <p>LLMs can be prompted to generate sources for their content; however, this process is not the same as traditional methods of identify the source of information and attributing that information the the source.
 A <a class="reference external" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12658395">study by Linardon et al.</a> found that GPT-4 fabricated or generated otherwise erroneous citations when prompted to generate 6 literature reviews for medical studies; and that prompt design can mitigate but not eliminate this behavior.
 Zhao et al. estimated that at least <a class="reference external" href="https://arxiv.org/abs/2605.07723">146,932 hallucinated citations</a> were in papers submitted to arXiv in 2025 alone.
 The true sources of the information that correspond to the LLM generated output are not reliably recoverable from the models themselves.</p>
-<p>Additionally, LLMs have a tendency to reinforce or exacerbate gender imbalances in citations by underreporting the works of women in generated citations (see discussion by He <a class="reference external" href="https://arxiv.org/abs/2508.02740">here</a>), meaning that references to important contributions may be omitted or misattributed.
-LLM generated output in some sense captures ‘average’ replies, meaning that it reinforces existing power structures and systems of inequality.</p>
+<p>This means that the training data is divorced from its original context, which complicates or makes impossible the task of attribution and licensing compatibility verification.
+This is especially problematic when the training data was not ethically sourced, as the original authors may have added licensing stipulations that are incompatible with the intended usage of LLM output.
+Data is collected without permission, the model is trained in a resource intensive fashion, and then the end user of the model cannot easily attribute the source data that was most relevant to the generated output or even ensure that their usage aligns with any stipulations on the original data, such as licensing agreements.</p>
+</section>
+<section id="bias-and-inequity">
+<h2>Bias and Inequity<a class="headerlink" href="#bias-and-inequity" title="Link to this heading">¶</a></h2>
+<p>LLMs can reinforce existing systemic bias and inequity.
+In this section, I discuss various research about this pattern.</p>
+<p>With respect to generated output, LLMs have a measurable impact upon the generated output when compared to human written content, as discussed by Abdulhai et. al. <a class="reference external" href="https://arxiv.org/abs/2603.18161">here</a>.
+Of particular note is the tendency, discussed by Agarwal et. al. <a class="reference external" href="https://arxiv.org/abs/2409.11360">here</a>, for LLMs to homogenize output towards Western cultural norms, erasing cultural expression.
+Furthermore, this tendency means that non-Western users have to put in additional effort to achieve perceived productivity gains reported by Western users.
+Multiple studies have explored how LLMs flatten out perspectives that are not dominant in the training data, which tends to be dominated by Western and often US American web content.</p>
+<p>Meincke et. al. <a class="reference external" href="https://www.nature.com/articles/s41562-025-02173-x.pdf">discuss</a> how ChatGPT reduces idea diversity during brainstorming.
+Producing outputs conforming to a smaller set of norms and producing a reduced diversity of ideas go hand in hand.
+Anecdotally, one of the benefits of diversity that was discussed in the US military in 2005-2016, when I was in the US Air Force, was the idea that a diversity of perspectives would lead to better and more varied problem solving.</p>
+<p>Related to the previous section, LLMs have a tendency to reinforce or exacerbate gender imbalances in citations by underreporting the works of women in generated citations (see discussion by He <a class="reference external" href="https://arxiv.org/abs/2508.02740">here</a>), meaning that references to important contributions may be omitted or misattributed.
+Taken together, these studies demonstrate a tendency of LLMs to erase perspectives and cultures that are not strongly represented in their training data, and those perspectives and cultures often correspond to groups that have been traditionally underrepresented in bodies of work prior to the widespread usage of LLMs, which makes sense considering the training process for LLMs.</p>
 </section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 10 Aug 2026</p>
-<p>Last edited: 18 Aug 2026</p>
+<p>Last edited: 03 Sep 2026</p>
 </section>
 </section>
 
@@ -346,6 +361,7 @@ LLM generated output in some sense captures ‘average’ replies, meaning that 
 <li><a class="reference internal" href="#">LLM Ethical Considerations for RSE</a><ul>
 <li><a class="reference internal" href="#data-center-impacts">Data Center Impacts</a></li>
 <li><a class="reference internal" href="#model-training">Model Training</a></li>
+<li><a class="reference internal" href="#bias-and-inequity">Bias and Inequity</a></li>
 <li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>

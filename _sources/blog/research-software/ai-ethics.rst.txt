@@ -64,17 +64,37 @@ The second point I will not spend long on here except to note that even with eth
 Using these models directly encourages the training costs of new models as various corporations attempt to secure additional users in their efforts to become profitable.
 
 As I noted in `my other post <https://jeremylt.org/blog/research-software/ai-for-rse>`_, the third point is a particular concern for academics, including Research Software Engineers.
-From a purely pragmatic point of view, it is currently not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
+From a purely pragmatic point of view, it is not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
 That's not how the training works, at a fundamental level.
-Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, especially if the details of the tools are supplied, but this lacks the specificity expected for citations.
+Disclosure of usage of LLM based tools does indirectly cite the training data for the specific model, if the details of the tools are supplied, but this lacks the specificity expected for citations.
 
 LLMs can be prompted to generate sources for their content; however, this process is not the same as traditional methods of identify the source of information and attributing that information the the source.
 A `study by Linardon et al. <https://pmc.ncbi.nlm.nih.gov/articles/PMC12658395>`_ found that GPT-4 fabricated or generated otherwise erroneous citations when prompted to generate 6 literature reviews for medical studies; and that prompt design can mitigate but not eliminate this behavior.
 Zhao et al. estimated that at least `146,932 hallucinated citations <https://arxiv.org/abs/2605.07723>`_ were in papers submitted to arXiv in 2025 alone.
 The true sources of the information that correspond to the LLM generated output are not reliably recoverable from the models themselves.
 
-Additionally, LLMs have a tendency to reinforce or exacerbate gender imbalances in citations by underreporting the works of women in generated citations (see discussion by He `here <https://arxiv.org/abs/2508.02740>`_), meaning that references to important contributions may be omitted or misattributed.
-LLM generated output in some sense captures 'average' replies, meaning that it reinforces existing power structures and systems of inequality.
+This means that the training data is divorced from its original context, which complicates or makes impossible the task of attribution and licensing compatibility verification.
+This is especially problematic when the training data was not ethically sourced, as the original authors may have added licensing stipulations that are incompatible with the intended usage of LLM output.
+Data is collected without permission, the model is trained in a resource intensive fashion, and then the end user of the model cannot easily attribute the source data that was most relevant to the generated output or even ensure that their usage aligns with any stipulations on the original data, such as licensing agreements.
+
+
+Bias and Inequity
+================================================================================
+
+LLMs can reinforce existing systemic bias and inequity.
+In this section, I discuss various research about this pattern.
+
+With respect to generated output, LLMs have a measurable impact upon the generated output when compared to human written content, as discussed by Abdulhai et. al. `here <https://arxiv.org/abs/2603.18161>`_.
+Of particular note is the tendency, discussed by Agarwal et. al. `here <https://arxiv.org/abs/2409.11360>`_, for LLMs to homogenize output towards Western cultural norms, erasing cultural expression.
+Furthermore, this tendency means that non-Western users have to put in additional effort to achieve perceived productivity gains reported by Western users.
+Multiple studies have explored how LLMs flatten out perspectives that are not dominant in the training data, which tends to be dominated by Western and often US American web content.
+
+Meincke et. al. `discuss <https://www.nature.com/articles/s41562-025-02173-x.pdf>`_ how ChatGPT reduces idea diversity during brainstorming.
+Producing outputs conforming to a smaller set of norms and producing a reduced diversity of ideas go hand in hand.
+Anecdotally, one of the benefits of diversity that was discussed in the US military in 2005-2016, when I was in the US Air Force, was the idea that a diversity of perspectives would lead to better and more varied problem solving.
+
+Related to the previous section, LLMs have a tendency to reinforce or exacerbate gender imbalances in citations by underreporting the works of women in generated citations (see discussion by He `here <https://arxiv.org/abs/2508.02740>`_), meaning that references to important contributions may be omitted or misattributed.
+Taken together, these studies demonstrate a tendency of LLMs to erase perspectives and cultures that are not strongly represented in their training data, and those perspectives and cultures often correspond to groups that have been traditionally underrepresented in bodies of work prior to the widespread usage of LLMs, which makes sense considering the training process for LLMs.
 
 
 Metadata
@@ -82,4 +102,4 @@ Metadata
 
 Started: 10 Aug 2026
 
-Last edited: 18 Aug 2026
+Last edited: 03 Sep 2026
