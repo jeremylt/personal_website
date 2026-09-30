@@ -788,9 +788,25 @@ One point to research is how to do parallel updates to the same vector.
 This has to be solved somewhere and have a common strategy that is known to be adequate or optimal.
 
 
+Issues discovered
+================================================================================
+
+As with any plan, issues have come forth as development has proceeded.
+
+* Object methods - As called out in the `Kokkos programming guide <https://kokkos.org/kokkos-core-wiki/ProgrammingGuide/Kokkos-and-Virtual-Functions>`_, it is technically possible but strongly recommended to not try to call virtual functions (such as those created when a class is derived from some base class) on the device.
+It is technically possible but rather messy and can break HIP portability, so it is recommended to find an alternative approach.
+In the 4C particle module, the `SPHKernelBase` class becomes either an instance of `SPHKernelCubicSpline` or `SPHKernelQuinticSpline`, and these kernels are needed in several places through the SPH code.
+The planned workaround is to create a `SPHKernelType` enum, and then create the kernel functions directly in the `SPHKernel` namespace and have them accept a `SPHKernelParams` struct as a function argument which contains the `SPHKernelType` and `KernelSpaceDimension`.
+These functions can then be annotated with `KOKKOS_INLINE_FUNCTION` and become callable in device code with no issue.
+
+* Object closures - A minor issue is that Kokkos lambdas, such as used in `parallel_for` require `*this` to be explicitly in scope for the `KOKKOS_LAMBDA`.
+Fortunately this is straightforward to fix by substituting `KOKKOS_CLASS_LAMBDA` in place of `KOKKOS_LAMBDA` when calling `parallel_for` inside of object methods and needing the `*this` to be explicitly captured to ensure data from the object can be used inside of the `parallel_for` on device.
+See `the Kokkos programming guide <https://kokkos.org/kokkos-core-wiki/ProgrammingGuide/API/core/macros-special/host_device_macros>`_ for discussion on other possible lambda and function annotation macros.
+
+
 Metadata
 ================================================================================
 
 Started: 17 Jul 2026
 
-Last edited: 22 Jul 2026
+Last edited: 30 Sep 2026
