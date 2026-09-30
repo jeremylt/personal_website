@@ -33,8 +33,10 @@ The `Data Centers and the Climate Landscape: An Actionable Resource for US Mayor
 While these concerns are not the limits of impacts of LLMs on people, it seems clear that these data centers do indeed result in less water and power being available for people to use.
 Participating in the demand for LLMs would thus be participating in this reduced access to water and power.
 While it is true that interacting with internet based technologies does have an impact and require the usage of data centers, LLM usage itself has a particularly high usage, with queries submitted to LLMs requiring `10 to 30 times more energy than traditional internet search engines require <https://www.scientificamerican.com/article/what-do-googles-ai-answers-cost-the-environment>`_.
-These and other impacts seem to be especially concentrated on `marginalized and minority communities in the US <https://thenarrativematters.com/data-centers-impact-on-low-income-marginalized-communities-balancing-economic-opportunity-and-community-burden>`_.
-Reinforcing existing systematic biases and issues is a theme that will come up in other contexts in this article.
+
+This strain is also not spread over all communities equally.
+Data center impacts seem to be especially concentrated on `marginalized and minority communities in the US <https://thenarrativematters.com/data-centers-impact-on-low-income-marginalized-communities-balancing-economic-opportunity-and-community-burden>`_.
+Reinforcing existing systematic inequalities and issues is a theme that repeats in the ethical concerns around LLMs.
 
 
 Model Training
@@ -53,6 +55,7 @@ US courts appear to agree with LLM companies, at least in part and in some cases
 In any case, while LLM training data collection practices may be legal, that still does not address the ethical concern of using the data without the permission and sometimes against the expressed wishes of the originators.
 Research guidelines, such as the `The European Code of Conduct for Research Integrity <https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/european-code-of-conduct-for-research-integrity_horizon_en.pdf>`_ set the expectation that research subjects and materials should be treated with respect and consistent with ethical guidelines.
 For researchers using LLMs during their research, this distinction between legal and ethical data collection is important.
+I find it difficult to reconcile these ethical expectations with the non-consensual collection of the training data.
 
 There have been efforts to ensure ethical collection of training data, such as the `Common Corpus project <https://proceedings.iclr.cc/paper_files/paper/2026/file/2b5c5689fae6fa9a4883e73e511d52c8-Paper-Conference.pdf>`_.
 This dataset consists of approximately 2 billion tokens, which is in line with the size of data sets for several of the recent larger models.
@@ -61,7 +64,7 @@ Furthermore, the Common Corpus team attempted to filter out data that was deemed
 These efforts address the ethics of data collection, or at least attempts to, but does not address the questions of resources consumed training the model or attribution concerns.
 
 The second point I will not spend long on here except to note that even with ethically sourced training data, the cost of training these LLMs noted in the previous section still remains.
-Using these models directly encourages the training costs of new models as various corporations attempt to secure additional users in their efforts to become profitable.
+Using these models directly encourages the training of new models as various corporations attempt to secure additional users in their efforts to become profitable.
 
 As I noted in `my other post <https://jeremylt.org/blog/research-software/ai-for-rse>`_, the third point is a particular concern for academics, including Research Software Engineers.
 From a purely pragmatic point of view, it is not possible to identify which of the billions of tokens in the training data were the most significant in generating a specific output from the model.
@@ -74,7 +77,7 @@ Zhao et al. estimated that at least `146,932 hallucinated citations <https://arx
 The true sources of the information that correspond to the LLM generated output are not reliably recoverable from the models themselves.
 
 This means that the training data is divorced from its original context, which complicates or makes impossible the task of attribution and licensing compatibility verification.
-This is especially problematic when the training data was not ethically sourced, as the original authors may have added licensing stipulations that are incompatible with the intended usage of LLM output.
+This is especially problematic when the training data was not ethically sourced, as the original authors may have added licensing stipulations that are incompatible with many of the possible usages of LLM output.
 Data is collected without permission, the model is trained in a resource intensive fashion, and then the end user of the model cannot easily attribute the source data that was most relevant to the generated output or even ensure that their usage aligns with any stipulations on the original data, such as licensing agreements.
 
 
@@ -97,9 +100,17 @@ Related to the previous section, LLMs have a tendency to reinforce or exacerbate
 Taken together, these studies demonstrate a tendency of LLMs to erase perspectives and cultures that are not strongly represented in their training data, and those perspectives and cultures often correspond to groups that have been traditionally underrepresented in bodies of work prior to the widespread usage of LLMs, which makes sense considering the training process for LLMs.
 
 
+Summary
+================================================================================
+
+Considering these issues, I find it difficult to justify or feel personally comfortable with LLM based tool usage, even with several researchers or industry software developers I know reporting that they find themselves to be more productive with the use of LLM based tools.
+With the world we live in and the economic pressures that many people are feeling, I know several individuals who begrudgingly use LLM based tools because they feel their employment would otherwise be at risk.
+This tension between pragmatic needs to retain employment or meet expectations squared against ethical misgivings or other concerns leaves people in an uncomfortable position.
+
+
 Metadata
 ================================================================================
 
 Started: 10 Aug 2026
 
-Last edited: 03 Sep 2026
+Last edited: 30 Sep 2026
