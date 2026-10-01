@@ -23,6 +23,7 @@ AI/LLM Usage
    
    ai-for-rse.rst
    ai-ethics.rst
+   ai-sdlc-techniques.rst
    local-llm.rst
 
 Bugs
