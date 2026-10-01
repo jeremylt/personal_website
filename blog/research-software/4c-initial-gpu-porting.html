@@ -1010,10 +1010,26 @@ I would implement in a straightforward fashion at first and then determine if th
 <p>One point to research is how to do parallel updates to the same vector.
 This has to be solved somewhere and have a common strategy that is known to be adequate or optimal.</p>
 </section>
+<section id="issues-discovered">
+<h2>Issues discovered<a class="headerlink" href="#issues-discovered" title="Link to this heading">¶</a></h2>
+<p>As with any plan, issues have come forth as development has proceeded.</p>
+<ul class="simple">
+<li><p>Object methods - As called out in the <a class="reference external" href="https://kokkos.org/kokkos-core-wiki/ProgrammingGuide/Kokkos-and-Virtual-Functions">Kokkos programming guide</a>, it is technically possible but strongly recommended to not try to call virtual functions (such as those created when a class is derived from some base class) on the device.</p></li>
+</ul>
+<p>It is technically possible but rather messy and can break HIP portability, so it is recommended to find an alternative approach.
+In the 4C particle module, the <cite>SPHKernelBase</cite> class becomes either an instance of <cite>SPHKernelCubicSpline</cite> or <cite>SPHKernelQuinticSpline</cite>, and these kernels are needed in several places through the SPH code.
+The planned workaround is to create a <cite>SPHKernelType</cite> enum, and then create the kernel functions directly in the <cite>SPHKernel</cite> namespace and have them accept a <cite>SPHKernelParams</cite> struct as a function argument which contains the <cite>SPHKernelType</cite> and <cite>KernelSpaceDimension</cite>.
+These functions can then be annotated with <cite>KOKKOS_INLINE_FUNCTION</cite> and become callable in device code with no issue.</p>
+<ul class="simple">
+<li><p>Object closures - A minor issue is that Kokkos lambdas, such as used in <cite>parallel_for</cite> require <cite>*this</cite> to be explicitly in scope for the <cite>KOKKOS_LAMBDA</cite>.</p></li>
+</ul>
+<p>Fortunately this is straightforward to fix by substituting <cite>KOKKOS_CLASS_LAMBDA</cite> in place of <cite>KOKKOS_LAMBDA</cite> when calling <cite>parallel_for</cite> inside of object methods and needing the <cite>*this</cite> to be explicitly captured to ensure data from the object can be used inside of the <cite>parallel_for</cite> on device.
+See <a class="reference external" href="https://kokkos.org/kokkos-core-wiki/ProgrammingGuide/API/core/macros-special/host_device_macros">the Kokkos programming guide</a> for discussion on other possible lambda and function annotation macros.</p>
+</section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Link to this heading">¶</a></h2>
 <p>Started: 17 Jul 2026</p>
-<p>Last edited: 22 Jul 2026</p>
+<p>Last edited: 30 Sep 2026</p>
 </section>
 </section>
 
@@ -1095,6 +1111,7 @@ This has to be solved somewhere and have a common strategy that is known to be a
 </ul>
 </li>
 <li><a class="reference internal" href="#control-flow">Control flow</a></li>
+<li><a class="reference internal" href="#issues-discovered">Issues discovered</a></li>
 <li><a class="reference internal" href="#metadata">Metadata</a></li>
 </ul>
 </li>
