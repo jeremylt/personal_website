@@ -14,5 +14,6 @@ Contents
    pullman.rst
    bloomington.rst
    ithaca.rst
+   bergedorf.rst
    hamburg.rst
    berlin.rst
