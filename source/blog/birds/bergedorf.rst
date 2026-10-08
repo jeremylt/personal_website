@@ -3,6 +3,8 @@ Bergedorf, Germany
 
 * `Eurasian magpie <https://en.wikipedia.org/wiki/Eurasian_magpie>`_
 
+* `Eurasian blue tit <https://en.wikipedia.org/wiki/Eurasian_blue_tit>`_
+
 * `Mallard duck <https://en.wikipedia.org/wiki/Mallard>`_
 
 * `Eurasian coot <https://en.wikipedia.org/wiki/Eurasian_coot>`_
