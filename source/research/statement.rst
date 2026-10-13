@@ -1,4 +1,4 @@
-Research Statement
+Research Statement - Jeremy L Thompson
 ********************************************************************************
 
 Open Source Scientific Software for Modern HPC Hardware
@@ -15,8 +15,9 @@ High-order matrix-free finite element-like operators on elements with tensor-pro
 However, matrix-free operators require iterative solvers, such as Krylov subspace methods, and these iterative solvers converge slowly for high-order operators because these operators are increasingly ill-conditioned as polynomial order of the bases increases.
 Preconditioning techniques can significantly improve the convergence of these iterative solvers for high-order matrix-free finite element operators.
 
-In my research, I focus on using high-order matrix-free methods with appropriate preconditioners to achieve high performance on modern HPC hardware.
-I build core computational infrastructure and preconditioners to support a variety of application areas.
+In my research, I focus on using matrix-free methods to achieve high performance on modern HPC hardware.
+I focus on high-order finite elements with appropriate preconditioners.
+I build core computational infrastructure and preconditioners to support a variety of application areas as well as meshless and mesh based particle methods such as Material Point Method (MPM) and Smoothed Particle Hydrodynamics (SPH).
 To this end, my research efforts are centered around building open source software packages while enabling and accelerating the research of students and researchers who are using these packages.
 This works allows us to complete simulations in hours or days that could take weeks to complete with older approaches.
 
