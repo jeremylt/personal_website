@@ -9,6 +9,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   statement.rst
+   Research Statement <statement.rst>
    publications.rst
    presentations.rst

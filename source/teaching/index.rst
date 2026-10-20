@@ -9,6 +9,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   statement.rst
+   Teaching Statement <statement.rst>
    classes.rst
    alt-courses.rst
