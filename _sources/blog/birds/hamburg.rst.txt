@@ -1,9 +1,11 @@
 Hamburg, Germany
 ********************************************************************************
 
-* `Eurasian magpie <https://en.wikipedia.org/wiki/Eurasian_magpie>`_
+* `Common raven <https://en.wikipedia.org/wiki/Common_raven>`_
 
 * `Carrion crow <https://en.wikipedia.org/wiki/Carrion_crow>`_
+
+* `Eurasian magpie <https://en.wikipedia.org/wiki/Eurasian_magpie>`_
 
 * `Eurasian jay <https://en.wikipedia.org/wiki/Eurasian_jay>`_
 
