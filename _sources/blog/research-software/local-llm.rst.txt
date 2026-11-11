@@ -89,10 +89,12 @@ However, this does make it difficult to prompt the LLM to review generated code,
 This usage feels less fraught when compared to using an LLM to plan development or generate code, especially considering the issues around attribution.
 Though, as noted above, I do not see local LLMs as an ethical 'get out of jail free' card.
 
+Generally, I've found myself to be underwhelmed by using LLMs to aid in software development, and as such I have stopped experimenting with local LLMs.
+
 
 Metadata
 ================================================================================
 
 Started: 10 Jul 2026
 
-Last edited: 10 Aug 2026
+Last edited: 11 Nov 2026
